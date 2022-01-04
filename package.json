@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "socket.io": "^2.3.0"
-  }
+  },
   "name": "coolnodeapp",
   "version": "1.0.0",
   "description": "node app ",
