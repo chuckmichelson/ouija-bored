@@ -5,7 +5,7 @@
   "name": "coolnodeapp",
   "version": "1.0.0",
   "description": "node app ",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
   "start": "node server.js"
 },
