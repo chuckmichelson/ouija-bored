@@ -1,25 +1,13 @@
-// const FRAME_RATE = 10;
+const FRAME_RATE = 10;
 const CANVAS_WIDTH = 838;
 const CANVAS_HEIGHT = 554;
 const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
-//const io = require('socket.io')();
+const io = require('socket.io')();
 const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
 const { FRAME_RATE } = require('./constants');
 const { makeid } = require('./utils');
-
-
-
-var express = require('express');
-var app = express();
-var server = require('https').createServer(app);
-var io = require('socket.io').listen(server);
-
-
-
-server.listen(process.env.PORT || 3000);
-
 
 const state = {};
 const clientRooms = {};
@@ -65,7 +53,7 @@ io.on('connection', client => {gameLoop
     // client.number = 2;
     client.number = 2;
     client.emit('init', 2);
-    
+
     startGameInterval(roomName);
   }
 
@@ -108,7 +96,7 @@ function startGameInterval(roomName) {
   console.log("made it to startGameInterval")
   const intervalId = setInterval(() => {
     const winner = gameLoop(state[roomName]);
-    
+
     if (!winner) {
       emitGameState(roomName, state[roomName])
       // emitScore(roomName, gameScore)
@@ -138,6 +126,5 @@ function emitScore(room, score) {
   io.sockets.in(room)
     .emit('gameScore', JSON.stringify(gameScore));
 }
-
 
 io.listen(process.env.PORT || 3000);
