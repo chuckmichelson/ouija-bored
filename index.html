@@ -1,0 +1,37 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div><center><button
+              type="submit"
+              class="btn btn-success"
+              id="joinGameButton"
+            >Join Game</center></div>
+<center><h1>Players: <span id="numPlayersDisplay"></span> Score: <span id="scoreDisplay"></span></h1></center>
+<section>
+<center>
+<div id="canvasesdiv" style="position:relative; width:838px; height:554px">
+<canvas id="layer1"
+style="z-index: 1;
+position:absolute;
+left:0px;
+top:0px;
+" height="554px" width="838px">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+<canvas id="layer2"
+style="z-index: 2;
+position:absolute;
+left:0px;
+top:0px;
+" height="554px" width="838px">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+</div>
+</center>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script type="text/javascript" src="index.js"></script>
