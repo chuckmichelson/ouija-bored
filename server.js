@@ -4,10 +4,22 @@ const CANVAS_HEIGHT = 554;
 const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
-const io = require('socket.io')();
+// const io = require('socket.io')();
 const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
 const { FRAME_RATE } = require('./constants');
 const { makeid } = require('./utils');
+
+
+
+var express = require('express'),
+    app = express(),
+    server = require('http').createServer(app),
+    io = require('socket.io').listen(server),
+
+
+server.listen(process.env.PORT || 3000);
+io.listen(process.env.PORT || 3000);
+
 
 const state = {};
 const clientRooms = {};
@@ -127,4 +139,5 @@ function emitScore(room, score) {
     .emit('gameScore', JSON.stringify(gameScore));
 }
 
-io.listen(process.env.PORT || 3000);
+
+
