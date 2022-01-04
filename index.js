@@ -7,7 +7,7 @@ const PLANCHETTE_HEIGHT = 120;
 
 console.log("Entering index.js")
 
-const socket = io('https://secret-bastion-80592.herokuapp.com/');
+const socket = io('https://ouija-bored.herokuapp.com/');
 
 socket.on('init', handleInit);
 socket.on('gameState', handleGameState);
