@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "express": "^4.17.2",
     "socket.io": "^2.3.0"
   },
   "name": "coolnodeapp",
@@ -7,16 +8,14 @@
   "description": "node app ",
   "main": "index.html",
   "scripts": {
-  "start": "node server.js"
-},
+    "start": "node server.js"
+  },
   "repository": {
-  "type": "git",
-  "url": ""
-},
+    "type": "git",
+    "url": ""
+  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-  "url": ""
-},
-  "homepage": ""
+  "homepage": "",
+  "keywords": []
 }
