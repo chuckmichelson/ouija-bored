@@ -9,18 +9,18 @@ const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
 const { FRAME_RATE } = require('./constants');
 const { makeid } = require('./utils');
 
-const state = {};
-const clientRooms = {};
-
 
 
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
-var io = require('socket.io').listen(server),
+var io = require('socket.io').listen(server);
 
 
 
+
+const state = {};
+const clientRooms = {};
 
 io.on('connection', client => {gameLoop
 
