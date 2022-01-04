@@ -19,7 +19,6 @@ var io = require('socket.io').listen(server);
 
 
 server.listen(process.env.PORT || 3000);
-io.listen(process.env.PORT || 3000);
 
 
 const state = {};
@@ -141,3 +140,4 @@ function emitScore(room, score) {
 }
 
 
+io.listen(process.env.PORT || 3000);
