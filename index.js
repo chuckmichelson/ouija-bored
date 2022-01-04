@@ -1,8 +1,8 @@
-const { FRAME_RATE } = require('./constants');
-const { CANVAS_WIDTH } = require('./constants');
-const { CANVAS_HEIGHT } = require('./constants');
-const { PLANCHETTE_WIDTH } = require('./constants');
-const { PLANCHETTE_HEIGHT } = require('./constants');
+const FRAME_RATE = 10;
+const CANVAS_WIDTH = 838;
+const CANVAS_HEIGHT = 554;
+const PLANCHETTE_WIDTH = 120;
+const PLANCHETTE_HEIGHT = 120;
 
 
 
