@@ -41,7 +41,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 
 // joinGame()
 document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
-joinGameBtn.addEventListener('click', newGame);
+joinGameBtn.addEventListener('click', joinGame);
 
 newGame()
 
@@ -53,7 +53,7 @@ function newGame() {
 
 function joinGame() {
   console.log("made it to joinGame")
-  newGame();
+  socket.emit('joinGame', 'AAAAA');
 }
 
 let playerNumber = 1;
