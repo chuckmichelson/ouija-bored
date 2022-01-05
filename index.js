@@ -93,12 +93,12 @@ function keyDown(e) {
   console.log("made it to keyDown()")
   socket.emit('keydown', e.keyCode);
   // document.getElementById("scoreDisplay").innerHTML = e.keyCode;
-  document.getElementById("scoreDisplay").innerHTML = state.planchette.pos.x;
   console.log("emitted keydown code")
 }
 
 function paintGame(state) {
   console.log("made it to paintGame")
+  document.getElementById("scoreDisplay").innerHTML = state.planchette.pos.x;
   ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 }
 
