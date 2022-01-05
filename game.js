@@ -89,7 +89,7 @@ function gameLoop(state) {
     }
   }
 
-  document.getElementById("scoreDisplay").innerHTML = state.planchette.pos.x;
+
   // if (playerOne.pos.x < 0 || playerOne.pos.x > GRID_SIZE || playerOne.pos.y < 0 || playerOne.pos.y > GRID_SIZE) {
   //   return 2;
   // }
