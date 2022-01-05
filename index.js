@@ -42,7 +42,7 @@ function newGame() {
 function joinGame() {
   console.log("made it to joinGame")
   const code = "AAAAA";
-  socket.emit('newGame', code);
+  socket.emit('newGame');
   init();
 }
 
