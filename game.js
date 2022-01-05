@@ -4,7 +4,7 @@
 // const { PLANCHETTE_WIDTH } = require('./constants');
 // const { PLANCHETTE_HEIGHT } = require('./constants');
 
-const FRAME_RATE = 10;
+const FRAME_RATE = 20;
 const CANVAS_WIDTH = 838;
 const CANVAS_HEIGHT = 554;
 const PLANCHETTE_WIDTH = 120;
@@ -73,20 +73,20 @@ function gameLoop(state) {
   var max_arrow_val = Math.max(nRIGHT, nLEFT, nUP, nDOWN)
   if (max_arrow_val != 0) {
     if (max_arrow_val === nRIGHT ) {
-      state.planchette.pos.x += 5;
+      state.planchette.pos.x += 3;
       state.planchette.pos.y += 0;
     }
     if (max_arrow_val === nLEFT ) {
-      state.planchette.pos.x += -5;
+      state.planchette.pos.x += -3;
       state.planchette.pos.y += 0;
     }
     if (max_arrow_val === nUP ) {
       state.planchette.pos.x += 0;
-      state.planchette.pos.y += 5;
+      state.planchette.pos.y += 3;
     }
     if (max_arrow_val === nDOWN ) {
       state.planchette.pos.x += 0;
-      state.planchette.pos.y += -5;
+      state.planchette.pos.y += -3;
     }
   }
 
