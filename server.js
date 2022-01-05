@@ -72,7 +72,6 @@ io.on('connection', client => {gameLoop
   function handleJoinGame(roomName) {
     console.log("made it to handleJoinGame")
     const room = io.sockets.adapter.rooms[roomName];
-    console.log(room)
 
     let allUsers;
     if (room) {
@@ -83,7 +82,7 @@ io.on('connection', client => {gameLoop
     if (allUsers) {
       numClients = Object.keys(allUsers).length;
     }
-    console.log("numClients" + numClients)
+    console.log("counted numClients")
 
     if (numClients === 0) {
       console.log("numClients = 0")
@@ -121,8 +120,6 @@ io.on('connection', client => {gameLoop
     client.join(roomName);
     client.number = 1;
     client.emit('init', 1);
-
-    startGameInterval(roomName);
   }
 
   function handleKeydown(keyCode) {
@@ -161,7 +158,6 @@ function startGameInterval(roomName) {
     }
   }, 1000 / FRAME_RATE);
 }
-
 
 function emitGameState(room, gameState) {
   // Send this event to everyone in the room.
