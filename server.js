@@ -139,6 +139,6 @@ function emitScore(room, score) {
 }
 
 
-server.listen(process.env.PORT || 8000);
+server.listen(process.env.PORT || 3000);
 
-io.listen(process.env.PORT || 8000);
+io.listen(process.env.PORT || 3000);
