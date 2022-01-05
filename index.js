@@ -32,7 +32,7 @@ console.log("sockets on")
 // const gameScreen = document.getElementById('gameScreen');
 // const initialScreen = document.getElementById('initialScreen');
 // const newGameBtn = document.getElementById('newGameButton');
-const joinGameBtn = document.getElementById('joinGameButton');
+// const joinGameBtn = document.getElementById('joinGameButton');
 // const gameCodeInput = document.getElementById('gameCodeInput');
 // const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 const numPlayersDisplay = document.getElementById('numPlayersDisplay');
@@ -41,7 +41,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 
 joinGame()
 document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
-joinGameBtn.addEventListener('click', newGame);
+// joinGameBtn.addEventListener('click', newGame);
 
 function newGame() {
   console.log("made it to NewGame")
