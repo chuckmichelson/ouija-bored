@@ -36,13 +36,13 @@ joinGameBtn.addEventListener('click', joinGame);
 
 function newGame() {
   console.log("made it to NewGame")
+  socket.emit('newGame');
   init();
 }
 
 function joinGame() {
   console.log("made it to joinGame")
   newGame();
-  init();
 }
 
 let playerNumber = 1;
