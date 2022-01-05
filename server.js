@@ -126,6 +126,7 @@ io.on('connection', client => {gameLoop
     console.log("made it to handleKeydown")
     const roomName = clientRooms[client.id];
     if (!roomName) {
+      console.log("No room name")
       return;
     }
     try {
