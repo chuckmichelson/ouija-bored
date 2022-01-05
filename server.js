@@ -142,7 +142,7 @@ io.on('connection', client => {gameLoop
 
     if (vel) {
       console.log("There's some vel!")
-      state[roomName].players[client.number - 1].vel = vel;
+      state[roomName].players[client.number].vel = vel;
     }
   }
 });
