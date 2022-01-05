@@ -115,8 +115,12 @@ function handleGameState(gameState) {
     return;
   }
   gameState = JSON.parse(gameState);
+  console.log('JSON parsed')
   handleNumPlayers(gameState.players.length)
+  console.log('num players handled')
   requestAnimationFrame(() => paintGame(gameState));
+  console.log('animation frame requested')
+
 }
 
 function handleGameOver(data) {
