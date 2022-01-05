@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "express": "^4.17.2",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.1"
   },
   "name": "coolnodeapp",
   "version": "1.0.0",
