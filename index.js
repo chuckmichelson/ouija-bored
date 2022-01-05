@@ -93,7 +93,7 @@ function init() {
 function keyDown(e) {
   console.log("made it to keyDown()")
   socket.emit('keydown', e.keyCode);
-  // document.getElementById("scoreDisplay").innerHTML = e.keyCode;
+  document.getElementById("scoreDisplay").innerHTML = e.keyCode;
   console.log("emitted keydown code")
 }
 
