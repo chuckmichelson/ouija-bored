@@ -9,6 +9,11 @@ const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
 const { makeid } = require('./utils');
 
 
+const express = require('express')
+const app = express()
+const server = require('http').Server(app)
+const io = module.exports.io = require('socket.io')(server)
+
 var app = express(),
     http = require('http'),
     server = http.createServer(app),
