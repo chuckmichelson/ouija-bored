@@ -3,7 +3,7 @@
     "express": "^4.17.2",
     "socket.io": "^4.4.0"
   },
-  "name": "coolnodeapp",
+  "name": "ouija-bored",
   "version": "1.0.0",
   "description": "node app ",
   "main": "index.html",
@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/chuckmichelson/ouija-bored"
   },
-  "author": "",
+  "author": "chuckmichelson",
   "license": "ISC",
   "homepage": "",
   "keywords": []
