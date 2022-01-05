@@ -45,7 +45,7 @@ function createGameState() {
   };
 }
 
-function addPlayer() {
+function addPlayer(state) {
   console.log("made it to addPlayer")
   newPlayer = [{
       vel: {
