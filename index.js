@@ -1,11 +1,11 @@
 const socket = io('http://localhost:3000');
 
-socket.on('init', handleInit);
+// socket.on('init_test', handleInit_test);
 
 
-function handleInit(msg) {
-  console.log(msg);
-}
+// function handleInit_test(msg) {
+//   console.log(msg);
+// }
 
 
 // const { GRID_SIZE } = require('./constants');
