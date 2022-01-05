@@ -98,6 +98,8 @@ io.on('connection', client => {gameLoop
 
     clientRooms[client.id] = roomName;
 
+    console.log("roomName: " + roomName)
+
     client.join(roomName);
     // client.number = 2;
     client.number = 2;
