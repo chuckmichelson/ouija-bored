@@ -102,6 +102,7 @@ function paintGame(state) {
   const layer2 = document.getElementById('layer2');
   const ctx2 = layer2.getContext('2d');
   document.getElementById("scoreDisplay").innerHTML = state.planchette.pos.x;
+  planchette.src = "images/planchette.png";
   ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 }
 
