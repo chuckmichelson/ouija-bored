@@ -83,7 +83,7 @@ io.on('connection', client => {gameLoop
     if (allUsers) {
       numClients = Object.keys(allUsers).length;
     }
-    console.log("counted numClients")
+    console.log("numClients" + numClients)
 
     if (numClients === 0) {
       console.log("numClients = 0")
