@@ -14,13 +14,6 @@ const app = express()
 const server = require('http').Server(app)
 const io = module.exports.io = require('socket.io')(server)
 
-var app = express(),
-    http = require('http'),
-    server = http.createServer(app),
-    io = require('socket.io').listen(server);
-var sockets = io;
-
-
 const state = {};
 const clientRooms = {};
 
