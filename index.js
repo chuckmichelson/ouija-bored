@@ -46,7 +46,6 @@ joinGameBtn.addEventListener('click', newGame);
 function newGame() {
   console.log("made it to NewGame")
   socket.emit('newGame');
-  init();
 }
 
 function joinGame() {
@@ -113,7 +112,7 @@ function handleInit(number) {
   console.log("made it to handleInit()")
   playerNumber = number;
   console.log(playerNumber)
-  // init()
+  init()
 }
 
 function handleGameState(gameState) {
