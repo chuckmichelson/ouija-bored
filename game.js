@@ -92,7 +92,6 @@ function gameLoop(state) {
   // if (playerOne.pos.x < 0 || playerOne.pos.x > GRID_SIZE || playerOne.pos.y < 0 || playerOne.pos.y > GRID_SIZE) {
   //   return 2;
   // }
-  paintGame(state)
 
   return false;
 }
