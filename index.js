@@ -99,6 +99,8 @@ function keyDown(e) {
 
 function paintGame(state) {
   console.log("made it to paintGame")
+  const layer2 = document.getElementById('layer2');
+  const ctx2 = layer2.getContext('2d');
   document.getElementById("scoreDisplay").innerHTML = state.planchette.pos.x;
   ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 }
