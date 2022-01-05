@@ -7,7 +7,7 @@ const PLANCHETTE_HEIGHT = 120;
 
 console.log("Entering index.js")
 
-const socket = io('https://ouija-bored.herokuapp.com:7105/socket.io/socket.io.js');
+const socket = io('https://ouija-bored.herokuapp.com/socket.io/socket.io.js');
 // const socket = io.connect();
 
 socket.on('init', handleInit);
