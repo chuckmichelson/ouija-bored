@@ -130,6 +130,7 @@ io.on('connection', client => {gameLoop
       return;
     }
     try {
+      console.log("Trying to parse keyCode")
       keyCode = parseInt(keyCode);
     } catch(e) {
       console.error(e);
