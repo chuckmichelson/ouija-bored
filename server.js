@@ -21,10 +21,10 @@ server.listen(PORT, hostname, () => {
 const io = require('socket.io')();
 
 
-// hello world test
-io.on('connection', client => {
-  client.emit('init', { data : 'hello world' });
-});
+// // hello world test
+// io.on('connection', client => {
+//   client.emit('init', { data : 'hello world' });
+// });
 
 
 io.listen(3000);
