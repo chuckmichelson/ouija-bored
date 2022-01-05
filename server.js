@@ -9,46 +9,15 @@ const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
 const { makeid } = require('./utils');
 
 
+const express = require('express')
+const app = express()
+const server = require('http').createServer(app)
+const io = require('socket.io')(server)
+const PORT = process.env.PORT || 3000;
 
-
-
-const http = require('http');
-const express = require('express');
-const socketIO = require('socket.io');
-
-const app = express();
-const server = http.createServer(app);
-
-const io = socketIO(server);
-io.on('connection', socket => {
-  console.log('client connected on websocket');
+http.listen(PORT,function(){
+    console.log("Listening to port " + PORT);
 });
-
-server.listen(PORT, () => {
-  console.log('server started and listening on port ' + PORT);
-});
-
-server.listen(port, err => {
-    if(err){
-        console.error("Some Error: "+err);
-    }else{
-        console.log(`Server is running on port: ${port}`);
-    }
-});
-
-
-
-
-
-// const express = require('express')
-// const app = express()
-// const server = require('http').createServer(app)
-// const io = require('socket.io')(server)
-// const PORT = process.env.PORT || 3000;
-
-// http.listen(PORT,function(){
-//     console.log("Listening to port " + PORT);
-// });
 
 
 const state = {};
