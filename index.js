@@ -40,6 +40,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 
 
 joinGame()
+
 document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
 // joinGameBtn.addEventListener('click', newGame);
 
