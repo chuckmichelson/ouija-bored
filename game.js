@@ -72,20 +72,20 @@ function gameLoop(state) {
   var max_arrow_val = Math.max(nRIGHT, nLEFT, nUP, nDOWN)
   if (max_arrow_val != 0) {
     if (max_arrow_val === nRIGHT ) {
-      planchette.pos.x += 5;
-      planchette.pos.y += 0;
+      state.planchette.pos.x += 5;
+      state.planchette.pos.y += 0;
     }
     if (max_arrow_val === nLEFT ) {
-      planchette.pos.x += -5;
-      planchette.pos.y += 0;
+      state.planchette.pos.x += -5;
+      state.planchette.pos.y += 0;
     }
     if (max_arrow_val === nUP ) {
-      planchette.pos.x += 0;
-      planchette.pos.y += 5;
+      state.planchette.pos.x += 0;
+      state.planchette.pos.y += 5;
     }
     if (max_arrow_val === nDOWN ) {
-      planchette.pos.x += 0;
-      planchette.pos.y += -5;
+      state.planchette.pos.x += 0;
+      state.planchette.pos.y += -5;
     }
   }
 
