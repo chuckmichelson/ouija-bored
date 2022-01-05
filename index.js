@@ -97,7 +97,7 @@ function keyDown(e) {
 }
 
 function paintGame(state) {
-  console.log("made it to paintGameState")
+  console.log("made it to paintGame")
   ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 }
 
@@ -114,7 +114,6 @@ function handleGameState(gameState) {
     return;
   }
   gameState = JSON.parse(gameState);
-  handleScore(gameState.players[0].snake.length)
   handleNumPlayers(gameState.players.length)
   requestAnimationFrame(() => paintGame(gameState));
 }
