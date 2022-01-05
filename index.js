@@ -33,6 +33,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
 joinGameBtn.addEventListener('click', newGame);
 
+newGame()
 
 function newGame() {
   console.log("made it to NewGame")
