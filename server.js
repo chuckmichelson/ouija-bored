@@ -13,12 +13,6 @@ const express = require('express')
 const app = express()
 const server = require('http').Server(app)
 const io = module.exports.io = require('socket.io')(server)
-var PORT = process.env.PORT || 3000;
-
-http.listen(PORT,function(){
-    console.log("Listening to port " + PORT);
-});
-
 
 const state = {};
 const clientRooms = {};
