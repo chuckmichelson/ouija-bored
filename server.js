@@ -64,7 +64,7 @@ const { makeid } = require('./utils');
 
 io.on('connection', client => {gameLoop
 
-  console.log(socket.connected); // prints "true"
+  // console.log(socket.connected); // prints "true"
   client.on('keydown', handleKeydown);
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
