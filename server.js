@@ -11,13 +11,13 @@ const { makeid } = require('./utils');
 
 const express = require('express')
 const app = express()
-const server = require('http').createServer(app)
+const server = require('http').Server(app)
 const io = require('socket.io')(server)
 const PORT = process.env.PORT || 3000;
 
-http.listen(PORT,function(){
-    console.log("Listening to port " + PORT);
-});
+// http.listen(PORT,function(){
+//     console.log("Listening to port " + PORT);
+// });
 
 
 const state = {};
