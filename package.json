@@ -1,24 +1,30 @@
+// {
+//   "dependencies": {
+//     "express": "^4.17.2",
+//     "socket.io": "^4.4.0"
+//   },
+//   "name": "ouija-bored",
+//   "version": "1.0.0",
+//   "description": "node app ",
+//   "main": "index.html",
+//   "engines": {
+//     "node": "14.x"
+//   },
+//   "scripts": {
+//     "start": "node server"
+//   },
+//   "repository": {
+//     "type": "git",
+//     "url": "https://github.com/chuckmichelson/ouija-bored"
+//   },
+//   "author": "chuckmichelson",
+//   "license": "ISC",
+//   "homepage": "",
+//   "keywords": []
+// }
+
 {
   "dependencies": {
-    "express": "^4.17.2",
-    "socket.io": "^4.4.0"
-  },
-  "name": "ouija-bored",
-  "version": "1.0.0",
-  "description": "node app ",
-  "main": "index.html",
-  "engines": {
-    "node": "14.x"
-  },
-  "scripts": {
-    "start": "node server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chuckmichelson/ouija-bored"
-  },
-  "author": "chuckmichelson",
-  "license": "ISC",
-  "homepage": "",
-  "keywords": []
+    "socket.io": "^2.3.0"
+  }
 }
