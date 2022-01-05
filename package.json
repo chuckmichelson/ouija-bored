@@ -8,7 +8,7 @@
   "description": "node app ",
   "main": "index.html",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
