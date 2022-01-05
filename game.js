@@ -12,6 +12,7 @@ const PLANCHETTE_HEIGHT = 120;
 
 module.exports = {
   initGame,
+  addPlayer,
   gameLoop,
   getUpdatedVelocity,
 }
@@ -42,6 +43,17 @@ function createGameState() {
     },
     letters: "",
   };
+}
+
+function addPlayer() {
+  console.log("made it to addPlayer")
+  newPlayer = [{
+      vel: {
+        x: 0,
+        y: 0,
+      },
+    },]
+  state.players += newPlayer
 }
 
 function gameLoop(state) {

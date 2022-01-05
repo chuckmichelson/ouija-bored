@@ -37,7 +37,7 @@ const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
 // // const io = require('socket.io')();
-const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
+const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
 const { makeid } = require('./utils');
 
 
@@ -101,6 +101,8 @@ io.on('connection', client => {gameLoop
     console.log("roomName: " + roomName)
 
     client.join(roomName);
+
+    state = addPlayer()
     // client.number = 2;
     client.number = numClients + 1;
     client.emit('init', client.number);
@@ -142,7 +144,7 @@ io.on('connection', client => {gameLoop
 
     if (vel) {
       console.log("There's some vel!");
-      state[roomName].players[client.number].vel = vel;
+      state[roomName].players[client.number - 1].vel = vel;
     }
   }
 });
