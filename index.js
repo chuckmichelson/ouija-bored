@@ -112,6 +112,7 @@ function paintGame(state) {
 
 function handleInit(number) {
   console.log("made it to handleInit()")
+  let playerNumber;
   playerNumber = number;
   console.log(playerNumber)
 }
