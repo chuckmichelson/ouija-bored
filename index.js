@@ -99,9 +99,9 @@ function keyDown(e) {
 
 function paintGame(state) {
   console.log("made it to paintGame")
+  const layer2 = document.getElementById('layer2');
   const context = layer2.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  const layer2 = document.getElementById('layer2');
   const ctx2 = layer2.getContext('2d');
   document.getElementById("scoreDisplay").innerHTML = state.planchette.pos.x;
   var planchette = new Image();
