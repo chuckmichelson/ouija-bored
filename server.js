@@ -85,14 +85,12 @@ io.on('connection', client => {gameLoop
     console.log("numClients: " + numClients)
 
     if (numClients === 0) {
-      console.log("numClients = 0")
       //client.emit('unknownCode');
       handleNewGame()
       return;
     }
 
     if (numClients === 1) {
-      console.log("numClients = 1")
       //client.emit('unknownCode');
       //handleNewGame()
       return;
