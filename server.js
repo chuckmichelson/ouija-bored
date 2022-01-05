@@ -11,13 +11,14 @@ const { makeid } = require('./utils');
 
 
 
-const express = require('express');
-const app = express();
-const server = require('http').createServer(app);
-const io = require('socket.io').listen(server);
+var express = require('express');
+var app = express();
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
 
 
 
+server.listen(process.env.PORT || 3000);
 
 
 const state = {};
@@ -138,7 +139,5 @@ function emitScore(room, score) {
     .emit('gameScore', JSON.stringify(gameScore));
 }
 
-
-server.listen(process.env.PORT || 3000);
 
 io.listen(process.env.PORT || 3000);
