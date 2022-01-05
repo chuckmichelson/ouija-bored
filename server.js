@@ -142,6 +142,7 @@ io.on('connection', client => {gameLoop
 
     if (vel) {
       console.log("There's some vel!");
+      console.log("client.number: " + client.number)
       state[roomName].players[client.number].vel = vel;
     }
   }
