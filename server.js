@@ -37,7 +37,7 @@ const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
 // // const io = require('socket.io')();
-const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
+const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
 const { makeid } = require('./utils');
 
 
@@ -52,7 +52,7 @@ const { makeid } = require('./utils');
 // // });
 
 
-var state = {};
+const state = {};
 const clientRooms = {};
 
 // app.use("/api", function(req, res, next){
@@ -101,8 +101,6 @@ io.on('connection', client => {gameLoop
     console.log("roomName: " + roomName)
 
     client.join(roomName);
-
-    state = addPlayer(state)
     // client.number = 2;
     client.number = numClients + 1;
     client.emit('init', client.number);
