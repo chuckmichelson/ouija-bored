@@ -113,7 +113,7 @@ function handleInit(number) {
   console.log("made it to handleInit()")
   playerNumber = number;
   console.log(playerNumber)
-  init()
+  // init()
 }
 
 function handleGameState(gameState) {
