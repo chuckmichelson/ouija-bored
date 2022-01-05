@@ -7,8 +7,20 @@ const PLANCHETTE_HEIGHT = 120;
 
 console.log("Entering index.js")
 
-const socket = io('https://ouija-bored.herokuapp.com:12345/socket.io/socket.io.js');
+// const socket = io('https://ouija-bored.herokuapp.com:12345/socket.io/socket.io.js');
 // const socket = io.connect();
+
+const socket = socketIO('https://ouija-bored.herokuapp.com', {
+  transports: ['websocket'],
+  jsonp: false
+});
+socket.connect();
+socket.on('connect', () => {
+  console.log('connected to socket server');
+});
+socket.emit('onsenddata', 'Hello from client to server');
+
+
 
 socket.on('init', handleInit);
 socket.on('gameState', handleGameState);
