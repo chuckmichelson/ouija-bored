@@ -141,8 +141,8 @@ io.on('connection', client => {gameLoop
     const vel = getUpdatedVelocity(keyCode);
 
     if (vel) {
-      console.log("There's some vel: " + vel)
-      state[roomName].players[client.number].vel = vel;
+      console.log("There's some vel!");
+      state[roomName].players[client.number - 1].vel = vel;
     }
   }
 });
