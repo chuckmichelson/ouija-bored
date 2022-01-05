@@ -165,7 +165,7 @@ function startGameInterval(roomName) {
 
 function emitGameState(room, gameState) {
   // Send this event to everyone in the room.
-  console.log("made it to emitGameState")
+  // console.log("made it to emitGameState")
   io.sockets.in(room)
     .emit('gameState', JSON.stringify(gameState));
 }
