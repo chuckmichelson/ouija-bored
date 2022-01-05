@@ -162,6 +162,7 @@ function startGameInterval(roomName) {
   }, 1000 / FRAME_RATE);
 }
 
+
 function emitGameState(room, gameState) {
   // Send this event to everyone in the room.
   console.log("made it to emitGameState")
