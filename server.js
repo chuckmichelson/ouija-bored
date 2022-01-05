@@ -52,7 +52,7 @@ const { makeid } = require('./utils');
 // // });
 
 
-const state = {};
+var state = {};
 const clientRooms = {};
 
 // app.use("/api", function(req, res, next){
@@ -102,6 +102,9 @@ io.on('connection', client => {gameLoop
 
     client.join(roomName);
     // client.number = 2;
+
+    state = AddPlayer(state)
+
     client.number = numClients + 1;
     client.emit('init', client.number);
 
@@ -143,7 +146,7 @@ io.on('connection', client => {gameLoop
     if (vel) {
       console.log("There's some vel!");
       console.log("client.number: " + client.number)
-      state[roomName].players[client.number].vel = vel;
+      state[roomName].players[client.number - 1].vel = vel;
     }
   }
 });
