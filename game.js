@@ -46,6 +46,7 @@ function createGameState() {
 
 function gameLoop(state) {
   console.log("made it to gameLoop")
+  console.log(state.planchette.pos.x)
   if (!state) {
     return;
   }
