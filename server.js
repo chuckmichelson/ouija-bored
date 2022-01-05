@@ -37,8 +37,8 @@ const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
 // // const io = require('socket.io')();
-// const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
-// const { makeid } = require('./utils');
+const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
+const { makeid } = require('./utils');
 
 
 // const express = require('express')
