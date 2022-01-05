@@ -1,7 +1,7 @@
 //Load HTTP module
 const http = require("http");
 const hostname = '127.0.0.1';
-const port = 3000;
+const PORT = 3000;
 
 //Create HTTP server and listen on port 3000 for requests
 const server = http.createServer((req, res) => {
@@ -13,15 +13,15 @@ const server = http.createServer((req, res) => {
 });
 
 //listen for request on port 3000, and as a callback function have the port listened on logged
-server.listen(port, hostname, () => {
+server.listen(PORT, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
 
 
-
-
 const io = require('socket.io')();
 
+
+// hello world test
 io.on('connection', client => {
   client.emit('init', { data : 'hello world' });
 });
@@ -30,17 +30,11 @@ io.on('connection', client => {
 io.listen(3000);
 
 
-
-
-
-
-
-
-// const { FRAME_RATE } = require('./constants');
-// const CANVAS_WIDTH = 838;
-// const CANVAS_HEIGHT = 554;
-// const PLANCHETTE_WIDTH = 120;
-// const PLANCHETTE_HEIGHT = 120;
+const { FRAME_RATE } = require('./constants');
+const CANVAS_WIDTH = 838;
+const CANVAS_HEIGHT = 554;
+const PLANCHETTE_WIDTH = 120;
+const PLANCHETTE_HEIGHT = 120;
 
 // // const io = require('socket.io')();
 // const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
@@ -68,120 +62,120 @@ io.listen(3000);
 //     next();
 // });
 
-// io.on('connection', client => {gameLoop
+io.on('connection', client => {gameLoop
 
-//   console.log(socket.connected); // prints "true"
-//   client.on('keydown', handleKeydown);
-//   client.on('newGame', handleNewGame);
-//   client.on('joinGame', handleJoinGame);
+  console.log(socket.connected); // prints "true"
+  client.on('keydown', handleKeydown);
+  client.on('newGame', handleNewGame);
+  client.on('joinGame', handleJoinGame);
 
-//   function handleJoinGame(roomName) {
-//     console.log("made it to handleJoinGame")
-//     const room = io.sockets.adapter.rooms[roomName];
+  function handleJoinGame(roomName) {
+    console.log("made it to handleJoinGame")
+    const room = io.sockets.adapter.rooms[roomName];
 
-//     let allUsers;
-//     if (room) {
-//       allUsers = room.sockets;
-//     }
+    let allUsers;
+    if (room) {
+      allUsers = room.sockets;
+    }
 
-//     let numClients = 0;
-//     if (allUsers) {
-//       numClients = Object.keys(allUsers).length;
-//     }
-//     console.log("counted numClients")
+    let numClients = 0;
+    if (allUsers) {
+      numClients = Object.keys(allUsers).length;
+    }
+    console.log("counted numClients")
 
-//     if (numClients === 0) {
-//       console.log("numClients = 0")
-//       //client.emit('unknownCode');
-//       handleNewGame()
-//       return;
-//     }
+    if (numClients === 0) {
+      console.log("numClients = 0")
+      //client.emit('unknownCode');
+      handleNewGame()
+      return;
+    }
 
-//     if (numClients === 1) {
-//       console.log("numClients = 1")
-//       //client.emit('unknownCode');
-//       //handleNewGame()
-//       return;
-//     }
+    if (numClients === 1) {
+      console.log("numClients = 1")
+      //client.emit('unknownCode');
+      //handleNewGame()
+      return;
+    }
 
-//     clientRooms[client.id] = roomName;
+    clientRooms[client.id] = roomName;
 
-//     client.join(roomName);
-//     // client.number = 2;
-//     client.number = 2;
-//     client.emit('init', 2);
+    client.join(roomName);
+    // client.number = 2;
+    client.number = 2;
+    client.emit('init', 2);
 
-//     startGameInterval(roomName);
-//   }
+    startGameInterval(roomName);
+  }
 
-//   function handleNewGame() {
-//     console.log("made it to handleNewGame")
-//     // let roomName = makeid(5);
-//     let roomName = 'AAAAA';
-//     clientRooms[client.id] = roomName;
-//     client.emit('gameCode', roomName);
+  function handleNewGame() {
+    console.log("made it to handleNewGame")
+    // let roomName = makeid(5);
+    let roomName = 'AAAAA';
+    clientRooms[client.id] = roomName;
+    client.emit('gameCode', roomName);
 
-//     state[roomName] = initGame();
+    state[roomName] = initGame();
 
-//     client.join(roomName);
-//     client.number = 1;
-//     client.emit('init', 1);
-//   }
+    client.join(roomName);
+    client.number = 1;
+    client.emit('init', 1);
+  }
 
-//   function handleKeydown(keyCode) {
-//     console.log("made it to handleKeydown")
-//     const roomName = clientRooms[client.id];
-//     if (!roomName) {
-//       return;
-//     }
-//     try {
-//       keyCode = parseInt(keyCode);
-//     } catch(e) {
-//       console.error(e);
-//       return;
-//     }
+  function handleKeydown(keyCode) {
+    console.log("made it to handleKeydown")
+    const roomName = clientRooms[client.id];
+    if (!roomName) {
+      return;
+    }
+    try {
+      keyCode = parseInt(keyCode);
+    } catch(e) {
+      console.error(e);
+      return;
+    }
 
-//     const vel = getUpdatedVelocity(keyCode);
+    const vel = getUpdatedVelocity(keyCode);
 
-//     if (vel) {
-//       state[roomName].players[client.number - 1].vel = vel;
-//     }
-//   }
-// });
+    if (vel) {
+      state[roomName].players[client.number - 1].vel = vel;
+    }
+  }
+});
 
-// function startGameInterval(roomName) {
-//   console.log("made it to startGameInterval")
-//   const intervalId = setInterval(() => {
-//     const winner = gameLoop(state[roomName]);
+function startGameInterval(roomName) {
+  console.log("made it to startGameInterval")
+  const intervalId = setInterval(() => {
+    const winner = gameLoop(state[roomName]);
 
-//     if (!winner) {
-//       emitGameState(roomName, state[roomName])
-//       // emitScore(roomName, gameScore)
-//     } else {
-//       emitGameOver(roomName, winner);
-//       state[roomName] = null;
-//       clearInterval(intervalId);
-//     }
-//   }, 1000 / FRAME_RATE);
-// }
+    if (!winner) {
+      emitGameState(roomName, state[roomName])
+      // emitScore(roomName, gameScore)
+    } else {
+      emitGameOver(roomName, winner);
+      state[roomName] = null;
+      clearInterval(intervalId);
+    }
+  }, 1000 / FRAME_RATE);
+}
 
-// function emitGameState(room, gameState) {
-//   // Send this event to everyone in the room.
-//   console.log("made it to emitGameState")
-//   io.sockets.in(room)
-//     .emit('gameState', JSON.stringify(gameState));
-// }
+function emitGameState(room, gameState) {
+  // Send this event to everyone in the room.
+  console.log("made it to emitGameState")
+  io.sockets.in(room)
+    .emit('gameState', JSON.stringify(gameState));
+}
 
-// function emitGameOver(room, winner) {
-//   console.log("made it to emitGameOver()")
-//   io.sockets.in(room)
-//     .emit('gameOver', JSON.stringify({ winner }));
-// }
+function emitGameOver(room, winner) {
+  console.log("made it to emitGameOver()")
+  io.sockets.in(room)
+    .emit('gameOver', JSON.stringify({ winner }));
+}
 
-// function emitScore(room, score) {
-//   console.log("made it to emitScore()")
-//   io.sockets.in(room)
-//     .emit('gameScore', JSON.stringify(gameScore));
-// }
+function emitScore(room, score) {
+  console.log("made it to emitScore()")
+  io.sockets.in(room)
+    .emit('gameScore', JSON.stringify(gameScore));
+}
 
 // io.listen(process.env.PORT || 3000);
