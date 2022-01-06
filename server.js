@@ -142,7 +142,7 @@ io.on('connection', client => {gameLoop
 
     const vel = getUpdatedVelocity(keyCode);
     console.log("vel.x: " + vel.x)
-    typeof(state) == 'undefined'
+    console.log(typeof(state) == 'undefined')
 
     if (vel) {
       console.log("There's some vel!");
