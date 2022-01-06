@@ -39,7 +39,7 @@ console.log("sockets on")
 const numPlayersDisplay = document.getElementById('numPlayersDisplay');
 const scoreDisplay = document.getElementById('scoreDisplay');
 
-makeSmoke()
+// makeSmoke()
 joinGame()
 
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
