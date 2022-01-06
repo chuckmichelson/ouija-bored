@@ -57,6 +57,7 @@ function addPlayer(state) {
   for (let i = 0; i < state.players.length; i++) {
     console.log("x vel of player " + i + " : " + newPlayer.vel.x)
   }
+  return state
 
 }
 
