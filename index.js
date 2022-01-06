@@ -117,7 +117,7 @@ function keyDown(e) {
 
 function paintGame(state) {
   console.log("made it to paintGame")
-  document.getElementById("letterDisplay").innerHTML = state.letters[state.letters.length - 1];
+  // document.getElementById("letterDisplay").innerHTML = state.letters[state.letters.length - 1];
 
   const layer2 = document.getElementById('layer2');
   const context = layer2.getContext('2d');
