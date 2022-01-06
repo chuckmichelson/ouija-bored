@@ -31,12 +31,10 @@ function ouijaGoToLetter(state, letter) {
   ouijaAlphabetLength = Object.keys(OUIJA_CODES).length;
   for ( var i = 0; i < ouijaAlphabetLength - 1; i++ ) {
       if (OUIJA_CODES[i].letter === letter) {
-         xpos = OUIJA_CODES[i].x
-         ypos = OUIJA_CODES[i].y
+         state.planchette.pos.x = OUIJA_CODES[i].x
+         state.planchette.pos.y = OUIJA_CODES[i].y
       }
   }
-  state.planchette.pos.x = xpos;
-  state.planchette.pos.y = ypos;
   return state;
 }
 
