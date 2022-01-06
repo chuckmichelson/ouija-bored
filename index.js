@@ -98,7 +98,7 @@ function keyDown(e) {
 
 function paintGame(state) {
   console.log("made it to paintGame")
-  document.getElementById("letterDisplay").innerHTML = state.letters;
+  document.getElementById("letterDisplay").innerHTML = state.letters[-1];
   const layer2 = document.getElementById('layer2');
   const context = layer2.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);

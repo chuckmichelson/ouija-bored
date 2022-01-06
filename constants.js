@@ -9,8 +9,7 @@ const OUIJA_CODES = {
     1 : {letter : 'NO', x : 645, y : 87 },
     2 : {letter : 'A', x : 111, y : 276 },
     3 : {letter : 'B', x : 162, y : 246 },
-    4 : {letter : 'C', x : 216, y : 225 },
-
+    4 : {letter : 'C', x : 220, y : 226 },
 }
 
 
