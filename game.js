@@ -26,7 +26,7 @@ module.exports = {
 
 function initGame() {
   console.log("made it to initGame()")
-  const state = createGameState();
+  var state = createGameState();
   state = ouijaGoToLetter(state, 'YES');
   return state;
 }
