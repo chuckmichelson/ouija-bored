@@ -113,8 +113,7 @@ io.on('connection', client => {gameLoop
 
   function handleNewGame() {
     console.log("made it to handleNewGame")
-    // let roomName = makeid(5);
-    var roomName = 'AAAAA';
+    let roomName = makeid(5);
     clientRooms[client.id] = roomName;
     client.emit('gameCode', roomName);
 
