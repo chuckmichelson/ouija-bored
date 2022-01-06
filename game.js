@@ -78,10 +78,6 @@ function gameLoop(state) {
   }
 
   // decision rule
-  var nUP = 0
-  var nDOWN = 0
-  var nLEFT = 0
-  var nRIGHT = 0
   for (let i = 0; i < state.players.length; i++) {
     if (state.players[i].vel.x === 1 ) {
       state.planchette.pos.x += 3;
@@ -115,7 +111,7 @@ function gameLoop(state) {
   if (letter === undefined || letter === '') {
     // do nothing
   } else {
-    console.log("It's a letter! Specifically, " + letter)
+    // console.log("It's a letter! Specifically, " + letter)
     state.letters += letter;
   }
 
