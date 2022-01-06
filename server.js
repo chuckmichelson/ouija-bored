@@ -123,7 +123,7 @@ io.on('connection', client => {gameLoop
     client.number = 1;
     client.emit('init', 1);
 
-    startGameInterval(roomName);
+    startGameInterval(roomName, state);
   }
 
   function handleKeydown(keyCode) {
