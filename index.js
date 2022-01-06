@@ -195,7 +195,7 @@ function handleScore(gameScore) {
 
 function handleNumPlayers(numPlayers) {
   console.log("made it to handleNumPlayers()")
-  numPlayersDisplay.innerText = numPlayers;
+  // numPlayersDisplay.innerText = numPlayers;
 }
 
 function handleUnknownCode() {
