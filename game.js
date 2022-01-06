@@ -111,12 +111,23 @@ function gameLoop(state) {
   }
 
 
-  // if (playerOne.pos.x < 0 || playerOne.pos.x > GRID_SIZE || playerOne.pos.y < 0 || playerOne.pos.y > GRID_SIZE) {
-  //   return 2;
-  // }
+  if (planchette.pos.x < 0) {
+    planchette.pos.x = 0;
+  }
+  if (planchette.pos.x > 0CANVAS_WIDTH) {
+    planchette.pos.x = CANVAS_WIDTH;
+  }
+  if (planchette.pos.y < 0) {
+    planchette.pos.y = 0;
+  }
+  if (planchette.pos.y > CANVAS_HEIGHT) {
+    planchette.pos.x = CANVAS_HEIGHT;
+  }
+
 
   return false;
 }
+
 
 function getUpdatedVelocity(keyCode) {
   console.log("made it to getUpdatedVelocity()")
