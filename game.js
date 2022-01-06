@@ -134,7 +134,7 @@ function gameLoop(state) {
   if (letter === undefined) {
     // do nothing
   } else {
-    console.log("It's a letter!")
+    console.log("It's a letter! Specifically, " + letter)
     state.letters += letter;
   }
 
