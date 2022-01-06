@@ -103,7 +103,8 @@ io.on('connection', client => {gameLoop
     client.join(roomName);
     // client.number = 2;
 
-    // state = addPlayer(state)
+    state = addPlayer(state)
+    console.log("Just added a player - is state undefined? " + typeof(state) == 'undefined')
 
     client.number = numClients + 1;
     client.emit('init', client.number);
