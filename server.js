@@ -108,7 +108,7 @@ io.on('connection', client => {gameLoop
     client.number = numClients + 1;
     client.emit('init', client.number);
 
-    startGameInterval(roomName);
+    // startGameInterval(roomName);
   }
 
   function handleNewGame() {
