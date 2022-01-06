@@ -28,8 +28,15 @@ function ouijaGoToLetter(state, letter) {
   // for ( var i = 0; i < 100; i++ ) {
   //     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   //  }
-  state.planchette.pos.x = OUIJA_CODES[letter].x;
-  state.planchette.pos.y = OUIJA_CODES[letter].y;
+  ouijaAlphabetLength = Object.keys(OUIJA_CODES).length;
+  for ( var i = 0; i < ouijaAlphabetLength - 1; i++ ) {
+      if (OUIJA_CODES[i].letter === letter) {
+         xpos = OUIJA_CODES[i].x
+         ypos = OUIJA_CODES[i].y
+      }
+  }
+  state.planchette.pos.x = xpos;
+  state.planchette.pos.y = ypos;
   return state;
 }
 
