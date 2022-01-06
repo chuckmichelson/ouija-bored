@@ -103,7 +103,7 @@ io.on('connection', client => {gameLoop
     client.join(roomName);
     // client.number = 2;
 
-    state = addPlayer(state)
+    // state = addPlayer(state)
 
     client.number = numClients + 1;
     client.emit('init', client.number);
