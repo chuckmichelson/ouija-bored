@@ -131,7 +131,9 @@ function gameLoop(state) {
   }
 
   var letter = ouijaGetLetter(state);
-  console.log(letter)
+  if (letter != '') {
+    console.log(letter)
+  }
 
   return false;
 }
