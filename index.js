@@ -45,7 +45,7 @@ joinGame()
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
 // joinGameBtn.addEventListener('click', newGame);
 
-smokeBtn.addEventListener('click', makeSmoke);
+// smokeBtn.addEventListener('click', makeSmoke);
 
 const layer_letters = document.getElementById('layer_letters');
 const context_letters = layer_letters.getContext('2d');
