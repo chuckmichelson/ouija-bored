@@ -53,9 +53,12 @@ function ouijaGetLetter(state) {
       distance = Math.sqrt(Math.pow(codx - posx, 2) + Math.pow(cody - posy, 2));
       console.log(distance);
       if (distance <= 15) {
-         letter = OUIJA_CODES[i].letter;
+         letter = { OUIJA_CODES[i].letter };
          console.log('Your letter is: ' + letter);
       }
+   }
+   if (posy >= 494 && posx >= 280 && posx <= 562) {
+      letter = { 'GOODBYE' };
    }
    return letter;
 
