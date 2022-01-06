@@ -40,6 +40,7 @@ const numPlayersDisplay = document.getElementById('numPlayersDisplay');
 const scoreDisplay = document.getElementById('scoreDisplay');
 
 // makeSmoke()
+document.body.style.backgroundColor = "black";
 joinGame()
 
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
