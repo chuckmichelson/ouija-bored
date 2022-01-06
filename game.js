@@ -131,7 +131,7 @@ function gameLoop(state) {
   }
 
   var letter = ouijaGetLetter(state);
-  if (letter === undefined) {
+  if (letter === undefined || letter === '') {
     // do nothing
   } else {
     console.log("It's a letter! Specifically, " + letter)
