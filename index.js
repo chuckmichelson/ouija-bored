@@ -47,6 +47,10 @@ document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
 
 smokeBtn.addEventListener('click', makeSmoke);
 
+const layer_letters = document.getElementById('layer_letters');
+const context_letters = layer_letters.getContext('2d');
+context_letters.clearRect(0, 0, 838, 48);
+
 function makeSmoke() {
   const layer_smoke = document.getElementById('layer_smoke');
   const context_smoke = layer_smoke.getContext('2d');
