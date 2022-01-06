@@ -42,6 +42,7 @@ function ouijaGetLetter(state) {
    posy = state.planchette.pos.y;
 
    for ( var i = 0; i < 3; i++ ) {
+      console.log(i)
       codx = OUIJA_CODES[i].x;
       cody = OUIJA_CODES[i].y;
       distance = Math.sqrt(Math.pow(codx - posx, 2) + Math.pow(cody - posx, 2));
