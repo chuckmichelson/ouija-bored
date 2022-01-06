@@ -27,7 +27,8 @@ const io = require('socket.io')();
 // });
 
 
-io.listen(3000);
+// io.listen(3000);
+io.listen(process.env.PORT || 3000);
 
 
 const { FRAME_RATE } = require('./constants');
@@ -190,4 +191,4 @@ function emitScore(room, score) {
     .emit('gameScore', JSON.stringify(gameScore));
 }
 
-// io.listen(process.env.PORT || 3000);
+
