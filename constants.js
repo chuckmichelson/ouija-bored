@@ -15,6 +15,10 @@ const OUIJA_CODES = {
     7 : {letter : 'F', x : 364, y : 193 },
     8 : {letter : 'G', x : 418, y : 190 },
     9 : {letter : 'H', x : 472, y : 190 },
+    10 : {letter : 'I', x : 523, y : 199 },
+    11 : {letter : 'J', x : 562, y : 205 },
+    12 : {letter : 'K', x : 613, y : 220 },
+    13 : {letter : 'L', x : 662, y : 238 },
 }
 
 
