@@ -12,6 +12,7 @@ const PLANCHETTE_HEIGHT = 120;
 
 const { makeid } = require('./utils');
 const { ouijaGoToLetter } = require('./utils');
+const { ouijaGetLetter } = require('./utils');
 
 
 module.exports = {
@@ -129,6 +130,8 @@ function gameLoop(state) {
     state.planchette.pos.y = CANVAS_HEIGHT - PLANCHETTE_WIDTH / 2;
   }
 
+  var letter = ouijaGetLetter(state);
+  console.log(letter)
 
   return false;
 }

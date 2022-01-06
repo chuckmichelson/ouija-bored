@@ -5,6 +5,7 @@ const { OUIJA_CODES } = require('./constants');
 module.exports = {
   makeid,
   ouijaGoToLetter,
+  ouijaGetLetter,
 }
 
 function makeid(length) {
@@ -30,4 +31,15 @@ function ouijaGoToLetter(state, letter) {
   state.planchette.pos.x = OUIJA_CODES[letter].x;
   state.planchette.pos.y = OUIJA_CODES[letter].y;
   return state;
+}
+
+function ouijaGetLetter(state) {
+   letter = '';
+   for ( var i = 0; i < OUIJA_CODES.length; i++ ) {
+      distance = Math.sqrt(Math.pow(OUIJA_CODES[i].x, 2) + Math.pow(OUIJA_CODES[i].y, 2));
+      if (distance <= 10) {
+         letter = OUIJA_CODES[i];
+      }
+   }
+
 }
