@@ -78,7 +78,7 @@ function gameLoop(state) {
   // decision rule
   size = Object.keys([state.players]).length
   console.log("decision rule size: " + size)
-  for (let i = 0; i < state.players.length; i++) {
+  for (let i = 0; i < size; i++) {
     if (state.players[i].x === 1 ) {
       state.planchette.pos.x += 3;
     }
