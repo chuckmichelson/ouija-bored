@@ -109,10 +109,10 @@ function paintGame(state) {
   ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 
   const letters_layer = document.getElementById('letters');
-  const context = letters_layer.getContext('2d');
-  context.clearRect(0, 0, 838, 48);
+  const letters_context = letters_layer.getContext('2d');
+  letters_context.clearRect(0, 0, 838, 48);
   const smokey_layer = document.getElementById('smoke');
-  const ctx2 = smokey_layer.getContext('2d');
+  const smokey_context = smokey_layer.getContext('2d');
   var smoke = new Image();
   smoke.src = "images/smoke.gif";
   ctx2.drawImage(smoke, 0, 100);
