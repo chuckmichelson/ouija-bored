@@ -7,6 +7,9 @@ const PLANCHETTE_HEIGHT = 120;
 const OUIJA_CODES = {
     'YES' : { x : 204, y : 87 },
     'NO' : { x : 645, y : 87 },
+    'A' : { x : 111, y : 276 },
+    'B' : { x : 162, y : 246 },
+    'C' : { x : 216, y : 225 },
 }
 
 
