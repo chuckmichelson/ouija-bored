@@ -146,7 +146,7 @@ io.on('connection', client => {gameLoop
       console.log("***** state is undefined")
     }
 
-    if (vel) {
+    if (vel && typeof(state) == 'undefined') {
       console.log("There's some vel!");
       console.log("client.number: " + client.number)
       state[roomName].players[client.number - 1].vel = vel;
