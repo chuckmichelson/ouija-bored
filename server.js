@@ -108,7 +108,7 @@ io.on('connection', client => {gameLoop
     client.number = numClients + 1;
     client.emit('init', client.number);
 
-    // startGameInterval(roomName);
+    startGameInterval(roomName, state);
   }
 
   function handleNewGame() {
@@ -150,7 +150,7 @@ io.on('connection', client => {gameLoop
   }
 });
 
-function startGameInterval(roomName) {
+function startGameInterval(roomName, state) {
   console.log("made it to startGameInterval")
   const intervalId = setInterval(() => {
     const winner = gameLoop(state[roomName]);
