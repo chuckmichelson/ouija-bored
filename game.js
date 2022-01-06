@@ -56,9 +56,9 @@ function addPlayer(state) {
   console.log("made it to addPlayer ****************************")
   size = Object.keys([state.players]).length
   console.log("add player size: " + size)  // state.players[size + 1] = { x: 0, y: 0 };
-  state.players[size] = {};
-  state.players[size].x = 0;
-  state.players[size].y = 0;
+  state.players[Stringify(size + 1)] = {};
+  state.players[Stringify(size + 1)].x = 0;
+  state.players[Stringify(size + 1)].y = 0;
   size = Object.keys([state.players]).length
   console.log("add player size: " + size)  // state.players[size + 1] = { x: 0, y: 0 };
 
