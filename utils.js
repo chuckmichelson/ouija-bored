@@ -46,7 +46,7 @@ function ouijaGetLetter(state) {
    posx = state.planchette.pos.x;
    posy = state.planchette.pos.y;
 
-   for ( var i = 0; i < ouijaAlphabetLength - 1; i++ ) {
+   for ( var i = 0; i < ouijaAlphabetLength; i++ ) {
       console.log(i)
       codx = OUIJA_CODES[i].x;
       cody = OUIJA_CODES[i].y;
