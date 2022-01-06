@@ -117,11 +117,11 @@ function gameLoop(state) {
   if (state.planchette.pos.x > CANVAS_WIDTH - PLANCHETTE_WIDTH / 2) {
     state.planchette.pos.x = CANVAS_WIDTH - PLANCHETTE_WIDTH / 2;
   }
-  if (state.planchette.pos.y < 0) {
-    state.planchette.pos.y = 0;
+  if (state.planchette.pos.y < 0 + PLANCHETTE_WIDTH / 2) {
+    state.planchette.pos.y = 0 + PLANCHETTE_WIDTH / 2;
   }
-  if (state.planchette.pos.y > CANVAS_HEIGHT) {
-    state.planchette.pos.y = CANVAS_HEIGHT;
+  if (state.planchette.pos.y > CANVAS_HEIGHT - PLANCHETTE_WIDTH / 2) {
+    state.planchette.pos.y = CANVAS_HEIGHT - PLANCHETTE_WIDTH / 2;
   }
 
 
