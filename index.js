@@ -99,15 +99,24 @@ function keyDown(e) {
 function paintGame(state) {
   console.log("made it to paintGame")
   document.getElementById("letterDisplay").innerHTML = state.letters[state.letters.length - 1];
+
   const layer2 = document.getElementById('layer2');
   const context = layer2.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   const ctx2 = layer2.getContext('2d');
-  // document.getElementById("XcoordDisplay").innerHTML = state.planchette.pos.x;
-  // document.getElementById("YcoordDisplay").innerHTML = state.planchette.pos.y;
   var planchette = new Image();
   planchette.src = "images/planchette.png";
   ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
+
+  const letters_layer = document.getElementById('letters');
+  const context = letters_layer.getContext('2d');
+  context.clearRect(0, 0, 838, 48);
+  const smokey_layer = document.getElementById('smoke');
+  const ctx2 = smokey_layer.getContext('2d');
+  var smoke = new Image();
+  smoke.src = "images/smoke.gif";
+  ctx2.drawImage(smoke, 0, 100);
+
 }
 
 function handleInit(number) {
