@@ -111,17 +111,17 @@ function gameLoop(state) {
   }
 
 
-  if (planchette.pos.x < 0) {
-    planchette.pos.x = 0;
+  if (state.planchette.pos.x < 0) {
+    state.planchette.pos.x = 0;
   }
-  if (planchette.pos.x > CANVAS_WIDTH) {
-    planchette.pos.x = CANVAS_WIDTH;
+  if (state.planchette.pos.x > CANVAS_WIDTH) {
+    state.planchette.pos.x = CANVAS_WIDTH;
   }
-  if (planchette.pos.y < 0) {
-    planchette.pos.y = 0;
+  if (state.planchette.pos.y < 0) {
+    state.planchette.pos.y = 0;
   }
-  if (planchette.pos.y > CANVAS_HEIGHT) {
-    planchette.pos.x = CANVAS_HEIGHT;
+  if (state.planchette.pos.y > CANVAS_HEIGHT) {
+    state.planchette.pos.x = CANVAS_HEIGHT;
   }
 
 
