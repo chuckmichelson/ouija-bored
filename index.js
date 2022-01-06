@@ -49,7 +49,9 @@ smokeBtn.addEventListener('click', makeSmoke);
 
 const layer_letters = document.getElementById('layer_letters');
 const context_letters = layer_letters.getContext('2d');
-context_letters.clearRect(0, 0, 838, 48);
+context_letters.fillStyle = 'black';
+context_letters.fillRect(0, 0, 838, 48);
+
 
 function makeSmoke() {
   const layer_smoke = document.getElementById('layer_smoke');
