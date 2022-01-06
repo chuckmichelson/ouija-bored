@@ -35,14 +35,26 @@ console.log("sockets on")
 // const joinGameBtn = document.getElementById('joinGameButton');
 // const gameCodeInput = document.getElementById('gameCodeInput');
 // const gameCodeDisplay = document.getElementById('gameCodeDisplay');
+const smokeBtn = document.getElementById('smoke');
 const numPlayersDisplay = document.getElementById('numPlayersDisplay');
 const scoreDisplay = document.getElementById('scoreDisplay');
 
-
+makeSmoke()
 joinGame()
 
 document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
 // joinGameBtn.addEventListener('click', newGame);
+smokeBtn.addEventListener('click', makeSmoke);
+
+function makeSmoke() {
+  const layer_smoke = document.getElementById('layer_smoke');
+  const context_smoke = layer_smoke.getContext('2d');
+  context_smoke.clearRect(0, 0, 838, 48);
+  const ctx_smoke = layer_smoke.getContext('2d');
+  var smoke = new Image();
+  smoke.src = "images/smoke.gif";
+  ctx_smoke.drawImage(smoke,100, 0);
+}
 
 function newGame() {
   console.log("made it to NewGame")
