@@ -114,7 +114,7 @@ function gameLoop(state) {
   if (planchette.pos.x < 0) {
     planchette.pos.x = 0;
   }
-  if (planchette.pos.x > 0CANVAS_WIDTH) {
+  if (planchette.pos.x > CANVAS_WIDTH) {
     planchette.pos.x = CANVAS_WIDTH;
   }
   if (planchette.pos.y < 0) {
