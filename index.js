@@ -190,7 +190,7 @@ function handleGameCode(gameCode) {
 
 function handleScore(gameScore) {
   console.log("made it to handleScore()")
-  scoreDisplay.innerText = gameScore;
+  // scoreDisplay.innerText = gameScore;
 }
 
 function handleNumPlayers(numPlayers) {
