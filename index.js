@@ -39,11 +39,12 @@ const smokeBtn = document.getElementById('smokeBtn');
 const numPlayersDisplay = document.getElementById('numPlayersDisplay');
 const scoreDisplay = document.getElementById('scoreDisplay');
 
-makeSmoke()
+// makeSmoke()
 // joinGame()
 
 document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
 // joinGameBtn.addEventListener('click', newGame);
+
 smokeBtn.addEventListener('click', makeSmoke);
 
 function makeSmoke() {
@@ -119,6 +120,14 @@ function paintGame(state) {
   var planchette = new Image();
   planchette.src = "images/planchette.png";
   ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
+
+  // const context_letters = document.getElementById('context_letters');
+  // const context = context_letters.getContext('2d');
+  // context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  // const ctx2 = context_letters.getContext('2d');
+  // var planchette = new Image();
+  // planchette.src = "images/smoke.png";
+  // ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 
   // const letters_layer = document.getElementById('letters');
   // const letters_context = letters_layer.getContext('2d');
