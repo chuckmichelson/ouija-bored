@@ -149,7 +149,7 @@ io.on('connection', client => {gameLoop
       console.log("vel.x: " + vel.x)
       console.log(typeof(state) == 'undefined')
       console.log("Player 1 Vel: " + state[roomName].players[0].vel.x)
-      state[roomName].players[client.number - 1].vel = vel;
+      state[roomName].players[client.number - 1].vel.x = vel.x;
     }
   }
 });
