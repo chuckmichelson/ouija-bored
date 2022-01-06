@@ -53,19 +53,19 @@ function createGameState() {
 
 function addPlayer(state) {
   console.log("made it to addPlayer ****************************")
-  // console.log(state.players.vel.x)
-  // newPlayer = {
-  //     vel: {
-  //       x: 0,
-  //       y: 0,
-  //     }
-  // };
-  // size = Object.keys([state.players]).length
-  // console.log("size: " + size)
-  // state.players[size + 1] = { vel: { x: 0, y: 0 } }
-  // for (let i = 0; i < size; i++) {
-  //   console.log("x vel of player " + i + " : " + state.players[i].vel.x)
-  // }
+  console.log(state.players.vel.x)
+  newPlayer = {
+      vel: {
+        x: 0,
+        y: 0,
+      }
+  };
+  size = Object.keys([state.players]).length
+  console.log("size: " + size)
+  state.players[size] = { vel: { x: 0, y: 0 } }
+  for (let i = 0; i < size; i++) {
+    console.log("x vel of player " + i + " : " + state.players[i].vel.x)
+  }
   return state;
 
 }

@@ -93,11 +93,7 @@ io.on('connection', client => {gameLoop
     console.log("roomName: " + roomName)
 
     client.join(roomName);
-    // client.number = 2;
-
     state = addPlayer(state)
-    console.log("*** Just added a player - is state undefined? " + typeof(state) == 'undefined')
-
     client.number = numClients + 1;
     client.emit('init', client.number);
 
@@ -136,7 +132,6 @@ io.on('connection', client => {gameLoop
     const vel = getUpdatedVelocity(keyCode);
 
     if (vel) {
-      console.log("There's some vel!");
       console.log("client.number: " + client.number)
       console.log("vel.x: " + vel.x)
       console.log(typeof(state) == 'undefined')
