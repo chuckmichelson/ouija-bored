@@ -13,23 +13,13 @@ const server = http.createServer((req, res) => {
 });
 
 //listen for request on port 3000, and as a callback function have the port listened on logged
+io.listen(process.env.PORT || 3000);
 server.listen(PORT, hostname, () => {
   console.log(`Server running at http://${hostname}:${PORT}/`);
 });
 
 
 const io = require('socket.io')();
-
-
-// // hello world test
-// io.on('connection', client => {
-//   client.emit('init', { data : 'hello world' });
-// });
-
-
-// io.listen(3000);
-io.listen(process.env.PORT || 3000);
-
 
 const { FRAME_RATE } = require('./constants');
 const CANVAS_WIDTH = 838;
@@ -150,8 +140,8 @@ io.on('connection', client => {gameLoop
       console.log("vel.x: " + vel.x)
       console.log(typeof(state) == 'undefined')
       console.log("Player 1 Vel: " + state[roomName].players[0].vel.x)
-      state[roomName].players[1].vel.x = { vel.x };
-      state[roomName].players[1].vel.y = { vel.y };
+      state[roomName].players[0].vel.x = vel.x;
+      state[roomName].players[0].vel.y = vel.y;
     }
   }
 });
