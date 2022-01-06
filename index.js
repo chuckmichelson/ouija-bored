@@ -103,8 +103,8 @@ function paintGame(state) {
   const context = layer2.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   const ctx2 = layer2.getContext('2d');
-  document.getElementById("XcoordDisplay").innerHTML = state.planchette.pos.x;
-  document.getElementById("YcoordDisplay").innerHTML = state.planchette.pos.y;
+  // document.getElementById("XcoordDisplay").innerHTML = state.planchette.pos.x;
+  // document.getElementById("YcoordDisplay").innerHTML = state.planchette.pos.y;
   var planchette = new Image();
   planchette.src = "images/planchette.png";
   ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
