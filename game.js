@@ -47,7 +47,7 @@ function createGameState() {
         y: 100,
       }
     },
-    letters: "",
+    letters: {},
   };
 }
 
@@ -131,11 +131,12 @@ function gameLoop(state) {
   }
 
   var letter = ouijaGetLetter(state);
+
   if (letter === undefined || letter === '') {
     // do nothing
   } else {
     console.log("It's a letter! Specifically, " + letter)
-    state.letters += letter;
+    state.letters += { letter };
   }
 
 
