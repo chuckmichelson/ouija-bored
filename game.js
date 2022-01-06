@@ -46,7 +46,7 @@ function createGameState() {
 }
 
 function addPlayer(state) {
-  console.log("made it to addPlayer")
+  console.log("made it to addPlayer ****************************")
   newPlayer = [{
       vel: {
         x: 0,
@@ -54,6 +54,7 @@ function addPlayer(state) {
       },
     },]
   state.players += newPlayer
+  console.log("number of players: " + state.players.length)
 }
 
 function gameLoop(state) {
