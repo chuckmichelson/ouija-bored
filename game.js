@@ -57,6 +57,7 @@ function addPlayer(state) {
   size = Object.keys([state.players]).length
   console.log("size: " + size)
   // state.players[size + 1] = { x: 0, y: 0 };
+  state.players[size + 1] = {};
   state.players[size + 1].x = 0;
   state.players[size + 1].y = 0;
 
