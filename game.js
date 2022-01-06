@@ -47,12 +47,12 @@ function createGameState() {
 
 function addPlayer(state) {
   console.log("made it to addPlayer ****************************")
-  newPlayer = [{
+  newPlayer = {
       vel: {
         x: 0,
         y: 0,
       },
-    },]
+    },
   state.players += newPlayer
   console.log("vel of new players: " + newPlayer.vel.x)
 }
