@@ -41,8 +41,8 @@ function ouijaGoToLetter(state, letter) {
 function ouijaGetLetter(state) {
    letter = '';
    ouijaAlphabetLength = Object.keys(OUIJA_CODES).length;
-   console.log("ouijaAlphabetLength: " + ouijaAlphabetLength);
-   console.log("state.planchette.pos.x: " + state.planchette.pos.x);
+   // console.log("ouijaAlphabetLength: " + ouijaAlphabetLength);
+   // console.log("state.planchette.pos.x: " + state.planchette.pos.x);
    posx = state.planchette.pos.x;
    posy = state.planchette.pos.y;
 
@@ -54,7 +54,7 @@ function ouijaGetLetter(state) {
       // console.log(distance);
       if (distance <= 15) {
          letter = OUIJA_CODES[i].letter;
-         console.log('Your letter is: ' + letter);
+         // console.log('Your letter is: ' + letter);
       }
    }
    if (posy >= 494 && posx >= 280 && posx <= 562) {
