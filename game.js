@@ -135,8 +135,8 @@ function gameLoop(state) {
     // do nothing
   } else {
     state.letters += letter;
-    }
   }
+
 
   return false;
 }
