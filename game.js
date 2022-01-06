@@ -47,7 +47,7 @@ function createGameState() {
 
 function addPlayer(state) {
   console.log("made it to addPlayer ****************************")
-  state.players.push([{vel : { x: 0, y : 0, }}]);
+  state.players += [{vel : { x: 0, y : 0, }}];
   // newPlayer = {
   //     vel: {
   //       x: 0,
