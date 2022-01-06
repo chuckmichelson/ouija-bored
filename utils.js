@@ -38,6 +38,7 @@ function ouijaGetLetter(state) {
    // console.log(OUIJA_CODES.length)
    for ( var i = 0; i < OUIJA_CODES.length; i++ ) {
       distance = Math.sqrt(Math.pow(OUIJA_CODES[i].x - state.planchette.pos.x, 2) + Math.pow(OUIJA_CODES[i].y - state.planchette.pos.y, 2));
+      console.log(distance)
       if (distance <= 10) {
          letter = OUIJA_CODES[i];
          console.log('Your letter is: ' + letter)
