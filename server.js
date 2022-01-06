@@ -142,12 +142,12 @@ io.on('connection', client => {gameLoop
     }
 
     const vel = getUpdatedVelocity(keyCode);
-    console.log("vel.x: " + vel.x)
-    console.log(typeof(state) == 'undefined')
 
     if (vel) {
       console.log("There's some vel!");
       console.log("client.number: " + client.number)
+      console.log("vel.x: " + vel.x)
+      console.log(typeof(state) == 'undefined')
       state[roomName].players[client.number - 1].vel = vel;
     }
   }
