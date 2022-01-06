@@ -51,7 +51,7 @@ function addPlayer(state) {
       vel: {
         x: 0,
         y: 0,
-      },
+      }
   };
   state.players += newPlayer
   console.log("state.players.length: " + state.players.length)
