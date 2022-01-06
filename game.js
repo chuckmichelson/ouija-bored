@@ -34,13 +34,14 @@ function initGame() {
 
 function createGameState() {
   console.log("made it to createGameState")
+
+var alerts = {
+    1: {app:'helloworld',message:'message'},
+    2: {app:'helloagain',message:'another message'}
+}
+
   return {
-    players: [{
-      vel: {
-        x: 0,
-        y: 0,
-      },
-    },],
+    players: { 1: { x : 0, y : 0} },
     planchette: {
       pos: {
         x: 100,
@@ -53,15 +54,9 @@ function createGameState() {
 
 function addPlayer(state) {
   console.log("made it to addPlayer ****************************")
-  newPlayer = {
-      vel: {
-        x: 0,
-        y: 0,
-      }
-  };
   size = Object.keys([state.players]).length
   console.log("size: " + size)
-  state.players[0] = { vel: { x: 0, y: 0 } }
+  state.players[size + 1] = { x: 0, y: 0 }
   // for (let i = 0; i < size; i++) {
   //   console.log("x vel of player " + i + " : " + state.players[i].vel.x)
   // }
@@ -78,16 +73,16 @@ function gameLoop(state) {
 
   // decision rule
   for (let i = 0; i < state.players.length; i++) {
-    if (state.players[i].vel.x === 1 ) {
+    if (state.players[i].x === 1 ) {
       state.planchette.pos.x += 3;
     }
-    if (state.players[i].vel.x === -1 ) {
+    if (state.players[i].x === -1 ) {
       state.planchette.pos.x += -3;
     }
-    if (state.players[i].vel.y === 1 ) {
+    if (state.players[i].y === 1 ) {
       state.planchette.pos.y += 3;
     }
-    if (state.players[i].vel.y === -1 ) {
+    if (state.players[i].y === -1 ) {
       state.planchette.pos.y += -3;
     }
   }
