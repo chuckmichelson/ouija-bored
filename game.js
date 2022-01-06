@@ -77,16 +77,16 @@ function gameLoop(state) {
   numPlayers = Object.keys([state.players]).length;
   console.log("decision rule numPlayers: " + numPlayers)
   for (let i = 0; i < numPlayers; i++) {
-    if (state.players[i+1].x === 1 ) {
+    if (state.players[i].x === 1 ) {
       state.planchette.pos.x += 3;
     }
-    if (state.players[i+1].x === -1 ) {
+    if (state.players[i].x === -1 ) {
       state.planchette.pos.x += -3;
     }
-    if (state.players[i+1].y === 1 ) {
+    if (state.players[i].y === 1 ) {
       state.planchette.pos.y += 3;
     }
-    if (state.players[i+1].y === -1 ) {
+    if (state.players[i].y === -1 ) {
       state.planchette.pos.y += -3;
     }
   }
