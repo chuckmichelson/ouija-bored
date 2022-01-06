@@ -5,11 +5,12 @@ const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
 const OUIJA_CODES = {
-    'YES' : { x : 204, y : 87 },
-    'NO' : { x : 645, y : 87 },
-    'A' : { x : 111, y : 276 },
-    'B' : { x : 162, y : 246 },
-    'C' : { x : 216, y : 225 },
+    0 : {letter : 'YES', x : 204, y : 87 },
+    1 : {letter : 'NO', x : 645, y : 87 },
+    2 : {letter : 'A', x : 111, y : 276 },
+    3 : {letter : 'B', x : 162, y : 246 },
+    4 : {letter : 'C', x : 216, y : 225 },
+
 }
 
 
