@@ -113,6 +113,7 @@ function handleInit(number) {
   console.log("made it to handleInit()")
   playerNumber = number;
   console.log(playerNumber)
+  document.getElementById("numPlayersDisplay").innerHTML = playerNumber;
   init()
 }
 
