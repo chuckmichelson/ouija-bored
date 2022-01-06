@@ -1,4 +1,5 @@
 const { FRAME_RATE } = require('./constants');
+const { OUIJA_CODES } = require('./constants');
 
 
 module.exports = {
