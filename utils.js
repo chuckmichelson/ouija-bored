@@ -21,10 +21,10 @@ function makeid(length) {
 
 function ouijaGoToLetter(state, letter) {
   console.log("made it to ouijaGoToLetter")
-  xstart = state.planchette.pos.x;
-  xend = OUIJA_CODES[letter].x;
-  ystart = state.planchette.pos.y;
-  yend = OUIJA_CODES[letter].y;
+  // xstart = state.planchette.pos.x;
+  // xend = OUIJA_CODES[letter].x;
+  // ystart = state.planchette.pos.y;
+  // yend = OUIJA_CODES[letter].y;
   // for ( var i = 0; i < 100; i++ ) {
   //     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   //  }
@@ -43,6 +43,7 @@ function ouijaGetLetter(state) {
 
    for ( var i = 0; i < 3; i++ ) {
       console.log(i)
+
       codx = OUIJA_CODES[i].x;
       cody = OUIJA_CODES[i].y;
       distance = Math.sqrt(Math.pow(codx - posx, 2) + Math.pow(cody - posx, 2));
