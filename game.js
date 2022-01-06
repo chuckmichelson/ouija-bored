@@ -10,6 +10,10 @@ const CANVAS_HEIGHT = 554;
 const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
+const { makeid } = require('./utils');
+const { ouijaGoToLetter } = require('./utils');
+
+
 module.exports = {
   initGame,
   addPlayer,
@@ -22,7 +26,8 @@ module.exports = {
 
 function initGame() {
   console.log("made it to initGame()")
-  const state = createGameState()
+  const state = createGameState();
+  state = ouijaGoToLetter(state, 'YES');
   return state;
 }
 

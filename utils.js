@@ -1,5 +1,9 @@
+const { FRAME_RATE } = require('./constants');
+
+
 module.exports = {
   makeid,
+  ouijaGoToLetter,
 }
 
 function makeid(length) {
@@ -11,4 +15,11 @@ function makeid(length) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
    }
    return result;
+}
+
+function ouijaGoToLetter(state, letter) {
+  console.log("made it to ouijaGoToLetter")
+  state.planchette.pos.x = OUIJA_CODES[letter].x;
+  state.planchette.pos.y = OUIJA_CODES[letter].y;
+  return state;
 }
