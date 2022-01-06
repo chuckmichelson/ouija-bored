@@ -136,7 +136,7 @@ function gameLoop(state) {
     // do nothing
   } else {
     console.log("It's a letter! Specifically, " + letter)
-    state.letters += { letter };
+    state.letters += letter;
   }
 
 
