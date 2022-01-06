@@ -52,7 +52,7 @@ const { makeid } = require('./utils');
 // // });
 
 
-var state = {};
+const state = {};
 const clientRooms = {};
 
 // app.use("/api", function(req, res, next){
