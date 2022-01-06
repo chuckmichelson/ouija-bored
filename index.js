@@ -35,11 +35,11 @@ console.log("sockets on")
 // const joinGameBtn = document.getElementById('joinGameButton');
 // const gameCodeInput = document.getElementById('gameCodeInput');
 // const gameCodeDisplay = document.getElementById('gameCodeDisplay');
-const smokeBtn = document.getElementById('smokeBtn');
+// const smokeBtn = document.getElementById('smokeBtn');
 const numPlayersDisplay = document.getElementById('numPlayersDisplay');
 const scoreDisplay = document.getElementById('scoreDisplay');
 
-// makeSmoke()
+makeSmoke()
 joinGame()
 
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
