@@ -41,5 +41,6 @@ function ouijaGetLetter(state) {
          letter = OUIJA_CODES[i];
       }
    }
+   return letter;
 
 }
