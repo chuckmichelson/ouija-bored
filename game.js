@@ -54,7 +54,10 @@ function addPlayer(state) {
       },
     },
   state.players += newPlayer
-  console.log("vel of new players: " + newPlayer.vel.x)
+  for (let i = 0; i < state.players.length; i++) {
+    console.log("x vel of player " + i + newPlayer.vel.x)
+  }
+
 }
 
 function gameLoop(state) {
