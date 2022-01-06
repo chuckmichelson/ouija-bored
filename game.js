@@ -54,7 +54,7 @@ function addPlayer(state) {
       },
     },]
   state.players += newPlayer
-  console.log("number of players: " + state.players.length)
+  console.log("vel of new players: " + newPlayer.vel.x)
 }
 
 function gameLoop(state) {
