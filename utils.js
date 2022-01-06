@@ -37,6 +37,7 @@ function ouijaGetLetter(state) {
    letter = '';
    ouijaAlphabetLength = Object.keys(OUIJA_CODES).length;
    console.log("ouijaAlphabetLength: " + ouijaAlphabetLength);
+   console.log("state.planchette.pos.x: " + state.planchette.pos.x);
    for ( var i = 0; i < ouijaAlphabetLength; i++ ) {
       distance = Math.sqrt(Math.pow(OUIJA_CODES[i].x - state.planchette.pos.x, 2) + Math.pow(OUIJA_CODES[i].y - state.planchette.pos.y, 2));
       console.log(distance);
