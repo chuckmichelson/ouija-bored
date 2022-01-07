@@ -36,7 +36,7 @@ function createGameState() {
   console.log("made it to createGameState")
 
   return {
-    players: [{ 1: { x : 0, y : 0 } }],
+    players: { x : 0, y : 0 },
     planchette: {
       pos: {
         x: 100,
@@ -77,7 +77,7 @@ function gameLoop(state) {
   // decision rule
   numPlayers = Object.keys([state.players]).length;
   console.log("decision rule numPlayers: " + numPlayers)
-  for (let i = 1; i < numPlayers + 1; i++) {
+  for (let i = 0; i < numPlayers; i++) {
     console.log("state.players[i].x: " + state.players[i].x)
     if (state.players[i].x === 1 ) {
       console.log("RIGHT")
