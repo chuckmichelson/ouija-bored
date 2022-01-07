@@ -77,7 +77,7 @@ function gameLoop(state) {
   numPlayers = Object.keys([state.players]).length;
   console.log("decision rule numPlayers: " + numPlayers)
   for (let i = 1; i < numPlayers + 1; i++) {
-    console.log("is state.players is undefined: " + state.players[i] === undefined)
+    console.log("is state.players is undefined: " + state.players[i].x === undefined)
     if (state.players[i].x === 1 ) {
       console.log("RIGHT")
       state.planchette.pos.x += 3;
