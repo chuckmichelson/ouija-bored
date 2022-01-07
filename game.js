@@ -61,7 +61,7 @@ function addPlayer(state) {
   // state.players[numPlayers].y = {};
   // state.players[numPlayers].x = 0;
   // state.players[numPlayers].y = 0;
-  numPlayers = keys([state.players]).length;
+  numPlayers = Object.keys([state.players]).length;
   console.log("add player numPlayers: " + numPlayers)  // state.players[size + 1] = { x: 0, y: 0 };
 
   for (let i = 0; i < numPlayers; i++) {
