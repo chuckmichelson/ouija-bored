@@ -82,12 +82,6 @@ io.on('connection', client => {gameLoop
       return;
     }
 
-    // if (numClients === 1) {
-    //   //client.emit('unknownCode');
-    //   //handleNewGame()
-    //   return;
-    // }
-
     clientRooms[client.id] = roomName;
 
     console.log("roomName: " + roomName)
