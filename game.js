@@ -54,7 +54,8 @@ function addPlayer(state) {
   // state.players[numPlayers + 1] = {};
   // state.players[numPlayers + 1] = { x : 0, y : 0 };
   // state.players.push([ { x : 0, y : 0 } ]);
-  // state.players[numPlayers] = {};
+  state.players[numPlayers].x = {};
+  state.players[numPlayers].y = {};
   state.players[numPlayers].x = 0;
   state.players[numPlayers].y = 0;
   numPlayers = keys([state.players]).length;
