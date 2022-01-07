@@ -89,11 +89,11 @@ function gameLoop(state) {
       state.planchette.pos.x += -3;
     }
     if (state.players[i].y === 1 ) {
-      console.log("DOWN")
+      console.log("UP")
       state.planchette.pos.y += 3;
     }
     if (state.players[i].y === -1 ) {
-      console.log("UP")
+      console.log("DOWN")
       state.planchette.pos.y += -3;
     }
   }
