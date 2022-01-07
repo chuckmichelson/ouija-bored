@@ -35,9 +35,21 @@ function initGame() {
 function createGameState() {
   console.log("made it to createGameState")
 
+//   return {
+//     numPlayers: 1,
+//     players: [{ x : 0, y : 0 }],
+//     planchette: {
+//       pos: {
+//         x: 100,
+//         y: 100,
+//       }
+//     },
+//     letters: {},
+//   };
+// }
+
   return {
-    numPlayers: 1,
-    players: [{ x : 0, y : 0 }],
+    players: { 1: { x : 0, y : 0 } },
     planchette: {
       pos: {
         x: 100,
@@ -47,6 +59,7 @@ function createGameState() {
     letters: {},
   };
 }
+
 
 function addPlayer(state) {
   console.log("made it to addPlayer ****************************")
