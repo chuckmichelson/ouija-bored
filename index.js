@@ -163,7 +163,7 @@ function handleGameState(gameState) {
   }
   gameState = JSON.parse(gameState);
   console.log('JSON parsed')
-  handleNumPlayers(gameState['AAAAA'].numPlayers)
+  handleNumPlayers(gameState.players.length)
   console.log('num players handled')
   requestAnimationFrame(() => paintGame(gameState));
   console.log('animation frame requested')

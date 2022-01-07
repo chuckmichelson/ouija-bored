@@ -134,9 +134,9 @@ io.on('connection', client => {gameLoop
     if (vel) {
       console.log("client.number: " + client.number)
       console.log(typeof(state) == 'undefined')
-      state[roomName].players[client.number] = {};
-      state[roomName].players[client.number].x = vel.x;
-      state[roomName].players[client.number].y = vel.y;
+      state[roomName].players[client.number - 1] = {};
+      state[roomName].players[client.number - 1].x = vel.x;
+      state[roomName].players[client.number - 1].y = vel.y;
       console.log("Player 1 Vel x: " + state[roomName].players[client.number].x)
       console.log("Player 1 Vel y: " + state[roomName].players[client.number].y)
     }
