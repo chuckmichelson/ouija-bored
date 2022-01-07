@@ -58,8 +58,8 @@ function addPlayer(state) {
   console.log(state['AAAAA'].players == undefined);
 
 
-  state['AAAAA'].players[numPlayers - 1].x = 0;
-  state['AAAAA'].players[numPlayers - 1].y = 0;
+  state['AAAAA'].players[numPlayers].x = 0;
+  state['AAAAA'].players[numPlayers].y = 0;
   numPlayers = Object.keys([state.players]).length;
   console.log("add player numPlayers: " + numPlayers)  // state.players[size + 1] = { x: 0, y: 0 };
 
@@ -72,7 +72,6 @@ function addPlayer(state) {
 
 function gameLoop(state) {
   console.log("made it to gameLoop")
-  console.log("gameLoop state.players[0].x: " + state.players[0].x)
   if (!state) {
     return;
   }
