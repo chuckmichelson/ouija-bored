@@ -126,7 +126,7 @@ function paintGame(state) {
   const ctx2 = layer2.getContext('2d');
   var planchette = new Image();
   planchette.src = "images/planchette.png";
-  ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
+  ctx2.drawImage(planchette,state['AAAAA'].planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 
   // const context_letters = document.getElementById('context_letters');
   // const context = context_letters.getContext('2d');
