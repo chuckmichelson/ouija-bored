@@ -45,7 +45,7 @@ const { makeid } = require('./utils');
 
 
 var state = {};
-const clientRooms = {};
+var clientRooms = {};
 
 // app.use("/api", function(req, res, next){
 //    console.log("request handler");
