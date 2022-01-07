@@ -78,7 +78,8 @@ function gameLoop(state) {
   numPlayers = Object.keys([state.players]).length;
   console.log("decision rule numPlayers: " + numPlayers)
   for (let i = 0; i < numPlayers; i++) {
-    if (state.players[i].x == 1 ) {
+    console.log("state.players[i].x: " + state.players[i].x)
+    if (state.players[i].x === 1 ) {
       console.log("RIGHT")
       state.planchette.pos.x += 3;
     }
@@ -96,6 +97,7 @@ function gameLoop(state) {
     }
   }
 
+  // keep the planchette on the board
   if (state.planchette.pos.x < 0 + PLANCHETTE_WIDTH / 2) {
     state.planchette.pos.x = 0 + PLANCHETTE_WIDTH / 2;
   }
