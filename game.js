@@ -49,12 +49,13 @@ function createGameState() {
 
 function addPlayer(state) {
   console.log("made it to addPlayer ****************************")
+
   numPlayers = Object.keys([state.players]).length;
   console.log("add player numPlayers: " + numPlayers)  // state.players[size + 1] = { x: 0, y: 0 };
   // state.players[numPlayers + 1] = {};
   // state.players[numPlayers + 1] = { x : 0, y : 0 };
   // state.players.push([ { x : 0, y : 0 } ]);
-  console.log(state.players == undefined);
+  console.log([state.players] == undefined);
   state.players[numPlayers].x = {};
   state.players[numPlayers].y = {};
   state.players[numPlayers].x = 0;
@@ -63,7 +64,7 @@ function addPlayer(state) {
   console.log("add player numPlayers: " + numPlayers)  // state.players[size + 1] = { x: 0, y: 0 };
 
   for (let i = 0; i < numPlayers; i++) {
-    console.log("x vel of player " + i + " : " + state.players[i].vel.x)
+    console.log("x vel of player " + i + " : " + state.players[i].x)
   }
   return state;
 
