@@ -77,7 +77,7 @@ function gameLoop(state) {
   // decision rule
   numPlayers = Object.keys([state.players]).length;
   console.log("decision rule numPlayers: " + numPlayers)
-  for (let i = 0; i < numPlayers; i++) {
+  for (let i = 1; i < numPlayers + 1; i++) {
     console.log("state.players[i].x: " + state.players[i].x)
     if (state.players[i].x === 1 ) {
       console.log("RIGHT")
