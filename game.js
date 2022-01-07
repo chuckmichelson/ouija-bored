@@ -126,7 +126,7 @@ function gameLoop(state) {
   }
 
 
-  return false;
+  return state;
 }
 
 
