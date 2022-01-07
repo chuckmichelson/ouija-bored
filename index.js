@@ -163,7 +163,7 @@ function handleGameState(gameState) {
   }
   gameState = JSON.parse(gameState);
   console.log('JSON parsed')
-  handleNumPlayers(gameState.players.length)
+  // handleNumPlayers(gameState.players.length)
   console.log('num players handled')
   requestAnimationFrame(() => paintGame(gameState));
   console.log('animation frame requested')
@@ -192,11 +192,6 @@ function handleGameCode(gameCode) {
 function handleScore(gameScore) {
   console.log("made it to handleScore()")
   // scoreDisplay.innerText = gameScore;
-}
-
-function handleNumPlayers(numPlayers) {
-  console.log("made it to handleNumPlayers()")
-  // numPlayersDisplay.innerText = numPlayers;
 }
 
 function handleUnknownCode() {
