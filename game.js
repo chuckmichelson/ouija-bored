@@ -68,8 +68,8 @@ function addPlayer(state) {
 }
 
 function gameLoop(state) {
-  // console.log("made it to gameLoop")
-  // console.log(state.planchette.pos.x)
+  console.log("made it to gameLoop")
+  console.log("gameLoop state.players.x: " + state.players.x)
   if (!state) {
     return;
   }
