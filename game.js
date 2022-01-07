@@ -50,7 +50,7 @@ function createGameState() {
 function addPlayer(state) {
   console.log("made it to addPlayer ****************************")
 
-  numPlayers = Object.keys([state.players]).length;
+  numPlayers = Object.keys([state['AAAAA'].players]).length;
   console.log("add player numPlayers: " + numPlayers)  // state.players[size + 1] = { x: 0, y: 0 };
   // state.players[numPlayers + 1] = {};
   // state.players[numPlayers + 1] = { x : 0, y : 0 };
