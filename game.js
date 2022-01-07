@@ -69,7 +69,7 @@ function addPlayer(state) {
 
 function gameLoop(state) {
   console.log("made it to gameLoop")
-  console.log("gameLoop state.players[0].x: " + state.players[0].x)
+  console.log("gameLoop state['AAAAA'].players[0].x: " + state['AAAAA'].players[0].x)
   if (!state) {
     return;
   }
