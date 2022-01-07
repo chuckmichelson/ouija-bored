@@ -133,18 +133,23 @@ function getUpdatedVelocity(keyCode) {
   console.log("made it to getUpdatedVelocity()")
   switch (keyCode) {
     case 32: { // space bar
+      console.log("SPACE BAR")
       return { x: 0, y: 0 };
     }
     case 37: { // left
+      console.log("LEFT")
       return { x: -1, y: 0 };
     }
     case 38: { // down
+      console.log("DOWN")
       return { x: 0, y: -1 };
     }
     case 39: { // right
+      console.log("RIGHT")
       return { x: 1, y: 0 };
     }
     case 40: { // up
+      console.log("UP")
       return { x: 0, y: 1 };
     }
   }
