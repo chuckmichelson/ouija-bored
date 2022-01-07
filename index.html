@@ -109,10 +109,69 @@ This text is displayed if your browser does not support HTML5 Canvas.
 
 
 <center>
+
 <div style="width: 500px;">
-<div style="float: left; width: 200px;">Left Stuff</div>
-<div style="float: left; width: 100px;">Middle Stuff</div>
-<div style="float: left; width: 200px;">Right Stuff</div>
+<div style="float: left; width: 200px;">
+<div>
+<div id="canvasesdiv" style="position:relative; width:10px; height:554px">
+<canvas id="left_layer1"
+style="z-index: 1;
+position:absolute;
+left:0px;
+top:0px;
+" height="554px" width="10px">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+<canvas id="left_layer2"
+style="z-index: 2;
+position:absolute;
+left:0px;
+top:0px;
+" height="554px" width="10px">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+</div>
+
+<div style="float: left; width: 100px;">
+<div id="canvasesdiv" style="position:relative; width:838px; height:554px">
+<canvas id="layer1"
+style="z-index: 1;
+position:absolute;
+left:0px;
+top:0px;
+" height="554px" width="838px">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+<canvas id="layer2"
+style="z-index: 2;
+position:absolute;
+left:0px;
+top:0px;
+" height="554px" width="838px">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+</div>
+
+</div>
+<div style="float: left; width: 200px;">
+<!-- <div id="canvasesdiv" style="position:relative; width:10px; height:554px">
+<canvas id="right_layer1"
+style="z-index: 1;
+position:absolute;
+left:0px;
+top:0px;
+" height="554px" width="10px">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+<canvas id="right_layer2"
+style="z-index: 2;
+position:absolute;
+left:0px;
+top:0px;
+" height="554px" width="10px">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+</div>
 <br style="clear: left;" />
 </div>
 </center>
