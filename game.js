@@ -57,8 +57,7 @@ function addPlayer(state) {
   // state.players.push([ { x : 0, y : 0 } ]);
   console.log(state['AAAAA'].players == undefined);
 
-  state['AAAAA'].players[numPlayers - 1].x = {};
-  state['AAAAA'].players[numPlayers - 1].y = {};
+
   state['AAAAA'].players[numPlayers - 1].x = 0;
   state['AAAAA'].players[numPlayers - 1].y = 0;
   numPlayers = Object.keys([state.players]).length;
