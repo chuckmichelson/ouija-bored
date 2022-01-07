@@ -36,7 +36,7 @@ function createGameState() {
   console.log("made it to createGameState")
 
   return {
-    players: { x : 0, y : 0 },
+    players: [{ x : 0, y : 0 }],
     planchette: {
       pos: {
         x: 100,
