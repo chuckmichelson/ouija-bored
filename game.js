@@ -79,7 +79,7 @@ function gameLoop(state) {
   console.log("decision rule numPlayers: " + numPlayers)
   for (let i = 0; i < numPlayers; i++) {
     console.log("index: " + i)
-    console.log("state.players[i].x: " + state.players[i].x)
+    console.log("state.players[0].x: " + state.players[0].x)
     if (state.players[i].x === 1 ) {
       console.log("RIGHT")
       state.planchette.pos.x += 3;
