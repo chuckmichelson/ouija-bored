@@ -97,19 +97,19 @@ function gameLoop(state) {
   for (let i = 0; i < numPlayers; i++) {
     // console.log("index: " + i)
     console.log("state.players[String(i+1)].x: " + state.players[String(i+1)].x)
-    if (state.players[i].x === 1 ) {
+    if (state.players[String(i+1)].x === 1 ) {
       console.log("RIGHT")
       state.planchette.pos.x += 3;
     }
-    if (state.players[i].x === -1 ) {
+    if (state.players[String(i+1)].x === -1 ) {
       console.log("LEFT")
       state.planchette.pos.x += -3;
     }
-    if (state.players[i].y === 1 ) {
+    if (state.players[String(i+1)].y === 1 ) {
       console.log("DOWN")
       state.planchette.pos.y += 3;
     }
-    if (state.players[i].y === -1 ) {
+    if (state.players[String(i+1)].y === -1 ) {
       console.log("UP")
       state.planchette.pos.y += -3;
     }
