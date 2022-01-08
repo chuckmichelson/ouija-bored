@@ -53,10 +53,10 @@ function createGameState() {
   return {
     x : Array(5).fill(0),
     y : Array(5).fill(0),
-    players : {
-      x : [0],
-      y : [0],
-    },
+    // players : {
+    //   x : [0],
+    //   y : [0],
+    // },
     planchette: {
       pos: {
         x: 100,
