@@ -43,8 +43,8 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 document.body.style.backgroundColor = "black";
 // playGif("images/smoke.gif")
 // makeSmoke()
-// setTimeout(() => { collapseSmoke(); joinGame();}, 2000);
-setTimeout(() => { joinGame();}, 2000);
+setTimeout(() => { collapseSmoke(); joinGame();}, 2000);
+// setTimeout(() => { joinGame();}, 2000);
 
 // var coll = document.getElementsByClassName("collapsible");
 // var i;
@@ -162,7 +162,7 @@ function paintGame(state) {
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
   left_ctx.fillStyle = "white";
   left_ctx.textAlign = "center";
-  left_ctx.fillText(state.numSouls, 50, 80);
+  left_ctx.fillText(state.numSpirits, 50, 80);
   left_ctx.font = "18px Copperplate, Papyrus, fantasy";
   left_ctx.fillText("Spirits", 50, 110);
   left_ctx.fillText("Present", 50, 130);
