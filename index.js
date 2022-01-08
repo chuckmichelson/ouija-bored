@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000');
+// const socket = io('http://localhost:3000');
 
 // socket.on('init_test', handleInit_test);
 
@@ -17,7 +17,7 @@ const PLANCHETTE_HEIGHT = 120;
 
 console.log("Entering index.js")
 
-// const socket = io.connect('https://ouija-bored.herokuapp.com:12345/socket.io/socket.io.js');
+const socket = io.connect('https://ouija-bored.herokuapp.com:12345/socket.io/socket.io.js');
 // const socket = io.connect('https://ouija-bored.herokuapp.com/');
 
 socket.on('init', handleInit);
