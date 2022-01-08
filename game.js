@@ -53,7 +53,7 @@ function createGameState() {
     players : {
       x : 0,
       y : 0,
-    }
+    },
     planchette: {
       pos: {
         x: 100,
