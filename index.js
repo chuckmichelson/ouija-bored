@@ -60,7 +60,7 @@ function makeSmoke() {
   const ctx_smoke = layer1.getContext('2d');
   // ctx_smoke.clearRect(0, 0, 554, 554);
   var smoke = new Image();
-  smoke.src = "images/smoke.gif";
+  smoke.src = "images/smoke.png";
   ctx_smoke.drawImage(smoke,0, 0);
 }
 
