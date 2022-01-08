@@ -168,8 +168,8 @@ function gameLoop(state) {
 }
 
 
-// function getUpdatedVelocity(keyCode) {
-  console.log("made it to getUpdatedVelocity()")
+function getUpdatedVelocity(keyCode) {
+  // console.log("made it to getUpdatedVelocity()")
   switch (keyCode) {
     case 32: { // space bar
       // console.log("SPACE BAR")
@@ -192,7 +192,7 @@ function gameLoop(state) {
       return { x: 0, y: 1 };
     }
   }
-
+}
 
 
 
