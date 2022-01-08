@@ -138,8 +138,8 @@ function init() {
 
   var left_layer2 = document.getElementById("left_layer2");
   var left_ctx = left_layer2.getContext("2d");
-  left_ctx.font = "30px Comic Sans MS";
-  left_ctx.fillStyle = "red";
+  left_ctx.font = "10px Comic Sans MS";
+  left_ctx.fillStyle = "white";
   left_ctx.textAlign = "center";
   left_ctx.fillText("Hello World", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
