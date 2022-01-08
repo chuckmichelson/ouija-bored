@@ -106,7 +106,6 @@ function gameLoop(state) {
   }
 
   // decision rule
-  numPlayers = state.x.length;
   console.log("decision rule numPlayers: " + numPlayers)
   for (let i = 0; i < numPlayers; i++) {
     // console.log("index: " + i)
@@ -155,6 +154,9 @@ function gameLoop(state) {
     state.letters += letter;
   }
 
+  // reset all player velocities to 0
+  state.x = Array(5).fill(0);
+  state.y = Array(5).fill(0);
 
   return false;
 }
