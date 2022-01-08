@@ -27,7 +27,7 @@ module.exports = {
 
 function initGame() {
   console.log("made it to initGame()")
-  var state = createGameState();
+  const state = createGameState();
   state = ouijaGoToLetter(state, 'C');
   return state;
 }
@@ -49,7 +49,7 @@ function createGameState() {
 // }
 
   return {
-    players: { 1: { x : 0, y : 0 } },
+    players: [ { 1: { x : 0, y : 0 } } ],
     planchette: {
       pos: {
         x: 100,
@@ -69,16 +69,16 @@ function addPlayer(state) {
   // state.players[numPlayers + 1] = {};
   // state.players[numPlayers + 1] = { x : 0, y : 0 };
   // state.players.push([ { x : 0, y : 0 } ]);
-  console.log(state['AAAAA'].players == undefined);
-  state['AAAAA'].numPlayers += 1;
+  console.log(state.players == undefined);
+  state.numPlayers += 1;
 
-  state['AAAAA'].players[numPlayers].x = 0;
-  state['AAAAA'].players[numPlayers].y = 0;
+  state.players[numPlayers].x = 0;
+  state.players[numPlayers].y = 0;
   // numPlayers = Object.keys([state.players]).length;
   console.log("add player numPlayers: " + state.numPlayers)  // state.players[size + 1] = { x: 0, y: 0 };
 
   for (let i = 0; i < numPlayers; i++) {
-    console.log("x vel of player " + i + " : " + state['AAAAA'].players[i].x)
+    console.log("x vel of player " + i + " : " + state.players[i].x)
   }
   return state;
 
