@@ -50,6 +50,8 @@ function createGameState() {
 // }
 
   return {
+    x : [0],
+    y : [0],
     players : {
       x : [0],
       y : [0],
@@ -75,14 +77,13 @@ function addPlayer(state) {
   // state.players.push([ { x : 0, y : 0 } ]);
   // console.log([state.players].x[0] === undefined);
   console.log(state)
-  console.log([state.players])
-  console.log(state.players.x)
-  numPlayers = players.x.length;
+  console.log(state.x)
+  numPlayers = state.x.length;
   console.log("addPlayer numPlayers (before push): " + numPlayers);
   // [state.players].push({ x : 0, y : 0 });
-  [state.players].x.push([0]);
-  [state.players].y.push([0]);
-  numPlayers = [state.players].x.length;
+  state.x.push([0]);
+  state.y.push([0]);
+  numPlayers = state.x.length;
   console.log("addPlayer numPlayers (after push): " + numPlayers);
   // state.players[String(state.numPlayers)].x = 0;
   // state.players[String(state.numPlayers)].y = 0;
