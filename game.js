@@ -29,7 +29,7 @@ module.exports = {
 function initGame() {
   console.log("made it to initGame()")
   state = createGameState();
-  console.log(state.numSpirits)
+  console.log("*****initGame: state.numSpirits: " + String(state.numSpirits))
   // state = ouijaGoToLetter(state, 'C');
   return state;
 }
