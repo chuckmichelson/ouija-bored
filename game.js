@@ -158,7 +158,7 @@ function getUpdatedVelocity(keyCode) {
       return { x: -1, y: 0 };
     }
     case 38: { // down
-      console.log("DOWN")
+      console.log("UP")
       return { x: 0, y: -1 };
     }
     case 39: { // right
@@ -166,7 +166,7 @@ function getUpdatedVelocity(keyCode) {
       return { x: 1, y: 0 };
     }
     case 40: { // up
-      console.log("UP")
+      console.log("DOWN")
       return { x: 0, y: 1 };
     }
   }
