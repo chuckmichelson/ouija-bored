@@ -204,9 +204,9 @@ function paintGame(state) {
 }
 
 function handleInit(number) {
-  // console.log("made it to handleInit()")
+  console.log("made it to handleInit()")
   playerNumber = number;
-  console.log(playerNumber)
+  console.log("*****playerNumber: " + playerNumber)
   // document.getElementById("numPlayersDisplay").innerHTML = playerNumber;
   init()
 }
