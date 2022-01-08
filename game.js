@@ -101,7 +101,7 @@ function addPlayer(state) {
 }
 
 function gameLoop(state) {
-  console.log("made it to gameLoop")
+  // console.log("made it to gameLoop")
   if (!state) {
     return;
   }
