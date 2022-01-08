@@ -43,9 +43,22 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 document.body.style.backgroundColor = "black";
 // playGif("images/smoke.gif")
 // makeSmoke()
-setTimeout(() => { setImageVisible('smoke', 0); joinGame();}, 2000);
+// setTimeout(() => { setImageVisible('smoke', 0); joinGame();}, 2000);
 
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 
 
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
