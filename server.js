@@ -101,6 +101,9 @@ io.on('connection', client => {gameLoop
     client.emit('gameCode', roomName);
 
     state[roomName] = initGame();
+    console.log('*****')
+    console.log(state === undefined)
+    console.log('*****')
 
     client.join(roomName);
     client.number = 1;
