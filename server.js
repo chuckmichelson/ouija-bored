@@ -131,8 +131,8 @@ io.on('connection', client => {
     if (vel) {
       // console.log("client.number: " + client.number)
       // console.log(typeof(state) == 'undefined')
-      state[roomName].players.x[client.number - 1] = vel.x;
-      state[roomName].players.y[client.number - 1] = vel.y;
+      state[roomName].x[client.number - 1] = vel.x;
+      state[roomName].y[client.number - 1] = vel.y;
       // console.log("This Player Vel x: " + state[roomName].players.x[client.number - 1])
       // console.log("This Player Vel y: " + state[roomName].players.y[client.number - 1])
     }
