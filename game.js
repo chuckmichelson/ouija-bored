@@ -50,7 +50,7 @@ function createGameState() {
 // }
 
   return {
-    players: { 1: { x : 0, y : 0 } },
+    players: [ { 1: { x : 0, y : 0 } } ],
     planchette: {
       pos: {
         x: 100,
@@ -73,7 +73,7 @@ function addPlayer(state) {
   console.log(state.players == undefined);
   numPlayers = state.players.length;
   numPlayers += 1;
-  state.players.addElem({ String(numPlayers): { x : 0, y : 0 } });
+  state.players.push([ { x : 0, y : 0 } ]);
   // state.players[String(state.numPlayers)].x = 0;
   // state.players[String(state.numPlayers)].y = 0;
   // numPlayers = Object.keys([state.players]).length;
