@@ -41,7 +41,8 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 
 // makeSmoke()
 document.body.style.backgroundColor = "white";
-makeSmoke()
+playGif("images/smoke.gif")
+// makeSmoke()
 // joinGame();
 
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
@@ -55,12 +56,23 @@ context_letters.fillStyle = 'black';
 context_letters.fillRect(0, 0, 838, 48);
 
 
+ function playGif(gif_img) {
+  if (gif_img.src.endsWith(".gif"))
+  {
+   gif_img.src = gif_img.src.substring(0, gif_img.src.length - 3) + "png";
+  } else
+  {
+   gif_img.src = gif_img.src.substring(0, gif_img.src.length - 3) + "gif";
+  }
+ }
+
+
 function makeSmoke() {
   const layer1 = document.getElementById('layer1');
   const ctx_smoke = layer1.getContext('2d');
   // ctx_smoke.clearRect(0, 0, 554, 554);
   var smoke = new Image();
-  smoke.src = "images/smoke.png";
+  smoke.src = "images/smoke.gif";
   ctx_smoke.drawImage(smoke,0, 0);
 }
 
