@@ -69,7 +69,7 @@ function createGameState() {
 
 
 function addPlayer(state) {
-  console.log("made it to addPlayer ****************************")
+  // console.log("made it to addPlayer ****************************")
 
   // numPlayers = Object.keys([state['AAAAA'].players]).length;
   // console.log("add player numPlayers: " + state.numPlayers)  // state.players[size + 1] = { x: 0, y: 0 };
@@ -111,19 +111,19 @@ function gameLoop(state) {
   for (let i = 0; i < MAX_PLAYERS_PER_ROOM; i++) {
     // console.log("index: " + i)
     if (state.x[i] === 1 ) {
-      console.log("RIGHT")
+      // console.log("RIGHT")
       state.planchette.pos.x += 3;
     }
     if (state.x[i] === -1 ) {
-      console.log("LEFT")
+      // console.log("LEFT")
       state.planchette.pos.x += -3;
     }
     if (state.y[i] === 1 ) {
-      console.log("DOWN")
+      // console.log("DOWN")
       state.planchette.pos.y += 3;
     }
     if (state.y[i] === -1 ) {
-      console.log("UP")
+      // console.log("UP")
       state.planchette.pos.y += -3;
     }
 
@@ -168,7 +168,7 @@ function gameLoop(state) {
 }
 
 
-function getUpdatedVelocity(keyCode) {
+// function getUpdatedVelocity(keyCode) {
   console.log("made it to getUpdatedVelocity()")
   switch (keyCode) {
     case 32: { // space bar

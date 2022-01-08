@@ -14,7 +14,7 @@ const CANVAS_HEIGHT = 554;
 const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
-console.log("Entering index.js")
+// console.log("Entering index.js")
 
 const socket = io('http://localhost:3000');
 // const socket = io.connect('https://ouija-bored.herokuapp.com:12345/socket.io/socket.io.js');
