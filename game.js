@@ -51,6 +51,7 @@ function createGameState() {
 // }
 
   return {
+    numSouls: 1,
     x : Array(5).fill(0),
     y : Array(5).fill(0),
     // players : {

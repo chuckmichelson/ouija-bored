@@ -75,6 +75,7 @@ io.on('connection', client => {
       numClients = Object.keys(allUsers).length;
     }
     console.log("numClients: " + numClients)
+    state.numSouls = numClients;
 
     if (numClients === 0) {
       //client.emit('unknownCode');
