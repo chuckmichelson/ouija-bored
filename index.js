@@ -136,13 +136,6 @@ function init() {
   // console.log("added keydown event listener")
   gameActive = true;
 
-  var left_layer2 = document.getElementById("left_layer2");
-  var left_ctx = left_layer2.getContext("2d");
-  left_ctx.font = "10px Comic Sans MS";
-  left_ctx.fillStyle = "white";
-  left_ctx.textAlign = "center";
-  left_ctx.fillText("Hello World", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
-
 }
 
 function keyDown(e) {
@@ -162,6 +155,13 @@ function paintGame(state) {
   var planchette = new Image();
   planchette.src = "images/planchette.png";
   ctx2.drawImage(planchette, state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
+
+  const left_layer2 = document.getElementById("left_layer2");
+  const left_ctx = left_layer2.getContext("2d");
+  left_ctx.font = "10px Comic Sans MS";
+  left_ctx.fillStyle = "white";
+  left_ctx.textAlign = "center";
+  left_ctx.fillText("Hello World", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
   // const context_letters = document.getElementById('context_letters');
   // const context = context_letters.getContext('2d');
