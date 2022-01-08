@@ -87,7 +87,7 @@ io.on('connection', client => {
     console.log("roomName: " + roomName)
 
     client.join(roomName);
-    state = addPlayer(state)
+    addPlayer(state)
     client.number = numClients + 1;
     client.emit('init', client.number);
 
