@@ -69,7 +69,6 @@ io.on('connection', client => {
     if (room) {
       allUsers = room.sockets;
     }
-
     let numClients = 0;
     if (allUsers) {
       numClients = Object.keys(allUsers).length;
@@ -111,6 +110,20 @@ io.on('connection', client => {
     client.join(roomName);
     client.number = 1;
     client.emit('init', 1);
+
+    let allUsers;
+    if (room) {
+      allUsers = room.sockets;
+    }
+    let numClients = 0;
+    if (allUsers) {
+      numClients = Object.keys(allUsers).length;
+      console.log("*****handleNewGame: numClients: " + numClients)
+    }
+    console.log("*****handleNewGame: numClients: " + numClients)
+    state.numSpirits = numClients;
+    console.log("*****handleNewGame: numClients: " + state.numSpirits)
+
 
     startGameInterval(roomName);
   }
