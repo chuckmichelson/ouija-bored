@@ -171,10 +171,10 @@ function paintGame(state) {
   right_ctx.font = "60px Copperplate, Papyrus, fantasy";
   right_ctx.fillStyle = "white";
   right_ctx.textAlign = "center";
-  right_ctx.fillText("31", 50, 80);
+  right_ctx.fillText(state.letters[state.letters.length - 1], 50, 80);
   right_ctx.font = "18px Copperplate, Papyrus, fantasy";
-  right_ctx.fillText("Souls", 50, 110);
-  right_ctx.fillText("Present", 50, 130);
+  // right_ctx.fillText("Souls", 50, 110);
+  // right_ctx.fillText("Present", 50, 130);
 
 
 
