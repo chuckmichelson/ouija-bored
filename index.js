@@ -41,6 +41,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 
 // makeSmoke()
 document.body.style.backgroundColor = "white";
+makeSmoke()
 joinGame();
 
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
@@ -55,13 +56,13 @@ context_letters.fillRect(0, 0, 838, 48);
 
 
 function makeSmoke() {
-  const layer_smoke = document.getElementById('layer_smoke');
+  const layer1 = document.getElementById('layer1');
   const context_smoke = layer_smoke.getContext('2d');
   context_smoke.clearRect(0, 0, 838, 48);
-  const ctx_smoke = layer_smoke.getContext('2d');
+  const ctx_smoke = layer1.getContext('2d');
   var smoke = new Image();
   smoke.src = "images/smoke.gif";
-  ctx_smoke.drawImage(smoke,100, 0);
+  ctx_smoke.drawImage(smoke,0, 0);
 }
 
 function newGame() {
