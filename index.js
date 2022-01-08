@@ -203,7 +203,7 @@ function handleUnknownCode() {
 function reset() {
   console.log("made it to reset()")
   playerNumber = null;
-  gameCodeInput.value = 'AAAAA';
+  gameCodeInput.value = '';
   initialScreen.style.display = "block";
   gameScreen.style.display = "none";
 }
