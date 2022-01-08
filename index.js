@@ -42,7 +42,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 // makeSmoke()
 document.body.style.backgroundColor = "white";
 makeSmoke()
-joinGame();
+// joinGame();
 
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
 // joinGameBtn.addEventListener('click', newGame);
