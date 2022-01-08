@@ -4,6 +4,7 @@ body {
     height: 100%;
     overflow: hidden;
     background-color: #92a8d1;
+    font-family: Copperplate, Papyrus, fantasy;
 }
 
 canvas {
