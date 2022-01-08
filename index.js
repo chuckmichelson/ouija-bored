@@ -45,16 +45,6 @@ document.body.style.backgroundColor = "black";
 // makeSmoke()
 setTimeout(() => { collapseSmoke(); joinGame();}, 2000);
 
-
-var left_layer1 = document.getElementById("left_layer1");
-var left_ctx = left_layer1.getContext("2d");
-left_ctx.fillStyle = "white";
-left_ctx.font = "30px Arial";
-left_ctx.textAlign = "center";
-left_ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
-left_ctx.fillText("Hello World", 0, 0);
-
-
 // var coll = document.getElementsByClassName("collapsible");
 // var i;
 
@@ -92,6 +82,15 @@ function setImageVisible(id, visible) {
 }
 
 
+
+function makeSmoke() {
+  const layer1 = document.getElementById('layer1');
+  const ctx_smoke = layer1.getContext('2d');
+  // ctx_smoke.clearRect(0, 0, 554, 554);
+  var smoke = new Image();
+  smoke.src = "images/smoke.gif";
+  ctx_smoke.drawImage(smoke,0, 0);
+}
 
 function newGame() {
   // console.log("made it to NewGame")
@@ -136,6 +135,13 @@ function init() {
   document.addEventListener('keydown', keyDown);
   // console.log("added keydown event listener")
   gameActive = true;
+
+  var left_layer2 = document.getElementById("left_layer2");
+  var left_ctx = left_layer2.getContext("2d");
+  left_ctx.font = "30px Comic Sans MS";
+  left_ctx.fillStyle = "red";
+  left_ctx.textAlign = "center";
+  left_ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
 
 }
 
