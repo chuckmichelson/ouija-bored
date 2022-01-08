@@ -57,9 +57,8 @@ context_letters.fillRect(0, 0, 838, 48);
 
 function makeSmoke() {
   const layer1 = document.getElementById('layer1');
-  const context_smoke = layer_smoke.getContext('2d');
-  context_smoke.clearRect(0, 0, 838, 48);
-  const ctx_smoke = layer1.getContext('2d');
+  const context_smoke = layer1.getContext('2d');
+  ctx_smoke.clearRect(0, 0, 554, 554);
   var smoke = new Image();
   smoke.src = "images/smoke.gif";
   ctx_smoke.drawImage(smoke,0, 0);
