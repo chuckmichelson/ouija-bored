@@ -16,9 +16,9 @@ const io = require('socket.io')();
 
 //listen for request on port 3000, and as a callback function have the port listened on logged
 io.listen(process.env.PORT || 3000);
-// server.listen(PORT, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${PORT}/`);
-// });
+server.listen(PORT, hostname, () => {
+  console.log(`Server running at http://${hostname}:${PORT}/`);
+});
 
 
 
