@@ -72,6 +72,7 @@ io.on('connection', client => {
 
     let numClients = 0;
     if (allUsers) {
+      console.log("***** made it to allUsers")
       numClients = Object.keys(allUsers).length;
     }
     console.log("numClients: " + numClients)
