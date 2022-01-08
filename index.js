@@ -40,7 +40,7 @@ const numPlayersDisplay = document.getElementById('numPlayersDisplay');
 const scoreDisplay = document.getElementById('scoreDisplay');
 
 // makeSmoke()
-document.body.style.backgroundColor = "white";
+document.body.style.backgroundColor = "black";
 // playGif("images/smoke.gif")
 // makeSmoke()
 // joinGame();
