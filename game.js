@@ -50,8 +50,8 @@ function createGameState() {
 // }
 
   return {
-    x : [0, 0, 0],
-    y : [0, 0, 0],
+    x : Array(5).fill(0);,
+    y : Array(5).fill(0);,
     players : {
       x : [0],
       y : [0],
