@@ -77,7 +77,7 @@ function addPlayer(state) {
   console.log(state === undefined)
   players = [state.players];
   console.log(players === undefined)
-  x = players.x;
+  x = [players.x];
   console.log(x === undefined)
   console.log(x)
   numPlayers = players.x.length;
