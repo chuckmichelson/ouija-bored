@@ -161,10 +161,21 @@ function paintGame(state) {
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
   left_ctx.fillStyle = "white";
   left_ctx.textAlign = "center";
-  left_ctx.fillText("31", 50, 80);
+  left_ctx.fillText(String([state.x].length), 50, 80);
   left_ctx.font = "18px Copperplate, Papyrus, fantasy";
   left_ctx.fillText("Souls", 50, 110);
   left_ctx.fillText("Present", 50, 130);
+
+  const right_layer2 = document.getElementById("right_layer2");
+  const right_ctx = right_layer2.getContext("2d");
+  right_ctx.font = "60px Copperplate, Papyrus, fantasy";
+  right_ctx.fillStyle = "white";
+  right_ctx.textAlign = "center";
+  right_ctx.fillText("31", 50, 80);
+  right_ctx.font = "18px Copperplate, Papyrus, fantasy";
+  right_ctx.fillText("Souls", 50, 110);
+  right_ctx.fillText("Present", 50, 130);
+
 
 
   // const context_letters = document.getElementById('context_letters');
