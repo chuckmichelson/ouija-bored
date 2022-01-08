@@ -142,8 +142,8 @@ function gameLoop(state) {
     state.planchette.pos.y = CANVAS_HEIGHT - PLANCHETTE_WIDTH / 2;
   }
 
-  console.log("state.planchette.pos.x: " + state.planchette.pos.x)
-  console.log("state.planchette.pos.y: " + state.planchette.pos.y)
+  // console.log("state.planchette.pos.x: " + state.planchette.pos.x)
+  // console.log("state.planchette.pos.y: " + state.planchette.pos.y)
 
 
   var letter = ouijaGetLetter(state);
