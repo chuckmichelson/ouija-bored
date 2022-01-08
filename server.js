@@ -129,12 +129,12 @@ io.on('connection', client => {
     const vel = getUpdatedVelocity(keyCode);
 
     if (vel) {
-      console.log("client.number: " + client.number)
-      console.log(typeof(state) == 'undefined')
+      // console.log("client.number: " + client.number)
+      // console.log(typeof(state) == 'undefined')
       state[roomName].players.x[client.number - 1] = vel.x;
       state[roomName].players.y[client.number - 1] = vel.y;
-      console.log("This Player Vel x: " + state[roomName].players.x[client.number - 1])
-      console.log("This Player Vel y: " + state[roomName].players.y[client.number - 1])
+      // console.log("This Player Vel x: " + state[roomName].players.x[client.number - 1])
+      // console.log("This Player Vel y: " + state[roomName].players.y[client.number - 1])
     }
   }
 });
