@@ -168,6 +168,7 @@ function paintGame(state) {
 
   const right_layer2 = document.getElementById("right_layer2");
   const right_ctx = right_layer2.getContext("2d");
+  right_ctx.clearRect(0, 0, 100, 554);
   right_ctx.font = "60px Copperplate, Papyrus, fantasy";
   right_ctx.fillStyle = "white";
   right_ctx.textAlign = "center";
