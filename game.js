@@ -192,7 +192,7 @@ function gameLoop(state) {
       return { x: 0, y: 1 };
     }
   }
-}
+
 
 
 
