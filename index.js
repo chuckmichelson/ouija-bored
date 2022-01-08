@@ -43,7 +43,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 document.body.style.backgroundColor = "black";
 // playGif("images/smoke.gif")
 // makeSmoke()
-// setTimeout(() => { setImageVisible('smoke', 0); joinGame();}, 2000);
+setTimeout(() => { collapseSmoke(); joinGame();}, 2000);
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -60,6 +60,10 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+function collapseSmoke() {
+  var x = document.getElementById("myDIV");
+  x.style.display = "none";
+}
 
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
 // joinGameBtn.addEventListener('click', newGame);
