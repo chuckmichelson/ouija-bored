@@ -9,6 +9,7 @@ const CANVAS_WIDTH = 838;
 const CANVAS_HEIGHT = 554;
 const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
+const MAX_PLAYERS_PER_ROOM = 100;
 
 const { makeid } = require('./utils');
 const { ouijaGoToLetter } = require('./utils');
@@ -107,26 +108,28 @@ function gameLoop(state) {
 
   // decision rule
   // console.log("decision rule numPlayers: " + numPlayers)
-  for (let i = 0; i < numPlayers; i++) {
+  for (let i = 0; i < MAX_PLAYERS_PER_ROOM; i++) {
     // console.log("index: " + i)
-    if (state.players.x[i] === 1 ) {
+    if (state.x[i] === 1 ) {
       console.log("RIGHT")
       state.planchette.pos.x += 3;
     }
-    if (state.players.x[i] === -1 ) {
+    if (state.x[i] === -1 ) {
       console.log("LEFT")
       state.planchette.pos.x += -3;
     }
-    if (state.players.y[i] === 1 ) {
+    if (state.y[i] === 1 ) {
       console.log("DOWN")
       state.planchette.pos.y += 3;
     }
-    if (state.players.y[i] === -1 ) {
+    if (state.y[i] === -1 ) {
       console.log("UP")
       state.planchette.pos.y += -3;
     }
 
     // once we read the velocity, zero it out
+    state.x[i] = 0;
+    state.y[i] = 0;
 
   }
 
