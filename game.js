@@ -80,7 +80,7 @@ function addPlayer(state) {
   for (let i = 0; i < numPlayers; i++) {
     console.log("x vel of player " + i + " : " + state.players[i].x)
   }
-  return state;
+  // return state;
 
 }
 
@@ -150,23 +150,23 @@ function getUpdatedVelocity(keyCode) {
   console.log("made it to getUpdatedVelocity()")
   switch (keyCode) {
     case 32: { // space bar
-      console.log("SPACE BAR")
+      // console.log("SPACE BAR")
       return { x: 0, y: 0 };
     }
     case 37: { // left
-      console.log("LEFT")
+      // console.log("LEFT")
       return { x: -1, y: 0 };
     }
     case 38: { // down
-      console.log("UP")
+      // console.log("UP")
       return { x: 0, y: -1 };
     }
     case 39: { // right
-      console.log("RIGHT")
+      // console.log("RIGHT")
       return { x: 1, y: 0 };
     }
     case 40: { // up
-      console.log("DOWN")
+      // console.log("DOWN")
       return { x: 0, y: 1 };
     }
   }
