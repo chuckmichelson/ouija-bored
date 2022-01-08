@@ -162,7 +162,7 @@ function paintGame(state) {
   left_ctx.fillStyle = "white";
   left_ctx.textAlign = "center";
   left_ctx.fillText("0", 50, 100);
-  left_ctx.font = "24px Copperplate, Papyrus, fantasy";
+  left_ctx.font = "12px Copperplate, Papyrus, fantasy";
   left_ctx.fillText("Souls Present", 50, 150);
 
 
