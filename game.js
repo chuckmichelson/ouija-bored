@@ -28,7 +28,7 @@ module.exports = {
 function initGame() {
   console.log("made it to initGame()")
   state = createGameState();
-  console.log(state.player)
+  console.log(state.players)
   // state = ouijaGoToLetter(state, 'C');
   return state;
 }
@@ -50,7 +50,7 @@ function createGameState() {
 // }
 
   return {
-    players: [ { 1: { x : 0, y : 0 } } ],
+    players: { 1: { x : 0, y : 0 } },
     planchette: {
       pos: {
         x: 100,
