@@ -50,8 +50,8 @@ function createGameState() {
 // }
 
   return {
-    x : [0, 0],
-    y : [0, 0],
+    x : [0, 0, 0],
+    y : [0, 0, 0],
     players : {
       x : [0],
       y : [0],
@@ -85,7 +85,7 @@ function addPlayer(state) {
   // [state.y].push(0);
   [state.x][numPlayers] = 0;
   [state.y][numPlayers] = 0;
-  numPlayers = [state.x].length;
+  numPlayers = state['AAAAA'].x.length;
   console.log("addPlayer numPlayers (after push): " + numPlayers);
   // state.players[String(state.numPlayers)].x = 0;
   // state.players[String(state.numPlayers)].y = 0;
