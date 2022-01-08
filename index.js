@@ -43,7 +43,8 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 document.body.style.backgroundColor = "black";
 // playGif("images/smoke.gif")
 // makeSmoke()
-setTimeout(() => { collapseSmoke(); joinGame();}, 2000);
+// setTimeout(() => { collapseSmoke(); joinGame();}, 2000);
+setTimeout(() => { joinGame();}, 2000);
 
 // var coll = document.getElementsByClassName("collapsible");
 // var i;
