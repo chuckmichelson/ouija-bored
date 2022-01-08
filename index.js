@@ -163,7 +163,7 @@ function paintGame(state) {
   left_ctx.textAlign = "center";
   left_ctx.fillText(String(state.numSouls), 50, 80);
   left_ctx.font = "18px Copperplate, Papyrus, fantasy";
-  left_ctx.fillText("Souls", 50, 110);
+  left_ctx.fillText("Spirits", 50, 110);
   left_ctx.fillText("Present", 50, 130);
 
   const right_layer2 = document.getElementById("right_layer2");
