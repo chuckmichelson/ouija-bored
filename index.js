@@ -156,12 +156,6 @@ function paintGame(state) {
   planchette.src = "images/planchette.png";
   ctx2.drawImage(planchette, state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 
-  const left_layer2 = document.getElementById("left_layer2");
-  const left_ctx = left_layer2.getContext("2d");
-  left_ctx.font = "30px Comic Sans MS";
-  left_ctx.fillStyle = "white";
-  left_ctx.textAlign = "left";
-  left_ctx.fillText("Hello World", 0, 100);
 
   // const context_letters = document.getElementById('context_letters');
   // const context = context_letters.getContext('2d');
@@ -226,7 +220,12 @@ function handleGameCode(gameCode) {
 
 function handleScore(gameScore) {
   // console.log("made it to handleScore()")
-  // scoreDisplay.innerText = gameScore;
+  const left_layer2 = document.getElementById("left_layer2");
+  const left_ctx = left_layer2.getContext("2d");
+  left_ctx.font = "30px Comic Sans MS";
+  left_ctx.fillStyle = "white";
+  left_ctx.textAlign = "left";
+  left_ctx.fillText(gameScore, 0, 100);
 }
 
 function handleUnknownCode() {
