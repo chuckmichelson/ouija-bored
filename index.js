@@ -41,7 +41,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 
 // makeSmoke()
 document.body.style.backgroundColor = "white";
-playGif("/images/smoke.gif")
+// playGif("images/smoke.gif")
 // makeSmoke()
 // joinGame();
 
@@ -57,8 +57,14 @@ context_letters.fillRect(0, 0, 838, 48);
 
 
  function playGif(gif_img) {
-  gif_img.src = gif_img.src.substring(0, gif_img.src.length - 3) + "gif";
-}
+  if (gif_img.src.endsWith(".gif"))
+  {
+   gif_img.src = gif_img.src.substring(0, gif_img.src.length - 3) + "png";
+  } else
+  {
+   gif_img.src = gif_img.src.substring(0, gif_img.src.length - 3) + "gif";
+  }
+ }
 
 
 function makeSmoke() {
