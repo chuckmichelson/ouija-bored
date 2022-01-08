@@ -160,8 +160,8 @@ function paintGame(state) {
   const left_ctx = left_layer2.getContext("2d");
   left_ctx.font = "10px Comic Sans MS";
   left_ctx.fillStyle = "white";
-  left_ctx.textAlign = "center";
-  left_ctx.fillText("Hello World", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+  left_ctx.textAlign = "left";
+  left_ctx.fillText("Hello World", 0, 0);
 
   // const context_letters = document.getElementById('context_letters');
   // const context = context_letters.getContext('2d');
