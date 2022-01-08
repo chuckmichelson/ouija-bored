@@ -161,10 +161,10 @@ function paintGame(state) {
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
   left_ctx.fillStyle = "white";
   left_ctx.textAlign = "center";
-  left_ctx.fillText("31", 50, 100);
-  left_ctx.font = "14px Copperplate, Papyrus, fantasy";
-  left_ctx.fillText("Souls", 50, 130);
-  left_ctx.fillText("Present", 50, 150);
+  left_ctx.fillText("31", 50, 80);
+  left_ctx.font = "18px Copperplate, Papyrus, fantasy";
+  left_ctx.fillText("Souls", 50, 110);
+  left_ctx.fillText("Present", 50, 130);
 
 
   // const context_letters = document.getElementById('context_letters');
