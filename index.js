@@ -43,8 +43,8 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 document.body.style.backgroundColor = "black";
 // playGif("images/smoke.gif")
 // makeSmoke()
-// joinGame();
 setTimeout(() => { setImageVisible('smoke', 0); }, 2000);
+joinGame();
 
 
 
