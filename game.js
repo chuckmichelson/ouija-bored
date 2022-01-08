@@ -73,14 +73,14 @@ function addPlayer(state) {
   console.log(state.players == undefined);
   state.numPlayers += 1;
 
-  state.players[numPlayers].x = 0;
-  state.players[numPlayers].y = 0;
+  state.players[String(numPlayers)].x = 0;
+  state.players[String(numPlayers)].y = 0;
   // numPlayers = Object.keys([state.players]).length;
-  console.log("add player numPlayers: " + state.numPlayers)  // state.players[size + 1] = { x: 0, y: 0 };
+  // console.log("add player numPlayers: " + state.numPlayers)  // state.players[size + 1] = { x: 0, y: 0 };
 
-  for (let i = 0; i < numPlayers; i++) {
-    console.log("x vel of player " + i + " : " + state.players[i].x)
-  }
+  // for (let i = 0; i < numPlayers; i++) {
+  //   console.log("x vel of player " + i + " : " + state.players[i].x)
+  // }
   // return state;
 
 }
