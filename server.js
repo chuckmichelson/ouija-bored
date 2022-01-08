@@ -99,6 +99,7 @@ io.on('connection', client => {
   function handleNewGame() {
     // console.log("made it to handleNewGame")
     let roomName = makeid(5);
+    const room = io.sockets.adapter.rooms[roomName];
     clientRooms[client.id] = roomName;
     client.emit('gameCode', roomName);
 
