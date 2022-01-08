@@ -48,7 +48,10 @@ setTimeout(() => { collapseSmoke(); joinGame();}, 2000);
 
 var left_layer1 = document.getElementById("left_layer1");
 var left_ctx = left_layer1.getContext("2d");
+left_ctx.fillStyle = "white";
 left_ctx.font = "30px Arial";
+left_ctx.textAlign = "center";
+left_ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
 left_ctx.fillText("Hello World", 0, 0);
 
 
