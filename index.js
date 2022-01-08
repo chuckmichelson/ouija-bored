@@ -162,7 +162,7 @@ function paintGame(state) {
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
   left_ctx.fillStyle = "white";
   left_ctx.textAlign = "center";
-  console.log("*****paintGame: state.numSpirits: " + state.numSpirits)
+  console.log("*****paintGame: state.numSpirits: " + String(state.numSpirits))
   left_ctx.fillText(state.numSpirits, 50, 80);
   left_ctx.font = "18px Copperplate, Papyrus, fantasy";
   left_ctx.fillText("Spirits", 50, 110);
