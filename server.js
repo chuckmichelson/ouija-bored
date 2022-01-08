@@ -102,7 +102,7 @@ io.on('connection', client => {gameLoop
 
     state[roomName] = initGame();
     console.log('*****')
-    console.log(state === undefined)
+    console.log(state.players === undefined)
     console.log('*****')
 
     client.join(roomName);
