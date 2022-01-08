@@ -65,12 +65,12 @@ function makeSmoke() {
 }
 
 function newGame() {
-  console.log("made it to NewGame")
+  // console.log("made it to NewGame")
   socket.emit('newGame');
 }
 
 function joinGame() {
-  console.log("made it to joinGame")
+  // console.log("made it to joinGame")
   socket.emit('joinGame', 'AAAAA');
 }
 
@@ -78,7 +78,7 @@ let playerNumber = 1;
 let gameActive = false;
 
 function init() {
-  console.log("made it to init")
+  // console.log("made it to init")
 
   const layer1 = document.getElementById('layer1');
   const ctx1 = layer1.getContext('2d');
@@ -105,19 +105,19 @@ function init() {
   }
 
   document.addEventListener('keydown', keyDown);
-  console.log("added keydown event listener")
+  // console.log("added keydown event listener")
   gameActive = true;
 
 }
 
 function keyDown(e) {
-  console.log("made it to keyDown()")
+  // console.log("made it to keyDown()")
   socket.emit('keydown', e.keyCode);
-  console.log("emitted keydown code")
+  // console.log("emitted keydown code")
 }
 
 function paintGame(state) {
-  console.log("made it to paintGame")
+  // console.log("made it to paintGame")
   // document.getElementById("letterDisplay").innerHTML = state.letters[state.letters.length - 1];
 
   const layer2 = document.getElementById('layer2');
@@ -148,7 +148,7 @@ function paintGame(state) {
 }
 
 function handleInit(number) {
-  console.log("made it to handleInit()")
+  // console.log("made it to handleInit()")
   playerNumber = number;
   console.log(playerNumber)
   // document.getElementById("numPlayersDisplay").innerHTML = playerNumber;
@@ -156,22 +156,22 @@ function handleInit(number) {
 }
 
 function handleGameState(gameState) {
-  console.log("made it to handleGameState")
+  // console.log("made it to handleGameState")
 
   if (!gameActive) {
     return;
   }
   gameState = JSON.parse(gameState);
-  console.log('JSON parsed')
+  // console.log('JSON parsed')
   // handleNumPlayers(gameState.players.length)
-  console.log('num players handled')
+  // console.log('num players handled')
   requestAnimationFrame(() => paintGame(gameState));
-  console.log('animation frame requested')
+  // console.log('animation frame requested')
 
 }
 
 function handleGameOver(data) {
-  console.log("made it to handleGameOver()")
+  // console.log("made it to handleGameOver()")
   if (!gameActive) {
     console.log("game not active")
     return;
@@ -185,23 +185,23 @@ function handleGameOver(data) {
 }
 
 function handleGameCode(gameCode) {
-  console.log("made it to handleGameCode()")
+  // console.log("made it to handleGameCode()")
   //gameCodeDisplay.innerText = gameCode;
 }
 
 function handleScore(gameScore) {
-  console.log("made it to handleScore()")
+  // console.log("made it to handleScore()")
   // scoreDisplay.innerText = gameScore;
 }
 
 function handleUnknownCode() {
-  console.log("made it to handleUnknownCode()")
+  // console.log("made it to handleUnknownCode()")
   reset();
   alert('Unknown Game Code')
 }
 
 function reset() {
-  console.log("made it to reset()")
+  // console.log("made it to reset()")
   playerNumber = null;
   gameCodeInput.value = '';
   initialScreen.style.display = "block";

@@ -62,7 +62,7 @@ io.on('connection', client => {
   client.on('joinGame', handleJoinGame);
 
   function handleJoinGame(roomName) {
-    console.log("made it to handleJoinGame")
+    // console.log("made it to handleJoinGame")
     const room = io.sockets.adapter.rooms[roomName];
 
     let allUsers;
@@ -95,15 +95,15 @@ io.on('connection', client => {
   }
 
   function handleNewGame() {
-    console.log("made it to handleNewGame")
+    // console.log("made it to handleNewGame")
     let roomName = makeid(5);
     clientRooms[client.id] = roomName;
     client.emit('gameCode', roomName);
 
     state[roomName] = initGame();
-    console.log('*****')
-    console.log(state.players === undefined)
-    console.log('*****')
+    // console.log('*****')
+    // console.log(state.players === undefined)
+    // console.log('*****')
 
     client.join(roomName);
     client.number = 1;
@@ -113,7 +113,7 @@ io.on('connection', client => {
   }
 
   function handleKeydown(keyCode) {
-    console.log("made it to handleKeydown")
+    // console.log("made it to handleKeydown")
     const roomName = clientRooms[client.id];
     if (!roomName) {
       console.log("No room name")
@@ -140,7 +140,7 @@ io.on('connection', client => {
 });
 
 function startGameInterval(roomName) {
-  console.log("made it to startGameInterval")
+  // console.log("made it to startGameInterval")
   const intervalId = setInterval(() => {
     const winner = gameLoop(state[roomName]);
 
@@ -162,13 +162,13 @@ function emitGameState(room, gameState) {
 }
 
 function emitGameOver(room, winner) {
-  console.log("made it to emitGameOver()")
+  // console.log("made it to emitGameOver()")
   io.sockets.in(room)
     .emit('gameOver', JSON.stringify({ winner }));
 }
 
 function emitScore(room, score) {
-  console.log("made it to emitScore()")
+  // console.log("made it to emitScore()")
   io.sockets.in(room)
     .emit('gameScore', JSON.stringify(gameScore));
 }
