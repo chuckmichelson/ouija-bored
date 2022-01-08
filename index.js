@@ -41,7 +41,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 
 // makeSmoke()
 document.body.style.backgroundColor = "white";
-playGif("images/smoke.gif")
+playGif("/images/smoke.gif")
 // makeSmoke()
 // joinGame();
 
