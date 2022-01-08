@@ -158,7 +158,7 @@ function paintGame(state) {
 
   const left_layer2 = document.getElementById("left_layer2");
   const left_ctx = left_layer2.getContext("2d");
-  left_ctx.font = "10px Comic Sans MS";
+  left_ctx.font = "30px Comic Sans MS";
   left_ctx.fillStyle = "white";
   left_ctx.textAlign = "left";
   left_ctx.fillText("Hello World", 0, 0);
