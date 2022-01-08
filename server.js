@@ -132,10 +132,10 @@ io.on('connection', client => {
       console.log("client.number: " + client.number)
       console.log(typeof(state) == 'undefined')
       state[roomName].players[client.number] = {};
-      state[roomName].players[client.number].x = vel.x;
-      state[roomName].players[client.number].y = vel.y;
-      console.log("Player 1 Vel x: " + state[roomName].players[client.number].x)
-      console.log("Player 1 Vel y: " + state[roomName].players[client.number].y)
+      state[roomName].players.x[client.number] = vel.x;
+      state[roomName].players.y[client.number] = vel.y;
+      console.log("This Player Vel x: " + state[roomName].players.x[client.number])
+      console.log("This Player Vel y: " + state[roomName].players.y[client.number])
     }
   }
 });
