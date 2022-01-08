@@ -44,6 +44,7 @@ document.body.style.backgroundColor = "black";
 // playGif("images/smoke.gif")
 // makeSmoke()
 // joinGame();
+setTimeout(() => { console.log("Hello World!"); }, 2000);
 
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
 // joinGameBtn.addEventListener('click', newGame);
