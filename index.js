@@ -141,7 +141,7 @@ function init() {
   left_ctx.font = "30px Comic Sans MS";
   left_ctx.fillStyle = "red";
   left_ctx.textAlign = "center";
-  left_ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
+  left_ctx.fillText("Hello World", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
 }
 
