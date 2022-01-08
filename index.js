@@ -225,7 +225,7 @@ function handleScore(gameScore) {
   left_ctx.font = "30px Comic Sans MS";
   left_ctx.fillStyle = "white";
   left_ctx.textAlign = "left";
-  left_ctx.fillText(gameScore, 0, 100);
+  left_ctx.fillText("1", 0, 100);
 }
 
 function handleUnknownCode() {
