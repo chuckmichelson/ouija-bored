@@ -72,9 +72,10 @@ function addPlayer(state) {
   // state.players.push([ { x : 0, y : 0 } ]);
   console.log(state.players == undefined);
   numPlayers = [state.players].length;
-  console.log("addPlayer numPlayers (before push): " + [state.players].length)
+  console.log("addPlayer numPlayers (before push): " + numPlayers);
   [state.players].push([ { x : 0, y : 0 } ]);
-  console.log("addPlayer numPlayers (after push): " + [state.players].length)
+  numPlayers = [state.players].length;
+  console.log("addPlayer numPlayers (after push): " + numPlayers);
   // state.players[String(state.numPlayers)].x = 0;
   // state.players[String(state.numPlayers)].y = 0;
   // numPlayers = Object.keys([state.players]).length;
