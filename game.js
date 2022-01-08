@@ -76,17 +76,17 @@ function addPlayer(state) {
   // state.players[numPlayers + 1] = { x : 0, y : 0 };
   // state.players.push([ { x : 0, y : 0 } ]);
   // console.log([state.players].x[0] === undefined);
-  console.log(state)
-  console.log([state.x])
-  numPlayers = state['AAAAA'].x.length;
-  console.log("addPlayer numPlayers (before push): " + numPlayers);
-  // [state.players].push({ x : 0, y : 0 });
-  // [state.x].push(0);
-  // [state.y].push(0);
-  [state.x][numPlayers] = 0;
-  [state.y][numPlayers] = 0;
-  numPlayers = state['AAAAA'].x.length;
-  console.log("addPlayer numPlayers (after push): " + numPlayers);
+  // console.log(state)
+  // console.log([state.x])
+  // numPlayers = 100;
+  // console.log("addPlayer numPlayers (before push): " + numPlayers);
+  // // [state.players].push({ x : 0, y : 0 });
+  // // [state.x].push(0);
+  // // [state.y].push(0);
+  // [state.x][numPlayers] = 0;
+  // [state.y][numPlayers] = 0;
+  // numPlayers = state['AAAAA'].x.length;
+  // console.log("addPlayer numPlayers (after push): " + numPlayers);
   // state.players[String(state.numPlayers)].x = 0;
   // state.players[String(state.numPlayers)].y = 0;
   // numPlayers = Object.keys([state.players]).length;
@@ -106,7 +106,7 @@ function gameLoop(state) {
   }
 
   // decision rule
-  console.log("decision rule numPlayers: " + numPlayers)
+  // console.log("decision rule numPlayers: " + numPlayers)
   for (let i = 0; i < numPlayers; i++) {
     // console.log("index: " + i)
     if (state.players.x[i] === 1 ) {
@@ -125,6 +125,9 @@ function gameLoop(state) {
       console.log("UP")
       state.planchette.pos.y += -3;
     }
+
+    // once we read the velocity, zero it out
+
   }
 
   // keep the planchette on the board
