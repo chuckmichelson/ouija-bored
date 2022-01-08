@@ -51,8 +51,8 @@ function createGameState() {
 
   return {
     players : {
-      x : 0,
-      y : 0,
+      x : [0],
+      y : [0],
     },
     planchette: {
       pos: {
@@ -74,12 +74,12 @@ function addPlayer(state) {
   // state.players[numPlayers + 1] = { x : 0, y : 0 };
   // state.players.push([ { x : 0, y : 0 } ]);
   console.log([state.players] == undefined);
-  numPlayers = [state.players].length;
+  numPlayers = [state.players].x.length;
   console.log("addPlayer numPlayers (before push): " + numPlayers);
   // [state.players].push({ x : 0, y : 0 });
-  [state.players].x.push([0]);
-  [state.players].y.push([0]);
-  numPlayers = [state.players].length;
+  [state.players].x.push([0];
+  [state.players].y.push([0];
+  numPlayers = [state.players].x.length;
   console.log("addPlayer numPlayers (after push): " + numPlayers);
   // state.players[String(state.numPlayers)].x = 0;
   // state.players[String(state.numPlayers)].y = 0;
@@ -104,20 +104,20 @@ function gameLoop(state) {
   console.log("decision rule numPlayers: " + numPlayers)
   for (let i = 0; i < numPlayers; i++) {
     // console.log("index: " + i)
-    console.log("state.players[String(i+1)].x: " + state.players[String(i+1)].x)
-    if (state.players[String(i+1)].x === 1 ) {
+    console.log("state.players.x[i]: " + state.players.x[i])
+    if (state.players.x[i] === 1 ) {
       console.log("RIGHT")
       state.planchette.pos.x += 3;
     }
-    if (state.players[String(i+1)].x === -1 ) {
+    if (state.players.x[i] === -1 ) {
       console.log("LEFT")
       state.planchette.pos.x += -3;
     }
-    if (state.players[String(i+1)].y === 1 ) {
+    if (state.players.y[i] === 1 ) {
       console.log("DOWN")
       state.planchette.pos.y += 3;
     }
-    if (state.players[String(i+1)].y === -1 ) {
+    if (state.players.y[i] === -1 ) {
       console.log("UP")
       state.planchette.pos.y += -3;
     }
