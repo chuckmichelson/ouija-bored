@@ -74,11 +74,11 @@ function addPlayer(state) {
   // state.players[numPlayers + 1] = { x : 0, y : 0 };
   // state.players.push([ { x : 0, y : 0 } ]);
   // console.log([state.players].x[0] === undefined);
-  console.log(state === undefined)
+  console.log(state == undefined)
   players = [state.players];
-  console.log(players === undefined)
+  console.log(players == undefined)
   x = [players.x];
-  console.log(x === undefined)
+  console.log(x == undefined)
   console.log(x)
   numPlayers = players.x.length;
   console.log("addPlayer numPlayers (before push): " + numPlayers);
