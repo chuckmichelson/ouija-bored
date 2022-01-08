@@ -29,7 +29,7 @@ module.exports = {
 function initGame() {
   console.log("made it to initGame()")
   state = createGameState();
-  console.log(state.players)
+  console.log(state.numSpirits)
   // state = ouijaGoToLetter(state, 'C');
   return state;
 }
@@ -51,7 +51,7 @@ function createGameState() {
 // }
 
   return {
-    numSpirits: [1],
+    numSpirits: 1,
     x: Array(5).fill(0),
     y: Array(5).fill(0),
     // players : {
