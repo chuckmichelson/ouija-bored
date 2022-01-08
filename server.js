@@ -44,8 +44,8 @@ const { makeid } = require('./utils');
 // // });
 
 
-var state = {};
-var clientRooms = {};
+const state = {};
+const clientRooms = {};
 
 // app.use("/api", function(req, res, next){
 //    console.log("request handler");
@@ -54,7 +54,7 @@ var clientRooms = {};
 //     next();
 // });
 
-io.on('connection', client => {gameLoop
+io.on('connection', client => {
 
   // console.log(socket.connected); // prints "true"
   client.on('keydown', handleKeydown);
