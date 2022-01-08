@@ -92,7 +92,7 @@ function gameLoop(state) {
   }
 
   // decision rule
-  numPlayers = Object.keys([state.players]).length;
+  numPlayers = [state.players].length;
   console.log("decision rule numPlayers: " + numPlayers)
   for (let i = 0; i < numPlayers; i++) {
     // console.log("index: " + i)
