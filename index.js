@@ -44,7 +44,9 @@ document.body.style.backgroundColor = "black";
 // playGif("images/smoke.gif")
 // makeSmoke()
 // joinGame();
-setTimeout(() => { console.log("Hello World!"); }, 2000);
+setTimeout(() => { setImageVisible('smoke', 0); }, 2000);
+
+
 
 // document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
 // joinGameBtn.addEventListener('click', newGame);
@@ -55,6 +57,12 @@ const layer_letters = document.getElementById('layer_letters');
 const context_letters = layer_letters.getContext('2d');
 context_letters.fillStyle = 'black';
 context_letters.fillRect(0, 0, 838, 48);
+
+
+function setImageVisible(id, visible) {
+    var img = document.getElementById(id);
+    img.style.visibility = (visible ? 'visible' : 'hidden');
+}
 
 
  function playGif(gif_img) {
