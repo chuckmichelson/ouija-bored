@@ -81,8 +81,8 @@ function addPlayer(state) {
   numPlayers = [state.x].length;
   console.log("addPlayer numPlayers (before push): " + numPlayers);
   // [state.players].push({ x : 0, y : 0 });
-  state.x.push([0]);
-  state.y.push([0]);
+  [state.x].push([0]);
+  [state.y].push([0]);
   numPlayers = [state.x].length;
   console.log("addPlayer numPlayers (after push): " + numPlayers);
   // state.players[String(state.numPlayers)].x = 0;
