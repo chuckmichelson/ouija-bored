@@ -164,6 +164,9 @@ function gameLoop(state) {
   state.x = Array(5).fill(0);
   state.y = Array(5).fill(0);
 
+  // update the number of currently connected clients
+  state.numSpirits = Object.keys(io.sockets.connected).length;
+
   return false;
 }
 
