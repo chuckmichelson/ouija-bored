@@ -188,6 +188,17 @@ function paintGame(state) {
 
 
 
+  const layer_agreed = document.getElementById("layer_agreed");
+  const agreed_ctx = layer_agreed.getContext("2d");
+  agreed_ctx.clearRect(0, 0, 100, 554);
+  agreed_ctx.font = "60px Copperplate, Papyrus, fantasy";
+  // right_ctx.fillStyle = '#8A2F70';
+  agreed_ctx.fillStyle = 'whitesmoke';
+  agreed_ctx.textAlign = "center";
+  right_ctx.fillText(state.agreed_letters, 10, 10);
+  right_ctx.font = "18px Copperplate, Papyrus, fantasy";
+
+
   // const context_letters = document.getElementById('context_letters');
   // const context = context_letters.getContext('2d');
   // context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
