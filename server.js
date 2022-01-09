@@ -44,7 +44,7 @@ const { makeid } = require('./utils');
 // // });
 
 
-const state = {};
+var state = {};
 const clientRooms = {};
 
 // app.use("/api", function(req, res, next){
@@ -76,8 +76,8 @@ io.on('connection', client => {
       console.log("*****allUsers: numClients: " + numClients)
     }
     console.log("*****allUsers: numClients: " + numClients)
-    state['AAAAA'].numSpirits = numClients;
-    console.log("*****allUsers: numClients: " + state['AAAAA'].numSpirits)
+    state.numSpirits = numClients;
+    console.log("*****allUsers: numClients: " + state.numSpirits)
 
     if (numClients === 0) {
       //client.emit('unknownCode');
