@@ -69,7 +69,7 @@ io.on('connection', client => {
 
 
   function handleJoinGame(roomName) {
-    // console.log("made it to handleJoinGame")
+    console.log("made it to handleJoinGame")
     const room = io.sockets.adapter.rooms[roomName];
 
     let allUsers;
