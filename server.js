@@ -173,9 +173,8 @@ function emitGameOver(room, winner) {
 
 function emitScore(room, score) {
   // console.log("made it to emitScore()")
-  // update the number of currently connected clients
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(io.sockets.in(room)));
+    .emit('gameScore', JSON.stringify(score));
 }
 
 
