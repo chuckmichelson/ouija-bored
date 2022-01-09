@@ -38,12 +38,16 @@
 // console.log("Hopefully listening by now")
 
 
+console.log("in server")
+
+
 const { FRAME_RATE } = require('./constants');
 const CANVAS_WIDTH = 838;
 const CANVAS_HEIGHT = 554;
 const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
+console.log("declared constants")
 
 // *****This is from multiplayer snake
 const io = require('socket.io')();
@@ -52,11 +56,12 @@ const { FRAME_RATE } = require('./constants');
 const { makeid } = require('./utils');
 // *****
 
+console.log("ran the multiplayer snake socket code")
 
-hostname = "https://ouija-bored.herokuapp.com"
-server.listen(process.env.PORT || 3000, hostname, () => {
-  console.log(`Server running at http://${hostname}:${PORT}/`);
-});
+// hostname = "https://ouija-bored.herokuapp.com"
+// server.listen(process.env.PORT || 3000, hostname, () => {
+//   console.log(`Server running at http://${hostname}:${PORT}/`);
+// });
 
 
 const state = {};
@@ -71,7 +76,8 @@ const clientRooms = {};
 
 io.on('connection', client => {
 
-  // console.log(socket.connected); // prints "true"
+  console.log("inside connection code")
+
   client.on('keydown', handleKeydown);
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
