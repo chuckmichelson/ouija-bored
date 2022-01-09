@@ -33,7 +33,6 @@ const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
 const { makeid } = require('./utils');
 
 
-connectCounter = 0;
 
 // const express = require('express')
 // const app = express()
@@ -80,7 +79,7 @@ io.on('connection', client => {
     // console.log("*****allUsers: numClients: " + numClients)
     // state[roomName].numSpirits = numClients;
     // console.log("*****allUsers: numClients: " + state.numSpirits)
-    emitScore(roomName, connectCounter)
+    emitScore(roomName, io.sockets.sockets.length)
 
     if (numClients === 0) {
       //client.emit('unknownCode');
@@ -175,7 +174,7 @@ function emitGameOver(room, winner) {
 function emitScore(room, score) {
   // console.log("made it to emitScore()")
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(io.sockets.sockets.length));
+    .emit('gameScore', JSON.stringify(score));
 }
 
 
