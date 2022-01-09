@@ -149,7 +149,7 @@ function startGameInterval(roomName) {
 
     if (!winner) {
       emitGameState(roomName, state[roomName])
-      // emitScore(roomName, gameScore)
+      emitScore(roomName, state[roomName].numSpirits)
     } else {
       emitGameOver(roomName, winner);
       state[roomName] = null;
@@ -173,7 +173,7 @@ function emitGameOver(room, winner) {
 function emitScore(room, score) {
   // console.log("made it to emitScore()")
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(gameScore));
+    .emit('gameScore', JSON.stringify(score));
 }
 
 
