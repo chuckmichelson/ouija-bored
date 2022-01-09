@@ -158,7 +158,7 @@ function gameLoop(state) {
   }
   state.letter_buffer += current_letter;
 
-  // if the last 30 frames of the letter buffer are the same, then that's an official letter
+  // if the last 30 frames of the letter buffer are the same, then that's an agreed letter
   if (state.letter_buffer.length > 30) {
     var last30 = state.letter_buffer.substr(state.letter_buffer.length - 30);
     console.log(last30)
@@ -170,8 +170,8 @@ function gameLoop(state) {
       count++;
     }
 
-    if (count >= 30) {
-      state.agreed_letters += state.current_letter;
+    if (count >= 29) {
+      state.agreed_letters += current_letter;
       state.letter_buffer = {};
       console.log("AGREED: " + state.agreed_letters)
     }
