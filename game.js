@@ -3,13 +3,14 @@ const { CANVAS_WIDTH } = require('./constants');
 const { CANVAS_HEIGHT } = require('./constants');
 const { PLANCHETTE_WIDTH } = require('./constants');
 const { PLANCHETTE_HEIGHT } = require('./constants');
+const { MAX_PLAYERS_PER_ROOM } = require('./constants');
 
 // const FRAME_RATE = 20;
 // const CANVAS_WIDTH = 838;
 // const CANVAS_HEIGHT = 554;
 // const PLANCHETTE_WIDTH = 120;
 // const PLANCHETTE_HEIGHT = 120;
-const MAX_PLAYERS_PER_ROOM = 100;
+// const MAX_PLAYERS_PER_ROOM = 100;
 
 const { makeid } = require('./utils');
 const { ouijaGoToLetter } = require('./utils');
