@@ -164,7 +164,7 @@ function gameLoop(state) {
     console.log(last30)
     let count = 0;
     for(let i = 0; i < last30.length; i++){
-      if(i === str.lastIndexOf(last30[i])){
+      if(i === last30.lastIndexOf(last30[i])){
          continue;
       };
       count++;
