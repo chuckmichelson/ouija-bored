@@ -148,6 +148,8 @@ function paintGame(state) {
   // console.log("made it to paintGame")
   // document.getElementById("letterDisplay").innerHTML = state.letters[state.letters.length - 1];
 
+
+  // planchette
   const layer2 = document.getElementById('layer2');
   const context = layer2.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -248,7 +250,16 @@ function handleGameOver(data) {
 
   gameActive = false;
 
-  alert('Game Over');
+  // game over messages
+  const layer2 = document.getElementById('layer2');
+  const context = layer2.getContext('2d');
+  context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  const ctx2 = layer2.getContext('2d');
+  ctx2.fillStyle = "white";
+  ctx2.textAlign = "center";
+  ctx2.fillText(state.agreed_letters, CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+  ctx2.font = "80px Copperplate, Papyrus, fantasy";
+
 
 }
 
