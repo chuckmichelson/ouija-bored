@@ -253,7 +253,6 @@ function handleScore(gameScore) {
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
   left_ctx.fillStyle = "white";
   left_ctx.textAlign = "center";
-  console.log("*****paintGame: gameScore: " + gameScore)
   left_ctx.fillText(gameScore, 50, 80);
   left_ctx.font = "18px Copperplate, Papyrus, fantasy";
   left_ctx.fillText("Spirits", 50, 110);
