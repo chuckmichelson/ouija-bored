@@ -157,16 +157,16 @@ function paintGame(state) {
   planchette.src = "images/planchette.png";
   ctx2.drawImage(planchette, state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 
-  // const left_layer2 = document.getElementById("left_layer2");
-  // const left_ctx = left_layer2.getContext("2d");
-  // left_ctx.font = "60px Copperplate, Papyrus, fantasy";
-  // left_ctx.fillStyle = "white";
-  // left_ctx.textAlign = "center";
-  // console.log("*****paintGame: state.numSpirits: " + String(state.numSpirits))
-  // left_ctx.fillText(state.numSpirits, 50, 80);
-  // left_ctx.font = "18px Copperplate, Papyrus, fantasy";
-  // left_ctx.fillText("Spirits", 50, 110);
-  // left_ctx.fillText("Present", 50, 130);
+  const left_layer2 = document.getElementById("left_layer2");
+  const left_ctx = left_layer2.getContext("2d");
+  left_ctx.font = "60px Copperplate, Papyrus, fantasy";
+  left_ctx.fillStyle = "white";
+  left_ctx.textAlign = "center";
+  console.log("*****paintGame: state.numSpirits: " + String(state.numSpirits))
+  left_ctx.fillText(state.numSpirits, 50, 80);
+  left_ctx.font = "18px Copperplate, Papyrus, fantasy";
+  left_ctx.fillText("Spirits", 50, 110);
+  left_ctx.fillText("Present", 50, 130);
 
   const right_layer2 = document.getElementById("right_layer2");
   const right_ctx = right_layer2.getContext("2d");
@@ -207,7 +207,7 @@ function handleInit(number) {
   console.log("made it to handleInit()")
   playerNumber = number;
   console.log("*****playerNumber: " + playerNumber)
-  state.numSpirits = playerNumber
+  state.numSpirits = playerNumber;
   // document.getElementById("numPlayersDisplay").innerHTML = playerNumber;
   init()
 }
