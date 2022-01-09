@@ -93,12 +93,12 @@ function makeSmoke() {
 }
 
 function newGame() {
-  // console.log("made it to NewGame")
+  console.log("made it to NewGame")
   socket.emit('newGame');
 }
 
 function joinGame() {
-  // console.log("made it to joinGame")
+  console.log("made it to joinGame")
   socket.emit('joinGame', 'AAAAA');
 }
 

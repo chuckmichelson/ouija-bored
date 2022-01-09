@@ -5,7 +5,7 @@ const http = require("http");
 // const hostname = '127.0.0.1';
 // const PORT = 3000;
 
-// Create HTTP server and listen on port 3000 for requests
+Create HTTP server and listen on port 3000 for requests
 const server = http.createServer((req, res) => {
 
   //Set the response HTTP header with HTTP status and Content type
@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
   res.end('Hello World\n');
 });
 
-
+console.log("Set up server")
 
 const io = require('socket.io')();
 
@@ -24,6 +24,7 @@ server.listen(PORT, hostname, () => {
   console.log(`Server running at http://${hostname}:${PORT}/`);
 });
 
+console.log("Hopefully listening by now")
 
 
 const { FRAME_RATE } = require('./constants');
