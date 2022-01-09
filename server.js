@@ -92,7 +92,7 @@ io.on('connection', client => {
     console.log("roomName: " + roomName)
 
     client.join(roomName);
-    addPlayer(state)
+    addPlayer(state);
     client.number = numClients + 1;
     client.emit('init', client.number);
 
@@ -173,8 +173,9 @@ function emitGameOver(room, winner) {
 
 function emitScore(room, score) {
   // console.log("made it to emitScore()")
+  current_score = io.engine.clientsCount;
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(score));
+    .emit('gameScore', JSON.stringify(current_score));
 }
 
 
