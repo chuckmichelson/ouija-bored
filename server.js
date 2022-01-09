@@ -175,7 +175,7 @@ function emitScore(room) {
   // console.log("made it to emitScore()")
   var numClients = (typeof clients !== 'undefined') ? Object.keys(clients).length : 0;
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(numClients));
+    .emit('gameScore', JSON.stringify(31));
 }
 
 
