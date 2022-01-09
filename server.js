@@ -6,24 +6,24 @@ const hostname = '127.0.0.1';
 const PORT = 3000;
 
 // Create HTTP server and listen on port 3000 for requests
-const server = http.createServer((req, res) => {
+// const server = http.createServer((req, res) => {
 
-  //Set the response HTTP header with HTTP status and Content type
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
-});
+//   //Set the response HTTP header with HTTP status and Content type
+//   res.statusCode = 200;
+//   res.setHeader('Content-Type', 'text/plain');
+//   res.end('Hello World\n');
+// });
 
 
-// const express = require('express')
-// const app = express()
-// const server = require('https').Server(app)
-// const io = require('socket.io')(server)
-// const PORT = process.env.PORT || 3000;
+const express = require('express')
+const app = express()
+const server = require('https').Server(app)
+const io = require('socket.io')(server)
+const PORT = process.env.PORT || 3000;
 
 console.log("Set up server")
 
-const io = require('socket.io')();
+// const io = require('socket.io')();
 
 
 // hostname = "https://ouija-bored.herokuapp.com"
