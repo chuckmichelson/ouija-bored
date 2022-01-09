@@ -162,11 +162,20 @@ function gameLoop(state) {
   if (state.letter_buffer.length > 30) {
     var last30 = state.letter_buffer.substr(state.letter_buffer.length - 30);
     console.log(last30)
-    if (1==0) {
+    let count = 0;
+    for(let i = 0; i < last30.length; i++){
+      if(i === str.lastIndexOf(last30[i])){
+         continue;
+      };
+      count++;
+    }
+
+    if (count >= 30) {
       state.agreed_letters += state.current_letter;
       state.letter_buffer = {};
+      console.log("AGREED: " + state.agreed_letters)
     }
-  }
+}
 
 
   // reset all player velocities to 0
