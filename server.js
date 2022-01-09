@@ -33,6 +33,10 @@ const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
 const { makeid } = require('./utils');
 
 
+connectCounter = 0;
+socket.on('connect', function() { connectCounter++; });
+socket.on('disconnect', function() { connectCounter--; });
+
 // const express = require('express')
 // const app = express()
 // const server = require('http').Server(app)
@@ -78,7 +82,7 @@ io.on('connection', client => {
     // console.log("*****allUsers: numClients: " + numClients)
     // state[roomName].numSpirits = numClients;
     // console.log("*****allUsers: numClients: " + state.numSpirits)
-    emitScore(roomName, numClients)
+    emitScore(roomName, connectCounter)
 
     if (numClients === 0) {
       //client.emit('unknownCode');
