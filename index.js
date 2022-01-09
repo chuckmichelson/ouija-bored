@@ -44,7 +44,7 @@ console.log("sockets on")
 document.body.style.backgroundColor = "black";
 // playGif("images/smoke.gif")
 // makeSmoke()
-setTimeout(() => { collapseSmoke(); joinGame();}, 2000);
+setTimeout(() => { setTimeout(() => { collapseSmoke(); joinGame();}, 2000); }, 1000);
 // setTimeout(() => { joinGame();}, 2000);
 
 // var coll = document.getElementsByClassName("collapsible");
@@ -181,8 +181,6 @@ function paintGame(state) {
   }
   right_ctx.fillText(current_letter, 50, 80);
   right_ctx.font = "18px Copperplate, Papyrus, fantasy";
-  // right_ctx.fillText("Souls", 50, 110);
-  // right_ctx.fillText("Present", 50, 130);
 
 
 
