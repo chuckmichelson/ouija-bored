@@ -76,8 +76,8 @@ io.on('connection', client => {
       console.log("*****allUsers: numClients: " + numClients)
     }
     console.log("*****allUsers: numClients: " + numClients)
-    state[roomName].numSpirits = numClients;
-    console.log("*****allUsers: numClients: " + state.numSpirits)
+    // state[roomName].numSpirits = numClients;
+    // console.log("*****allUsers: numClients: " + state.numSpirits)
     emitScore(roomName, numClients)
 
     if (numClients === 0) {
