@@ -63,8 +63,8 @@ function createGameState() {
         y: 100,
       }
     },
-    letter_buffer: {},
-    agreed_letters: {},
+    letter_buffer: '',
+    agreed_letters: '',
   };
 }
 
