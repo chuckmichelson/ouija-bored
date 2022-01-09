@@ -50,7 +50,7 @@ function createGameState() {
 // }
 
   return {
-    numSpirits: [],
+    numSpirits: Array(1).fill(1),
     x: Array(5).fill(0),
     y: Array(5).fill(0),
     // players : {
