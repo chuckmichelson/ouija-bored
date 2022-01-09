@@ -44,7 +44,7 @@ console.log("sockets on")
 document.body.style.backgroundColor = "black";
 // playGif("images/smoke.gif")
 // makeSmoke()
-setTimeout(() => { setTimeout(() => { collapseSmoke(); joinGame();}, 2000); }, 1000);
+setTimeout(() => { collapseSmoke(); joinGame();}, 2000);
 // setTimeout(() => { joinGame();}, 2000);
 
 // var coll = document.getElementsByClassName("collapsible");
