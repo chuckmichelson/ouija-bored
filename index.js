@@ -150,13 +150,13 @@ function paintGame(state) {
   // console.log("made it to paintGame")
   // document.getElementById("letterDisplay").innerHTML = state.letters[state.letters.length - 1];
 
-  const layer_agreed = document.getElementById("layer_agreed");
-  const agreed_ctx = layer_agreed.getContext("2d");
-  agreed_ctx.font = "60px Copperplate, Papyrus, fantasy";
-  agreed_ctx.fillStyle = "whitesmoke";
-  agreed_ctx.textAlign = "center";
-  agreed_ctx.font = "18px Copperplate, Papyrus, fantasy";
-  agreed_ctx.fillText(state.agreed_letters, 20, 80);
+  const layer2 = document.getElementById('layer2');
+  const context = layer2.getContext('2d');
+  context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  const ctx2 = layer2.getContext('2d');
+  var planchette = new Image();
+  planchette.src = "images/planchette.png";
+  ctx2.drawImage(planchette, state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 
   const left_layer2 = document.getElementById("left_layer2");
   const left_ctx = left_layer2.getContext("2d");
@@ -168,14 +168,6 @@ function paintGame(state) {
   left_ctx.font = "18px Copperplate, Papyrus, fantasy";
   left_ctx.fillText("Spirits", 50, 110);
   left_ctx.fillText("Present", 50, 130);
-
-  const layer2 = document.getElementById('layer2');
-  const context = layer2.getContext('2d');
-  context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  const ctx2 = layer2.getContext('2d');
-  var planchette = new Image();
-  planchette.src = "images/planchette.png";
-  ctx2.drawImage(planchette, state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 
   const right_layer2 = document.getElementById("right_layer2");
   const right_ctx = right_layer2.getContext("2d");
@@ -194,8 +186,13 @@ function paintGame(state) {
   // right_ctx.fillText("Present", 50, 130);
 
 
-
-
+  const layer_agreed = document.getElementById("layer_agreed");
+  const agreed_ctx = layer_agreed.getContext("2d");
+  agreed_ctx.font = "24px Copperplate, Papyrus, fantasy";
+  agreed_ctx.fillStyle = "whitesmoke";
+  agreed_ctx.textAlign = "center";
+  agreed_ctx.fillText(numSpirits, 50, 80);
+  agreed_ctx.font = "18px Copperplate, Papyrus, fantasy";
 
 
   // const context_letters = document.getElementById('context_letters');
