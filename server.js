@@ -77,11 +77,11 @@ io.on('connection', client => {
       numClients = Object.keys(allUsers).length;
       console.log("*****allUsers: numClients: " + numClients)
     }
-    // console.log("*****allUsers: numClients: " + numClients)
+    console.log("*****allUsers: numClients: " + numClients)
     // state[roomName].numSpirits = numClients;
     // console.log("*****allUsers: numClients: " + state.numSpirits)
     // score =
-    // emitScore(numClients, score);
+    emitScore(room, numClients);
 
     if (numClients === 0) {
       //client.emit('unknownCode');
