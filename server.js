@@ -79,7 +79,7 @@ io.on('connection', client => {
     // console.log("*****allUsers: numClients: " + numClients)
     // state[roomName].numSpirits = numClients;
     // console.log("*****allUsers: numClients: " + state.numSpirits)
-    // emitScore(roomName, io.sockets.sockets.length)
+    emitScore(roomName);
 
     if (numClients === 0) {
       //client.emit('unknownCode');
@@ -171,11 +171,11 @@ function emitGameOver(room, winner) {
     .emit('gameOver', JSON.stringify({ winner }));
 }
 
-function emitScore(room, score) {
+function emitScore(room) {
   // console.log("made it to emitScore()")
-  current_score = io.sockets.server.engine.clientsCount;
+  var numClients = (typeof clients !== 'undefined') ? Object.keys(clients).length : 0;
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(current_score));
+    .emit('gameScore', JSON.stringify(numClients));
 }
 
 
