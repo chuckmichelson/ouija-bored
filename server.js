@@ -78,6 +78,7 @@ io.on('connection', client => {
     console.log("*****allUsers: numClients: " + numClients)
     state[roomName].numSpirits = numClients;
     console.log("*****allUsers: numClients: " + state.numSpirits)
+    emitScore(roomName, numClients)
 
     if (numClients === 0) {
       //client.emit('unknownCode');
@@ -149,7 +150,6 @@ function startGameInterval(roomName) {
 
     if (!winner) {
       emitGameState(roomName, state[roomName])
-      emitScore(roomName, state[roomName].numSpirits)
     } else {
       emitGameOver(roomName, winner);
       state[roomName] = null;
