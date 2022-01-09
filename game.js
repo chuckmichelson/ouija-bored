@@ -63,8 +63,8 @@ function createGameState() {
         y: 100,
       }
     },
-    current_letter: {},
-    letters: {},
+    letter_buffer: {},
+    agreed_letters: {},
   };
 }
 
@@ -152,17 +152,22 @@ function gameLoop(state) {
   // console.log("state.planchette.pos.y: " + state.planchette.pos.y)
 
 
-  state.current_letter = ouijaGetLetter(state);
-  if (state.current_letter === undefined) {
-    state.current_letter = ' ';
+  current_letter = ouijaGetLetter(state);
+  if (current_letter === undefined) {
+    current_letter = ' ';
+  }
+  state.letter_buffer += current_letter;
+
+  // if the last 30 frames of the letter buffer are the same, then that's an official letter
+  if (state.letter_buffer.length > 30) {
+    var last30 = id.substr(state.letter_buffer.length - 5);
+    console.log(last30)
+    if (1==0) {
+      state.agreed_letters += state.current_letter;
+      state.letter_buffer = {};
+    }
   }
 
-  if (letter === undefined || letter === '') {
-    // do nothing
-  } else {
-    // console.log("It's a letter! Specifically, " + letter)
-    state.letters += letter;
-  }
 
   // reset all player velocities to 0
   state.x = Array(5).fill(0);
