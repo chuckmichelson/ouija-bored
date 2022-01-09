@@ -154,7 +154,7 @@ function gameLoop(state) {
 
   current_letter = ouijaGetLetter(state);
   if (current_letter === undefined) {
-    current_letter = ' ';
+    current_letter = '_';
   }
   state.letter_buffer += current_letter;
 
