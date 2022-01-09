@@ -159,7 +159,7 @@ function paintGame(state) {
   const left_layer2 = document.getElementById("left_layer2");
   const left_ctx = left_layer2.getContext("2d");
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
-  left_ctx.fillStyle = "white";
+  left_ctx.fillStyle = "slategrey";
   left_ctx.textAlign = "center";
   numSpirits = state.numSpirits;
   left_ctx.fillText(numSpirits, 50, 80);
@@ -171,7 +171,8 @@ function paintGame(state) {
   const right_ctx = right_layer2.getContext("2d");
   right_ctx.clearRect(0, 0, 100, 554);
   right_ctx.font = "60px Copperplate, Papyrus, fantasy";
-  right_ctx.fillStyle = '#8A2F70';
+  // right_ctx.fillStyle = '#8A2F70';
+  right_ctx.fillStyle = 'slategrey';
   right_ctx.textAlign = "center";
   current_letter = state.letters[state.letters.length - 1];
   if (current_letter != undefined) {
