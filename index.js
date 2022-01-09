@@ -176,6 +176,7 @@ function paintGame(state) {
   // right_ctx.fillStyle = '#8A2F70';
   right_ctx.fillStyle = 'whitesmoke';
   right_ctx.textAlign = "center";
+  // current_letter = state.letters[state.letters.length - 1];
   current_letter = state.letter_buffer.substr(state.letter_buffer.length - 1);
   if (current_letter == '_') {
     current_letter = ' ';
@@ -185,14 +186,6 @@ function paintGame(state) {
   // right_ctx.fillText("Souls", 50, 110);
   // right_ctx.fillText("Present", 50, 130);
 
-
-  const layer_agreed = document.getElementById("layer_agreed");
-  const agreed_ctx = layer_agreed.getContext("2d");
-  agreed_ctx.font = "24px Copperplate, Papyrus, fantasy";
-  agreed_ctx.fillStyle = "whitesmoke";
-  agreed_ctx.textAlign = "center";
-  agreed_ctx.fillText(numSpirits, 50, 80);
-  agreed_ctx.font = "18px Copperplate, Papyrus, fantasy";
 
 
   // const context_letters = document.getElementById('context_letters');
