@@ -15,15 +15,19 @@
 // });
 
 
-const express = require('express')
-const app = express()
-const server = require('https').Server(app)
-const io = require('socket.io')(server)
+// const express = require('express')
+// const app = express()
+// const server = require('https').Server(app)
+// const io = require('socket.io')(server)
 const PORT = process.env.PORT || 3000;
 
 console.log("Set up server")
 
 // const io = require('socket.io')();
+
+
+hostname = "https://ouija-bored.herokuapp.com"
+
 
 //listen for request on port 3000, and as a callback function have the port listened on logged
 io.listen(process.env.PORT || 3000);
