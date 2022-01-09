@@ -3,7 +3,7 @@
 //Load HTTP module
 const http = require("http");
 const hostname = '127.0.0.1';
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Create HTTP server and listen on port 3000 for requests
 // const server = http.createServer((req, res) => {
@@ -19,7 +19,6 @@ const express = require('express')
 const app = express()
 const server = require('https').Server(app)
 const io = require('socket.io')(server)
-const PORT = process.env.PORT || 3000;
 
 console.log("Set up server")
 
