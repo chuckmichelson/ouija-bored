@@ -195,8 +195,8 @@ function paintGame(state) {
   // right_ctx.fillStyle = '#8A2F70';
   agreed_ctx.fillStyle = 'whitesmoke';
   agreed_ctx.textAlign = "center";
-  right_ctx.fillText(state.agreed_letters, 10, 10);
-  right_ctx.font = "18px Copperplate, Papyrus, fantasy";
+  agreed_ctx.fillText(state.agreed_letters, 10, 10);
+  agreed_ctx.font = "18px Copperplate, Papyrus, fantasy";
 
 
   // const context_letters = document.getElementById('context_letters');
