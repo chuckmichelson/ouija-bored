@@ -69,6 +69,7 @@ io.on('connection', client => {
     if (room) {
       allUsers = room.sockets;
     }
+
     let numClients = 0;
     if (allUsers) {
       numClients = Object.keys(allUsers).length;
@@ -99,7 +100,6 @@ io.on('connection', client => {
   function handleNewGame() {
     // console.log("made it to handleNewGame")
     let roomName = makeid(5);
-    const room = io.sockets.adapter.rooms[roomName];
     clientRooms[client.id] = roomName;
     client.emit('gameCode', roomName);
 
@@ -111,20 +111,6 @@ io.on('connection', client => {
     client.join(roomName);
     client.number = 1;
     client.emit('init', 1);
-
-    let allUsers;
-    if (room) {
-      allUsers = room.sockets;
-    }
-    let numClients = 0;
-    if (allUsers) {
-      numClients = Object.keys(allUsers).length;
-      console.log("*****handleNewGame: numClients: " + numClients)
-    }
-    console.log("*****handleNewGame: numClients: " + numClients)
-    state.numSpirits = numClients;
-    console.log("*****handleNewGame: numClients: " + state.numSpirits)
-
 
     startGameInterval(roomName);
   }
@@ -162,8 +148,8 @@ function startGameInterval(roomName) {
     const winner = gameLoop(state[roomName]);
 
     if (!winner) {
-      emitGameState(roomName, state[roomName]);
-      emitScore(roomName, score);
+      emitGameState(roomName, state[roomName])
+      // emitScore(roomName, gameScore)
     } else {
       emitGameOver(roomName, winner);
       state[roomName] = null;
@@ -184,7 +170,7 @@ function emitGameOver(room, winner) {
     .emit('gameOver', JSON.stringify({ winner }));
 }
 
-function emitScore(room, gameScore) {
+function emitScore(room, score) {
   // console.log("made it to emitScore()")
   io.sockets.in(room)
     .emit('gameScore', JSON.stringify(gameScore));
