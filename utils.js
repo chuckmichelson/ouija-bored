@@ -60,6 +60,9 @@ function ouijaGetLetter(state) {
    if (posy >= 494 && posx >= 280 && posx <= 562) {
       letter = '.'; // i.e., GOODBYE
    }
+   if (letter === undefined) {
+      letter = '_'
+   }
    return letter;
 
 }
