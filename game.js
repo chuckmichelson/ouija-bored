@@ -63,6 +63,7 @@ function createGameState() {
         y: 100,
       }
     },
+    current_letter: {},
     letters: {},
   };
 }
@@ -151,7 +152,10 @@ function gameLoop(state) {
   // console.log("state.planchette.pos.y: " + state.planchette.pos.y)
 
 
-  var letter = ouijaGetLetter(state);
+  state.current_letter = ouijaGetLetter(state);
+  if (state.current_letter === undefined) {
+    state.current_letter = ' ';
+  }
 
   if (letter === undefined || letter === '') {
     // do nothing
