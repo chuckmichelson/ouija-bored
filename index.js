@@ -249,6 +249,7 @@ function handleScore(gameScore) {
   // scoreDisplay.innerText = gameScore;
   const left_layer2 = document.getElementById("left_layer2");
   const left_ctx = left_layer2.getContext("2d");
+  left_ctx.clearRect(0, 0, 100, 554);
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
   left_ctx.fillStyle = "white";
   left_ctx.textAlign = "center";
