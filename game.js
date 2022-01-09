@@ -156,18 +156,18 @@ function gameLoop(state) {
   state.letter_buffer += current_letter;
 
   // if the last 30 frames of the letter buffer are the same, then that's an agreed letter
-  if (state.letter_buffer.length > 40) {
-    var last40 = state.letter_buffer.substr(state.letter_buffer.length - 40);
-    console.log(last40)
+  if (state.letter_buffer.length > 50) {
+    var last50 = state.letter_buffer.substr(state.letter_buffer.length - 50);
+    console.log(last50)
     let count = 0;
-    for(let i = 0; i < last40.length; i++){
-      if(i === last40.lastIndexOf(last40[i])){
+    for(let i = 0; i < last50.length; i++){
+      if(i === last50.lastIndexOf(last50[i])){
          continue;
       };
       count++;
     }
 
-    if (count >= 39 && current_letter != '_') {
+    if (count >= 49 && current_letter != '_') {
       state.agreed_letters += current_letter;
       state.letter_buffer = {};
       console.log("AGREED: " + state.agreed_letters)
