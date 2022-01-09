@@ -174,7 +174,7 @@ function gameLoop(state) {
     }
   }
 
-  last_agreed = state.letter_buffer.substr(state.letter_buffer.length - 1);
+  last_agreed = state.agreed_letters.substr(state.agreed_letters.length - 1);
   if(last_agreed == '.') {
       return true;
   }
