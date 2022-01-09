@@ -79,7 +79,7 @@ io.on('connection', client => {
     // console.log("*****allUsers: numClients: " + numClients)
     // state[roomName].numSpirits = numClients;
     // console.log("*****allUsers: numClients: " + state.numSpirits)
-    emitScore(roomName, io.sockets.sockets.length)
+    // emitScore(roomName, io.sockets.sockets.length)
 
     if (numClients === 0) {
       //client.emit('unknownCode');
@@ -173,8 +173,9 @@ function emitGameOver(room, winner) {
 
 function emitScore(room, score) {
   // console.log("made it to emitScore()")
+  // update the number of currently connected clients
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(score));
+    .emit('gameScore', JSON.stringify(Object.keys(io.sockets.connected).length;));
 }
 
 
