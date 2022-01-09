@@ -53,6 +53,11 @@ const { makeid } = require('./utils');
 // *****
 
 
+hostname = "https://ouija-bored.herokuapp.com"
+server.listen(process.env.PORT || 3000, hostname, () => {
+  console.log(`Server running at http://${hostname}:${PORT}/`);
+});
+
 
 const state = {};
 const clientRooms = {};
