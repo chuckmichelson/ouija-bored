@@ -160,7 +160,7 @@ function gameLoop(state) {
 
   // if the last 30 frames of the letter buffer are the same, then that's an official letter
   if (state.letter_buffer.length > 30) {
-    var last30 = id.substr(state.letter_buffer.length - 5);
+    var last30 = state.letter_buffer.substr(state.letter_buffer.length - 30);
     console.log(last30)
     if (1==0) {
       state.agreed_letters += state.current_letter;
