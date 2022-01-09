@@ -178,9 +178,10 @@ function paintGame(state) {
   right_ctx.textAlign = "center";
   // current_letter = state.letters[state.letters.length - 1];
   current_letter = state.letter_buffer.substr(state.letter_buffer.length - 1);
-  if (current_letter != undefined) {
-     right_ctx.fillText(current_letter, 50, 80);
+  if (current_letter == '_') {
+    current_letter = ' ';
   }
+  right_ctx.fillText(current_letter, 50, 80);
   right_ctx.font = "18px Copperplate, Papyrus, fantasy";
   // right_ctx.fillText("Souls", 50, 110);
   // right_ctx.fillText("Present", 50, 130);
