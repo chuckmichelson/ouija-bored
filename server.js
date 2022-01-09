@@ -75,7 +75,7 @@ io.on('connection', client => {
     let numClients = 0;
     if (allUsers) {
       numClients = Object.keys(allUsers).length;
-      console.log("*****allUsers: numClients: " + numClients)
+      console.log("*****allUsers exists")
     }
     console.log("*****allUsers: numClients: " + numClients)
     // state[roomName].numSpirits = numClients;
