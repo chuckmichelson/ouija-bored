@@ -80,8 +80,8 @@ io.on('connection', client => {
     // console.log("*****allUsers: numClients: " + numClients)
     // state[roomName].numSpirits = numClients;
     // console.log("*****allUsers: numClients: " + state.numSpirits)
-    var numClients = io.sockets.adapter.rooms['AAAAA'].sockets.length;
-    emitScore(numClients, numClients);
+    var score = io.sockets.adapter.rooms['AAAAA'].sockets.length;
+    emitScore(numClients, score);
 
     if (numClients === 0) {
       //client.emit('unknownCode');
