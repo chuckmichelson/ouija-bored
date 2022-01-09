@@ -72,10 +72,10 @@ function collapseSmoke() {
 
 // smokeBtn.addEventListener('click', makeSmoke);
 
-const layer_letters = document.getElementById('layer_letters');
-const context_letters = layer_letters.getContext('2d');
-context_letters.fillStyle = 'black';
-context_letters.fillRect(0, 0, 838, 48);
+const layer_agreed = document.getElementById('layer_agreed');
+const context_agreed = layer_agreed.getContext('2d');
+context_agreed.fillStyle = 'black';
+context_agreed.fillRect(0, 0, 838, 48);
 
 
 function setImageVisible(id, visible) {
