@@ -76,7 +76,7 @@ io.on('connection', client => {
       console.log("*****allUsers: numClients: " + numClients)
     }
     console.log("*****allUsers: numClients: " + numClients)
-    state.numSpirits = [numClients];
+    state.numSpirits = numClients;
     console.log("*****allUsers: numClients: " + state.numSpirits)
 
     if (numClients === 0) {
