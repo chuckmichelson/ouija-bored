@@ -20,7 +20,7 @@ const PLANCHETTE_HEIGHT = 120;
 // ***** CHANGE THIS TO RUN ON HEROKU
 // const socket = io('http://localhost:3000');
 // const socket = io.connect('https://ouija-bored.herokuapp.com:50806/socket.io/socket.io.js');
-const socket = io.connect('https://ouija-bored.herokuapp.com:443/socket.io/socket.io.js');
+const socket = io.connect('https://ouija-bored.herokuapp.com:12345/socket.io/socket.io.js');
 // const socket = io.connect('https://ouija-bored.herokuapp.com/');
 
 socket.on('init', handleInit);
