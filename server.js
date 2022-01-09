@@ -78,7 +78,7 @@ io.on('connection', client => {
       console.log("*****allUsers exists")
     }
     console.log("*****allUsers: numClients: " + numClients)
-    // state[roomName].numSpirits = numClients;
+    state[roomName].numSpirits = numClients;
     // console.log("*****allUsers: numClients: " + state.numSpirits)
     // score =
     emitScore(room, numClients);

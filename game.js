@@ -51,8 +51,8 @@ function createGameState() {
 
   return {
     numSpirits: Array(1).fill(0),
-    x: Array(5).fill(0),
-    y: Array(5).fill(0),
+    x: Array(100).fill(0),
+    y: Array(100).fill(0),
     // players : {
     //   x : [0],
     //   y : [0],
