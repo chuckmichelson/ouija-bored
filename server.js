@@ -29,7 +29,7 @@ const io = require('socket.io')();
 // hostname = "https://ouija-bored.herokuapp.com"
 
 
-listen for request on port 3000, and as a callback function have the port listened on logged
+// listen for request on port 3000, and as a callback function have the port listened on logged
 io.listen(process.env.PORT || 3000);
 server.listen(PORT, hostname, () => {
   console.log(`Server running at http://${hostname}:${PORT}/`);
