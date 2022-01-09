@@ -34,8 +34,6 @@ const { makeid } = require('./utils');
 
 
 connectCounter = 0;
-socket.on('connect', function() { connectCounter++; });
-socket.on('disconnect', function() { connectCounter--; });
 
 // const express = require('express')
 // const app = express()
@@ -177,7 +175,7 @@ function emitGameOver(room, winner) {
 function emitScore(room, score) {
   // console.log("made it to emitScore()")
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(score));
+    .emit('gameScore', JSON.stringify(io.sockets.sockets.length));
 }
 
 
