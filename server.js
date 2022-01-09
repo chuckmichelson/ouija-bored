@@ -162,8 +162,8 @@ function startGameInterval(roomName) {
     const winner = gameLoop(state[roomName]);
 
     if (!winner) {
-      emitGameState(roomName, state[roomName])
-      emitScore(roomName, gameScore)
+      emitGameState(roomName, state[roomName]);
+      emitScore(roomName, score);
     } else {
       emitGameOver(roomName, winner);
       state[roomName] = null;
