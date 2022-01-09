@@ -76,8 +76,8 @@ io.on('connection', client => {
       console.log("*****allUsers: numClients: " + numClients)
     }
     console.log("*****allUsers: numClients: " + numClients)
-    state.numSpirits = numClients;
-    console.log("*****allUsers: numClients: " + state.numSpirits)
+    state['AAAAA'].numSpirits = numClients;
+    console.log("*****allUsers: numClients: " + state['AAAAA'].numSpirits)
 
     if (numClients === 0) {
       //client.emit('unknownCode');
