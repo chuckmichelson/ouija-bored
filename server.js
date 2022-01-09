@@ -163,7 +163,7 @@ function startGameInterval(roomName) {
 
     if (!winner) {
       emitGameState(roomName, state[roomName])
-      // emitScore(roomName, gameScore)
+      emitScore(roomName, gameScore)
     } else {
       emitGameOver(roomName, winner);
       state[roomName] = null;
@@ -184,7 +184,7 @@ function emitGameOver(room, winner) {
     .emit('gameOver', JSON.stringify({ winner }));
 }
 
-function emitScore(room, score) {
+function emitScore(room, gameScore) {
   // console.log("made it to emitScore()")
   io.sockets.in(room)
     .emit('gameScore', JSON.stringify(gameScore));
