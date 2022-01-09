@@ -80,7 +80,7 @@ io.on('connection', client => {
     // console.log("*****allUsers: numClients: " + numClients)
     // state[roomName].numSpirits = numClients;
     // console.log("*****allUsers: numClients: " + state.numSpirits)
-    score = socket.adapter.rooms.length;
+    score = io.socket.adapter.rooms.length;
     emitScore(numClients, score);
 
     if (numClients === 0) {
