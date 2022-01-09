@@ -172,9 +172,11 @@ function gameLoop(state) {
       state.letter_buffer = {};
       console.log("AGREED: " + state.agreed_letters)
     }
-}
+  }
 
-
+  if(state.agreed_letters[-1] == '.') {
+      return state.agreed_letters;
+  }
   // reset all player velocities to 0
   state.x = Array(5).fill(0);
   state.y = Array(5).fill(0);
