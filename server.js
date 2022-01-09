@@ -62,6 +62,7 @@ io.on('connection', client => {
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
 
+
   function handleJoinGame(roomName) {
     // console.log("made it to handleJoinGame")
     const room = io.sockets.adapter.rooms[roomName];
@@ -79,7 +80,8 @@ io.on('connection', client => {
     // console.log("*****allUsers: numClients: " + numClients)
     // state[roomName].numSpirits = numClients;
     // console.log("*****allUsers: numClients: " + state.numSpirits)
-    emitScore(roomName);
+    var numClients = io.sockets.adapter.rooms['AAAAA'].sockets.length;
+    emitScore(numClients, numClients);
 
     if (numClients === 0) {
       //client.emit('unknownCode');
@@ -171,11 +173,10 @@ function emitGameOver(room, winner) {
     .emit('gameOver', JSON.stringify({ winner }));
 }
 
-function emitScore(room) {
+function emitScore(room, score) {
   // console.log("made it to emitScore()")
-  var numClients = (typeof clients !== 'undefined') ? Object.keys(clients).length : 0;
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(31));
+    .emit('gameScore', JSON.stringify(score));
 }
 
 
