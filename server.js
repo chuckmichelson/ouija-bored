@@ -60,13 +60,13 @@ const PLANCHETTE_HEIGHT = 120;
 console.log("declared constants")
 
 // *****This is from multiplayer snake
-const io = require('socket.io')();
-const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
-const { FRAME_RATE } = require('./constants');
-const { makeid } = require('./utils');
+// const io = require('socket.io')();
+// const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
+// const { FRAME_RATE } = require('./constants');
+// const { makeid } = require('./utils');
 // *****
 
-console.log("ran the multiplayer snake socket code")
+// console.log("ran the multiplayer snake socket code")
 
 // hostname = "https://ouija-bored.herokuapp.com"
 // server.listen(process.env.PORT || 3000, hostname, () => {
