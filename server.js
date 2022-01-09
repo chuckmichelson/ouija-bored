@@ -174,7 +174,7 @@ function emitGameOver(room, winner) {
 }
 
 function emitScore(room, score) {
-  console.log("made it to emitScore()")
+  console.log("emitScore(): Room: " + room + " Score: " + score)
   io.sockets.in(room)
     .emit('gameScore', JSON.stringify(score));
 }
