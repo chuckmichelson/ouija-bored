@@ -207,7 +207,6 @@ function handleInit(number) {
   console.log("made it to handleInit()")
   playerNumber = number;
   console.log("*****playerNumber: " + playerNumber)
-  state.numSpirits = playerNumber;
   // document.getElementById("numPlayersDisplay").innerHTML = playerNumber;
   init()
 }
@@ -254,6 +253,7 @@ function handleScore(gameScore) {
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
   left_ctx.fillStyle = "white";
   left_ctx.textAlign = "center";
+  // console.log("*****paintGame: state.numSpirits: " + String(state.numSpirits))
   left_ctx.fillText(String(gameScore), 50, 80);
   left_ctx.font = "18px Copperplate, Papyrus, fantasy";
   left_ctx.fillText("Spirits", 50, 110);
