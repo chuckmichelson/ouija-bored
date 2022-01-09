@@ -174,7 +174,8 @@ function gameLoop(state) {
     }
   }
 
-  if(state.agreed_letters[-1] == '.') {
+  last_agreed = state.letter_buffer.substr(state.letter_buffer.length - 1);
+  if(last_agreed == '.') {
       return true;
   }
   // reset all player velocities to 0
