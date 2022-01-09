@@ -1,52 +1,24 @@
-// ***** CHANGE THIS TO RUN ON HEROKU
-
 //Load HTTP module
 const http = require("http");
 const hostname = '127.0.0.1';
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
-// Create HTTP server and listen on port 3000 for requests
-// const server = http.createServer((req, res) => {
+//Create HTTP server and listen on port 3000 for requests
+const server = http.createServer((req, res) => {
 
-//   //Set the response HTTP header with HTTP status and Content type
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Hello World\n');
-// });
+  //Set the response HTTP header with HTTP status and Content type
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World\n');
+});
 
+const io = require('socket.io')();
 
-const express = require('express')
-const app = express()
-const server = require('https').Server(app)
-const io = require('socket.io')(server)
-
-console.log("Set up server")
-
-// const io = require('socket.io')();
-
-
-// hostname = "https://ouija-bored.herokuapp.com"
-
-
-// listen for request on port 3000, and as a callback function have the port listened on logged
+//listen for request on port 3000, and as a callback function have the port listened on logged
 io.listen(process.env.PORT || 3000);
 server.listen(PORT, hostname, () => {
   console.log(`Server running at http://${hostname}:${PORT}/`);
 });
-
-console.log("Hopefully listening by now")
-
-
-
-console.log("in server")
-
-
-// const PORT = process.env.PORT || 3000;
-// var server = app.listen(PORT, function() {
-//     var host = server.address().address;
-//     var port = server.address().port;
-//     console.log("server is listening at http://%s:%s", host, port);
-// });
 
 
 
@@ -56,21 +28,21 @@ const CANVAS_HEIGHT = 554;
 const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
-console.log("declared constants")
+// // const io = require('socket.io')();
+const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
+const { makeid } = require('./utils');
 
-// *****This is from multiplayer snake
-// const io = require('socket.io')();
-// const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
-// const { FRAME_RATE } = require('./constants');
-// const { makeid } = require('./utils');
-// *****
 
-// console.log("ran the multiplayer snake socket code")
 
-// hostname = "https://ouija-bored.herokuapp.com"
-// server.listen(process.env.PORT || 3000, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${PORT}/`);
-// });
+// const express = require('express')
+// const app = express()
+// const server = require('http').Server(app)
+// const io = require('socket.io')(server)
+// const PORT = process.env.PORT || 3000;
+
+// // http.listen(PORT,function(){
+// //     console.log("Listening to port " + PORT);
+// // });
 
 
 const state = {};
@@ -85,15 +57,14 @@ const clientRooms = {};
 
 io.on('connection', client => {
 
-  console.log("inside connection code")
-
+  // console.log(socket.connected); // prints "true"
   client.on('keydown', handleKeydown);
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
 
 
   function handleJoinGame(roomName) {
-    console.log("made it to handleJoinGame")
+    // console.log("made it to handleJoinGame")
     const room = io.sockets.adapter.rooms[roomName];
 
     let allUsers;
@@ -210,7 +181,3 @@ function emitScore(room, score) {
 }
 
 
-
-// ***** from multiplayer snake
-io.listen(process.env.PORT || 3000);
-// *****
