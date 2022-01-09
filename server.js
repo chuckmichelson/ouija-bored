@@ -70,7 +70,7 @@ io.on('connection', client => {
       allUsers = room.sockets;
     }
 
-    let numClients = 0;
+    // let numClients = 0;
     if (allUsers) {
       numClients = Object.keys(allUsers).length;
       console.log("*****allUsers: numClients: " + numClients)
