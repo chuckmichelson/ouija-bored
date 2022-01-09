@@ -78,8 +78,8 @@ io.on('connection', client => {
       console.log("*****allUsers exists")
     }
     console.log("*****allUsers: numClients: " + numClients)
-    state[roomName].numSpirits = []
-    state[roomName].numSpirits = numClients;
+    // state[roomName].numSpirits = []
+    // state[roomName].numSpirits = numClients;
     // console.log("*****allUsers: numClients: " + state.numSpirits)
     // score =
     emitScore(room, numClients);
@@ -174,10 +174,10 @@ function emitGameOver(room, winner) {
     .emit('gameOver', JSON.stringify({ winner }));
 }
 
-function emitScore(room, score) {
-  console.log("emitScore(): Score: " + score)
+function emitScore(room, gameScore) {
+  console.log("emitScore(): Score: " + gameScore)
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(score));
+    .emit('gameScore', JSON.stringify(gameScore));
 }
 
 
