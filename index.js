@@ -72,10 +72,8 @@ function collapseSmoke() {
 
 // smokeBtn.addEventListener('click', makeSmoke);
 
-const layer_agreed = document.getElementById('layer_agreed');
-const context_agreed = layer_agreed.getContext('2d');
-context_agreed.fillStyle = 'black';
-context_agreed.fillRect(0, 0, 838, 48);
+
+
 
 
 function setImageVisible(id, visible) {
@@ -190,12 +188,14 @@ function paintGame(state) {
 
   const layer_agreed = document.getElementById("layer_agreed");
   const agreed_ctx = layer_agreed.getContext("2d");
-  agreed_ctx.clearRect(0, 0, 100, 554);
+  agreed_ctx.fillStyle = 'black';
+  agreed_ctx.clearRect(0, 0, 838, 48);
   agreed_ctx.font = "24px Copperplate, Papyrus, fantasy";
   // right_ctx.fillStyle = '#8A2F70';
   agreed_ctx.fillStyle = 'whitesmoke';
   agreed_ctx.textAlign = "center";
   agreed_ctx.fillText(state.agreed_letters, 419, 10);
+
 
 
   // const context_letters = document.getElementById('context_letters');
