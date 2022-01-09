@@ -175,7 +175,7 @@ function emitScore(room, score) {
   // console.log("made it to emitScore()")
   // update the number of currently connected clients
   io.sockets.in(room)
-    .emit('gameScore', JSON.stringify(Object.keys(io.sockets.connected).length;));
+    .emit('gameScore', JSON.stringify(Object.keys(io.sockets.connected).length));
 }
 
 
