@@ -248,6 +248,17 @@ function handleGameCode(gameCode) {
 function handleScore(gameScore) {
   // console.log("made it to handleScore()")
   // scoreDisplay.innerText = gameScore;
+  const left_layer2 = document.getElementById("left_layer2");
+  const left_ctx = left_layer2.getContext("2d");
+  left_ctx.font = "60px Copperplate, Papyrus, fantasy";
+  left_ctx.fillStyle = "white";
+  left_ctx.textAlign = "center";
+  // console.log("*****paintGame: state.numSpirits: " + String(state.numSpirits))
+  left_ctx.fillText(gameScore, 50, 80);
+  left_ctx.font = "18px Copperplate, Papyrus, fantasy";
+  left_ctx.fillText("Spirits", 50, 110);
+  left_ctx.fillText("Present", 50, 130);
+
 }
 
 function handleUnknownCode() {
