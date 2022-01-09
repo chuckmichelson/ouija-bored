@@ -38,6 +38,17 @@
 // console.log("Hopefully listening by now")
 
 
+
+console.log("in server")
+
+
+const PORT = process.env.PORT || 443;
+var server = app.listen(PORT, function() {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("server is listening at http://%s:%s", host, port);
+});
+
 console.log("in server")
 
 
