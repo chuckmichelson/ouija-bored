@@ -153,9 +153,6 @@ function gameLoop(state) {
 
 
   current_letter = ouijaGetLetter(state);
-  if (current_letter === undefined) {
-    current_letter = '_';
-  }
   state.letter_buffer += current_letter;
 
   // if the last 30 frames of the letter buffer are the same, then that's an agreed letter
@@ -170,7 +167,7 @@ function gameLoop(state) {
       count++;
     }
 
-    if (count >= 29) {
+    if (count >= 29 && current_letter != '_') {
       state.agreed_letters += current_letter;
       state.letter_buffer = {};
       console.log("AGREED: " + state.agreed_letters)
