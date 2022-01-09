@@ -175,7 +175,7 @@ function gameLoop(state) {
   }
 
   if(state.agreed_letters[-1] == '.') {
-      return state.agreed_letters;
+      return true;
   }
   // reset all player velocities to 0
   state.x = Array(5).fill(0);
