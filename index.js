@@ -191,7 +191,7 @@ function paintGame(state) {
   const layer_agreed = document.getElementById("layer_agreed");
   const agreed_ctx = layer_agreed.getContext("2d");
   agreed_ctx.clearRect(0, 0, 100, 554);
-  agreed_ctx.font = "60px Copperplate, Papyrus, fantasy";
+  agreed_ctx.font = "24px Copperplate, Papyrus, fantasy";
   // right_ctx.fillStyle = '#8A2F70';
   agreed_ctx.fillStyle = 'whitesmoke';
   agreed_ctx.textAlign = "center";
