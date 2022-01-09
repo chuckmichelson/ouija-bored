@@ -39,7 +39,7 @@ function ouijaGoToLetter(state, letter) {
 }
 
 function ouijaGetLetter(state) {
-   letter = '';
+   letter = '_';
    ouijaAlphabetLength = Object.keys(OUIJA_CODES).length;
    // console.log("ouijaAlphabetLength: " + ouijaAlphabetLength);
    // console.log("state.planchette.pos.x: " + state.planchette.pos.x);
@@ -60,9 +60,5 @@ function ouijaGetLetter(state) {
    if (posy >= 494 && posx >= 280 && posx <= 562) {
       letter = '.'; // i.e., GOODBYE
    }
-   if (letter === undefined) {
-      letter = '_'
-   }
    return letter;
-
 }
