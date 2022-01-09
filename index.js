@@ -38,7 +38,7 @@ console.log("sockets on")
 // const gameCodeInput = document.getElementById('gameCodeInput');
 // const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 // const smokeBtn = document.getElementById('smokeBtn');
-const scoreDisplay = document.getElementById('scoreDisplay');
+// const scoreDisplay = document.getElementById('scoreDisplay');
 
 // makeSmoke()
 document.body.style.backgroundColor = "black";
