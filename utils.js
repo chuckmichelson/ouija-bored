@@ -35,7 +35,7 @@ function ouijaGoToLetter(state, letter) {
          state.planchette.pos.y = OUIJA_CODES[i].y
       }
   }
-  // return state;
+  return state;
 }
 
 function ouijaGetLetter(state) {
