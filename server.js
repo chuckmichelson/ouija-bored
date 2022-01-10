@@ -37,16 +37,16 @@ const server = require('http').Server(app)
 const io = require('socket.io')(server)
 const PORT = process.env.PORT || 3000;
 
-server.listen(PORT,function(){
+http.listen(PORT,function(){
     console.log("Listening to port " + PORT);
 });
 
-app.use("/api", function(req, res, next){
-   console.log("request handler");
-    res.end("hello");
-    console.log(res);
-    next();
-});
+// app.use("/api", function(req, res, next){
+//    console.log("request handler");
+//     res.end("hello");
+//     console.log(res);
+//     next();
+// });
 // *********************************************************
 
 
