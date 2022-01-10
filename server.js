@@ -25,28 +25,28 @@
 
 
 // ***** LITERALLY THE ONLY CODE IN THE SNAKES EXAMPLE *****
-const io = require('socket.io')();
-io.listen(process.env.PORT || 3000);
+// const io = require('socket.io')();
+// io.listen(process.env.PORT || 3000);
 // *********************************************************
 
 
 // ***** ALTERNATIVE CODE FOR HEROKU DEPLOY ****************
-// const express = require('express')
-// const app = express()
-// const server = require('http').Server(app)
-// const io = require('socket.io')(server)
-// const PORT = process.env.PORT || 3000;
+const express = require('express')
+const app = express()
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
+const PORT = process.env.PORT || 3000;
 
-// http.listen(PORT,function(){
-//     console.log("Listening to port " + PORT);
-// });
+server.listen(PORT,function(){
+    console.log("Listening to port " + PORT);
+});
 
-// app.use("/api", function(req, res, next){
-//    console.log("request handler");
-//     res.end("hello");
-//     console.log(res);
-//     next();
-// });
+app.use("/api", function(req, res, next){
+   console.log("request handler");
+    res.end("hello");
+    console.log(res);
+    next();
+});
 // *********************************************************
 
 
