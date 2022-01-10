@@ -109,10 +109,6 @@ io.on('connection', client => {
     client.emit('gameCode', roomName);
 
     state[roomName] = initGame();
-    // console.log('*****')
-    // console.log(state.players === undefined)
-    // console.log('*****')
-
     client.join(roomName);
     client.number = 1;
     client.emit('init', 1);
@@ -137,12 +133,8 @@ io.on('connection', client => {
     const vel = getUpdatedVelocity(keyCode);
 
     if (vel) {
-      // console.log("client.number: " + client.number)
-      // console.log(typeof(state) == 'undefined')
       state[roomName].x[client.number - 1] = vel.x;
       state[roomName].y[client.number - 1] = vel.y;
-      // console.log("This Player Vel x: " + state[roomName].players.x[client.number - 1])
-      // console.log("This Player Vel y: " + state[roomName].players.y[client.number - 1])
     }
   }
 });
@@ -169,13 +161,13 @@ function emitGameState(room, gameState) {
 }
 
 function emitGameOver(room, winner) {
-  // console.log("made it to emitGameOver()")
+  // Send this event to everyone in the room.
   io.sockets.in(room)
     .emit('gameOver', JSON.stringify({ winner }));
 }
 
 function emitScore(room, score) {
-  console.log("emitScore(): Score: " + score)
+  // Send this event to everyone in the room.
   io.sockets.in(room)
     .emit('gameScore', JSON.stringify(score));
 }
