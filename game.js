@@ -52,7 +52,6 @@ function gameLoop(state) {
   }
 
   // decision rule
-  // console.log("decision rule numPlayers: " + numPlayers)
   for (let i = 0; i < MAX_PLAYERS_PER_ROOM; i++) {
     // console.log("index: " + i)
     if (state.x[i] === 1 ) {
