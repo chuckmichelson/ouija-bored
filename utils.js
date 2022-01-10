@@ -20,21 +20,21 @@ function makeid(length) {
 }
 
 function ouijaGoToLetter(state, letter) {
-  console.log("made it to ouijaGoToLetter")
-  // xstart = state.planchette.pos.x;
-  // xend = OUIJA_CODES[letter].x;
-  // ystart = state.planchette.pos.y;
-  // yend = OUIJA_CODES[letter].y;
-  // for ( var i = 0; i < 100; i++ ) {
-  //     result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  //  }
-  ouijaAlphabetLength = Object.keys(OUIJA_CODES).length;
-  for ( var i = 0; i < ouijaAlphabetLength - 1; i++ ) {
+   // console.log("made it to ouijaGoToLetter")
+   // xstart = state.planchette.pos.x;
+   // xend = OUIJA_CODES[letter].x;
+   // ystart = state.planchette.pos.y;
+   // yend = OUIJA_CODES[letter].y;
+   // for ( var i = 0; i < 100; i++ ) {
+
+   // }
+   ouijaAlphabetLength = Object.keys(OUIJA_CODES).length;
+   for ( var i = 0; i < ouijaAlphabetLength - 1; i++ ) {
       if (OUIJA_CODES[i].letter === letter) {
          state.planchette.pos.x = OUIJA_CODES[i].x
          state.planchette.pos.y = OUIJA_CODES[i].y
       }
-  }
+   }
   return state;
 }
 
