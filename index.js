@@ -222,7 +222,7 @@ function handleGameOver(data) {
   const layer3 = document.getElementById('layer3');
   const ctx3 = layer3.getContext('2d');
   ctx3.fillStyle = "black";
-  ctx3.globalAlpha = 0.2;
+  ctx3.globalAlpha = 0.9;
   ctx3.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // game over messages
