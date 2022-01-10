@@ -27,8 +27,6 @@ const { CANVAS_WIDTH } = require('./constants');
 const { CANVAS_HEIGHT } = require('./constants');
 const { PLANCHETTE_WIDTH } = require('./constants');
 const { PLANCHETTE_HEIGHT } = require('./constants');
-
-// // const io = require('socket.io')();
 const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
 const { makeid } = require('./utils');
 
