@@ -224,8 +224,8 @@ function handleGameOver(data) {
   const ctx3 = layer3.getContext('2d');
   ctx3.fillStyle = "white";
   ctx3.textAlign = "center";
+  ctx3.font = "120px Copperplate, Papyrus, fantasy";
   ctx3.fillText("Game Over", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
-  ctx3.font = "80px Copperplate, Papyrus, fantasy";
 
 }
 
