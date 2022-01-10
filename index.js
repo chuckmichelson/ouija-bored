@@ -1,13 +1,5 @@
 
-// socket.on('init_test', handleInit_test);
-
-
-// function handleInit_test(msg) {
-//   console.log(msg);
-// }
-
-
-// const { GRID_SIZE } = require('./constants');
+const { GRID_SIZE } = require('./constants');
 const FRAME_RATE = 10;
 const CANVAS_WIDTH = 838;
 const CANVAS_HEIGHT = 554;
