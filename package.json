@@ -13,10 +13,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chuckmichelson/ouija-bored"
-  },
+  "repository": "https://github.com/chuckmichelson/ouija-bored",
   "author": "chuckmichelson",
   "license": "ISC",
   "homepage": "",
