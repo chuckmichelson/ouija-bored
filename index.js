@@ -218,6 +218,13 @@ function handleGameOver(data) {
   gameActive = false;
 
   // game over messages
+
+
+  const layer2 = document.getElementById('layer2');
+  const ctx2 = layer2.getContext('2d');
+  ctx2.globalAlpha = 0.2;
+
+
   const layer3 = document.getElementById('layer3');
   const context = layer3.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
