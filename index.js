@@ -169,7 +169,7 @@ function paintGame(state) {
   const right_ctx = right_layer2.getContext("2d");
   right_ctx.clearRect(0, 0, 100, 554);
   right_ctx.font = "60px Copperplate, Papyrus, fantasy";
-  streak = calculateFontColor(state);
+  streak = calculateLetterStreak(state);
   console.log("streak: " + streak);
   alpha = streak / state.letter_buffer.length;
   right_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
@@ -263,13 +263,13 @@ function reset() {
   gameScreen.style.display = "none";
 }
 
-function calculateFontColor(state) {
+function calculateLetterStreak(state) {
   current_letter = state.current_letter;
   buffer = state.letter_buffer;
   var streak = 0;
   for (i = 0; i < buffer.length; i++) {
     streak += 1;
-    if (current_letter != buffer[buffer.length - i]) {
+    if (current_letter != buffer[buffer.length - i - 1]) {
       break;
     }
   }
