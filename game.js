@@ -90,6 +90,7 @@ function gameLoop(state) {
   }
 
 
+  // read letters
   current_letter = ouijaGetLetter(state);
   state.letter_buffer += current_letter;
 
@@ -104,7 +105,6 @@ function gameLoop(state) {
       };
       count++;
     }
-
     if (count >= 49 && current_letter != '_') {
       state.agreed_letters += current_letter;
       state.letter_buffer = {};
@@ -120,6 +120,7 @@ function gameLoop(state) {
   state.x = Array(5).fill(0);
   state.y = Array(5).fill(0);
 
+  // return with no exit code
   return false;
 }
 
