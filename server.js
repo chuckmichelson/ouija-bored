@@ -57,14 +57,13 @@ const clientRooms = {};
 
 io.on('connection', client => {
 
-  // console.log(socket.connected); // prints "true"
   client.on('keydown', handleKeydown);
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
 
 
   function handleJoinGame(roomName) {
-    // console.log("made it to handleJoinGame")
+    console.log("made it to handleJoinGame")
     const room = io.sockets.adapter.rooms[roomName];
 
     let allUsers;
@@ -75,13 +74,8 @@ io.on('connection', client => {
     let numClients = 0;
     if (allUsers) {
       numClients = Object.keys(allUsers).length;
-      console.log("*****allUsers exists")
     }
     console.log("*****allUsers: numClients: " + numClients)
-    // state[roomName].numSpirits = []
-    // state[roomName].numSpirits = numClients;
-    // console.log("*****allUsers: numClients: " + state.numSpirits)
-    // score =
     emitScore(room, numClients);
 
     if (numClients === 0) {
@@ -103,7 +97,6 @@ io.on('connection', client => {
   }
 
   function handleNewGame() {
-    // console.log("made it to handleNewGame")
     let roomName = makeid(5);
     clientRooms[client.id] = roomName;
     client.emit('gameCode', roomName);
@@ -117,7 +110,6 @@ io.on('connection', client => {
   }
 
   function handleKeydown(keyCode) {
-    // console.log("made it to handleKeydown")
     const roomName = clientRooms[client.id];
     if (!roomName) {
       console.log("No room name")
@@ -140,7 +132,6 @@ io.on('connection', client => {
 });
 
 function startGameInterval(roomName) {
-  // console.log("made it to startGameInterval")
   const intervalId = setInterval(() => {
     const winner = gameLoop(state[roomName]);
 
