@@ -25,8 +25,8 @@
 
 
 // ***** LITERALLY THE ONLY CODE IN THE SNAKES EXAMPLE *****
-const io = require('socket.io')();
-io.listen(process.env.PORT || 3000);
+// const io = require('socket.io')();
+// io.listen(process.env.PORT || 3000);
 // *********************************************************
 
 
@@ -50,6 +50,11 @@ io.listen(process.env.PORT || 3000);
 // *********************************************************
 
 
+var app = express(),
+    http = require('http'),
+    server = http.createServer(app),
+    io = require('socket.io').listen(server);
+var sockets = io;
 
 
 const { FRAME_RATE } = require('./constants');
