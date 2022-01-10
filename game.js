@@ -20,6 +20,7 @@ function initGame() {
   console.log("made it to initGame()")
   state = createGameState();
   // state = ouijaGoToLetter(state, 'C');
+  state.planchette.pos.x = 200;
   return state;
 }
 
