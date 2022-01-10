@@ -91,9 +91,6 @@ function gameLoop(state) {
     state.planchette.pos.y = CANVAS_HEIGHT - PLANCHETTE_WIDTH / 2;
   }
 
-  // console.log("state.planchette.pos.x: " + state.planchette.pos.x)
-  // console.log("state.planchette.pos.y: " + state.planchette.pos.y)
-
 
   current_letter = ouijaGetLetter(state);
   state.letter_buffer += current_letter;
@@ -121,7 +118,7 @@ function gameLoop(state) {
   if(last_agreed == '.') {
       return true;
   }
-  // reset all player velocities to 0
+  // reset all player velocities to 0 so the user must hold down the arrow keys
   state.x = Array(5).fill(0);
   state.y = Array(5).fill(0);
 
