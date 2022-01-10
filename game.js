@@ -24,7 +24,6 @@ function initGame() {
 }
 
 function createGameState() {
-  console.log("made it to createGameState")
   return {
     numSpirits: Array(1).fill(0),
     x: Array(100).fill(0),
@@ -42,11 +41,10 @@ function createGameState() {
 
 
 function addPlayer(state) {
-  // console.log("made it to addPlayer ****************************")
 }
 
 function gameLoop(state) {
-  // console.log("made it to gameLoop")
+
   if (!state) {
     return;
   }
@@ -72,8 +70,8 @@ function gameLoop(state) {
     }
 
     // once we read the velocity, zero it out
-    state.x[i] = 0;
-    state.y[i] = 0;
+    // state.x[i] = 0;
+    // state.y[i] = 0;
 
   }
 
