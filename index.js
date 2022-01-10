@@ -170,7 +170,9 @@ function paintGame(state) {
   right_ctx.clearRect(0, 0, 100, 554);
   right_ctx.font = "60px Copperplate, Papyrus, fantasy";
   streak = calculateLetterStreak(state);
-  console.log("streak: " + streak);
+  if (streak === undefined) {
+    console.log("streak undefined);
+  }
   alpha = streak / state.letter_buffer.length;
   right_ctx.fillStyle = 'rgba(255, 255, 255, alpha)';
   right_ctx.textAlign = "center";
