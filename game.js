@@ -19,7 +19,7 @@ module.exports = {
 function initGame() {
   console.log("made it to initGame()")
   state = createGameState();
-  // state = ouijaGoToLetter(state, 'C');
+  state = ouijaGoToLetter(state, 'C');
   return state;
 }
 
