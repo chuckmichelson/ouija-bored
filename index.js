@@ -142,9 +142,6 @@ function keyDown(e) {
 }
 
 function paintGame(state) {
-  // console.log("made it to paintGame")
-  // document.getElementById("letterDisplay").innerHTML = state.letters[state.letters.length - 1];
-
 
   // display planchette
   const layer2 = document.getElementById('layer2');
