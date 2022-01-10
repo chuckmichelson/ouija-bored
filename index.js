@@ -217,6 +217,17 @@ function handleGameOver(data) {
   data = JSON.parse(data);
   gameActive = false;
 
+
+  // dim the ouija board
+  const layer3 = document.getElementById('layer3');
+  const ctx3 = layer3.getContext('2d');
+  ctx3.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  ctx3.fillStyle = "black";
+  ctx3.textAlign = "center";
+  ctx3.font = "120px Copperplate, Papyrus, fantasy";
+  ctx3.globalAlpha = 0.2;
+  ctx3.fillText("Game Over", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+
   // game over messages
   const layer4 = document.getElementById('layer4');
   const ctx4 = layer4.getContext('2d');
