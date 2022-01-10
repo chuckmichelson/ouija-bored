@@ -181,9 +181,9 @@ function paintGame(state) {
   right_ctx.font = "18px Copperplate, Papyrus, fantasy";
   streak = calculateFontColor(state);
   console.log("streak: " + streak)
-  font_multiplier = streak / state.letter_buffer.length;
+  alpha = streak / state.letter_buffer.length;
   console.log("font_multiplier: " + font_multiplier)
-  right_ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+  right_ctx.fillStyle = 'rgba(255, 255, 255, alpha)';
 
   // display agreed letters
   const layer_agreed = document.getElementById("layer_agreed");
