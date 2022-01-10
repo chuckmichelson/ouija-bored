@@ -218,14 +218,14 @@ function handleGameOver(data) {
   gameActive = false;
 
   // game over messages
-  const layer2 = document.getElementById('layer2');
-  const context = layer2.getContext('2d');
+  const layer3 = document.getElementById('layer3');
+  const context = layer3.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  const ctx2 = layer2.getContext('2d');
-  ctx2.fillStyle = "white";
-  ctx2.textAlign = "center";
-  ctx2.fillText(state.agreed_letters, CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
-  ctx2.font = "80px Copperplate, Papyrus, fantasy";
+  const ctx3 = layer3.getContext('2d');
+  ctx3.fillStyle = "white";
+  ctx3.textAlign = "center";
+  ctx3.fillText("Game Over", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+  ctx3.font = "80px Copperplate, Papyrus, fantasy";
 
 }
 
