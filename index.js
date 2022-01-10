@@ -232,7 +232,7 @@ function handleGameOver(data) {
   ctx4.fillStyle = "white";
   ctx4.textAlign = "center";
   ctx4.font = "120px Copperplate, Papyrus, fantasy";
-  ctx4.fillText("Game Over", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+  ctx4.fillText(state.agreed_letters, CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
 }
 
