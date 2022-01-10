@@ -172,7 +172,7 @@ function paintGame(state) {
   streak = calculateLetterStreak(state);
   console.log("streak: " + streak);
   alpha = streak / state.letter_buffer.length;
-  right_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
+  right_ctx.fillStyle = 'rgba(255, 255, 255, alpha)';
   right_ctx.textAlign = "center";
   // current_letter = state.letter_buffer.substr(state.letter_buffer.length - 1);
   current_letter = state.letter_buffer[state.letter_buffer.length - 1]
