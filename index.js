@@ -14,8 +14,8 @@ const PLANCHETTE_HEIGHT = 120;
 // const socket = io.connect('https://ouija-bored.herokuapp.com:50806/socket.io/socket.io.js');
 // const socket = io.connect('https://ouija-bored.herokuapp.com:12345/socket.io/socket.io.js');
 // const socket = io.connect('https://ouija-bored.herokuapp.com/');
-// const socket = io.connect('https://ouija-bored.herokuapp.com:12345/socket.io/socket.io.js');
-var socket = io.connect('https://ouija-bored.herokuapp.com/');
+const socket = io.connect('https://ouija-bored.herokuapp.com:12345/socket.io/socket.io.js');
+// var socket = io.connect('https://ouija-bored.herokuapp.com/');
 
 socket.on('init', handleInit);
 socket.on('gameState', handleGameState);
