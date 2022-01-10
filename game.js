@@ -21,6 +21,7 @@ function initGame() {
   state = createGameState();
   // state = ouijaGoToLetter(state, 'C');
   state.planchette.pos.x = 200;
+  state.planchette.pos.y = 200;
   return state;
 }
 
