@@ -10,7 +10,8 @@ const PLANCHETTE_HEIGHT = 120;
 
 
 // ***** CHANGE THIS TO RUN ON HEROKU
-const socket = io('http://localhost:3000');
+// const socket = io('http://localhost:3000');
+const socket = io('https://ouija-bored.herokuapp.com/');
 // const socket = io.connect('https://ouija-bored.herokuapp.com:50806/socket.io/socket.io.js');
 // const socket = io('https://ouija-bored.herokuapp.com:12345/socket.io/socket.io.js');
 // const socket = io('https://ouija-bored.herokuapp.com/');
@@ -216,7 +217,6 @@ function handleGameOver(data) {
   }
   data = JSON.parse(data);
   gameActive = false;
-
 
   // dim the ouija board
   const layer2 = document.getElementById('layer2');
