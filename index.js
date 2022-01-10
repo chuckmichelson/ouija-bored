@@ -223,8 +223,8 @@ function handleGameOver(data) {
   ctx4.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   ctx4.fillStyle = "white";
   ctx4.textAlign = "center";
-  ctx4.fillText("Game Over", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
   ctx4.font = "120px Copperplate, Papyrus, fantasy";
+  ctx4.fillText("Game Over", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
 }
 

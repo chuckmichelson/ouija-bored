@@ -30,8 +30,8 @@ function createGameState() {
     y: Array(100).fill(0),
     planchette: {
       pos: {
-        x: 100,
-        y: 100,
+        x: 300,
+        y: 300,
       }
     },
     letter_buffer: '',
