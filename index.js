@@ -176,7 +176,7 @@ function paintGame(state) {
   right_ctx.textAlign = "center";
   // current_letter = state.letter_buffer.substr(state.letter_buffer.length - 1);
   current_letter = state.letter_buffer[state.letter_buffer.length - 1]
-  if (current_letter == undefined) {
+  if (current_letter == '_' || current_letter == undefined) {
     current_letter = ' ';
   }
   right_ctx.fillText(current_letter, 50, 80);
