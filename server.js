@@ -1,3 +1,5 @@
+
+// ***** CODE THAT WORKS FOR LOCALHOST *********************
 //Load HTTP module
 const http = require("http");
 const hostname = '127.0.0.1';
@@ -19,6 +21,29 @@ io.listen(process.env.PORT || 3000);
 server.listen(PORT, hostname, () => {
   console.log(`Server running at http://${hostname}:${PORT}/`);
 });
+// *********************************************************
+
+
+
+// ***** ADDITIONAL CODE THAT MIGHT HELP HEROKU DEPLOY *****
+// const express = require('express')
+// const app = express()
+// const server = require('http').Server(app)
+// const io = require('socket.io')(server)
+// const PORT = process.env.PORT || 3000;
+
+// // http.listen(PORT,function(){
+// //     console.log("Listening to port " + PORT);
+// // });
+
+// app.use("/api", function(req, res, next){
+//    console.log("request handler");
+//     res.end("hello");
+//     console.log(res);
+//     next();
+// });
+// *********************************************************
+
 
 
 
@@ -32,26 +57,12 @@ const { makeid } = require('./utils');
 
 
 
-// const express = require('express')
-// const app = express()
-// const server = require('http').Server(app)
-// const io = require('socket.io')(server)
-// const PORT = process.env.PORT || 3000;
 
-// // http.listen(PORT,function(){
-// //     console.log("Listening to port " + PORT);
-// // });
 
 
 const state = {};
 const clientRooms = {};
 
-// app.use("/api", function(req, res, next){
-//    console.log("request handler");
-//     res.end("hello");
-//     console.log(res);
-//     next();
-// });
 
 io.on('connection', client => {
 
