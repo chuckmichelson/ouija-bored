@@ -70,8 +70,8 @@ function gameLoop(state) {
     }
 
     // once we read the velocity, zero it out
-    // state.x[i] = 0;
-    // state.y[i] = 0;
+    state.x[i] = 0;
+    state.y[i] = 0;
 
   }
 
