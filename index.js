@@ -1,5 +1,5 @@
 
-const { GRID_SIZE } = require('./constants');
+// const { GRID_SIZE } = require('./constants');
 const FRAME_RATE = 10;
 const CANVAS_WIDTH = 838;
 const CANVAS_HEIGHT = 554;
@@ -143,7 +143,7 @@ function paintGame(state) {
   // document.getElementById("letterDisplay").innerHTML = state.letters[state.letters.length - 1];
 
 
-  // planchette
+  // display planchette
   const layer2 = document.getElementById('layer2');
   const context = layer2.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -152,6 +152,7 @@ function paintGame(state) {
   planchette.src = "images/planchette.png";
   ctx2.drawImage(planchette, state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 
+  // display score (spirits present)
   const left_layer2 = document.getElementById("left_layer2");
   const left_ctx = left_layer2.getContext("2d");
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
@@ -163,14 +164,13 @@ function paintGame(state) {
   left_ctx.fillText("Spirits", 50, 110);
   left_ctx.fillText("Present", 50, 130);
 
+  // display current letter
   const right_layer2 = document.getElementById("right_layer2");
   const right_ctx = right_layer2.getContext("2d");
   right_ctx.clearRect(0, 0, 100, 554);
   right_ctx.font = "60px Copperplate, Papyrus, fantasy";
-  // right_ctx.fillStyle = '#8A2F70';
   right_ctx.fillStyle = 'whitesmoke';
   right_ctx.textAlign = "center";
-  // current_letter = state.letters[state.letters.length - 1];
   current_letter = state.letter_buffer.substr(state.letter_buffer.length - 1);
   if (current_letter == '_') {
     current_letter = ' ';
@@ -179,7 +179,7 @@ function paintGame(state) {
   right_ctx.font = "18px Copperplate, Papyrus, fantasy";
 
 
-
+  // display agreed letters
   const layer_agreed = document.getElementById("layer_agreed");
   const agreed_ctx = layer_agreed.getContext("2d");
   agreed_ctx.fillStyle = 'black';
@@ -190,58 +190,28 @@ function paintGame(state) {
   agreed_ctx.textAlign = "center";
   agreed_ctx.fillText(state.agreed_letters, 419, 40);
 
-
-
-  // const context_letters = document.getElementById('context_letters');
-  // const context = context_letters.getContext('2d');
-  // context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  // const ctx2 = context_letters.getContext('2d');
-  // var planchette = new Image();
-  // planchette.src = "images/smoke.png";
-  // ctx2.drawImage(planchette,state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
-
-  // const letters_layer = document.getElementById('letters');
-  // const letters_context = letters_layer.getContext('2d');
-  // letters_context.clearRect(0, 0, 838, 48);
-  // const smokey_layer = document.getElementById('smoke');
-  // const smokey_context = smokey_layer.getContext('2d');
-  // var smoke = new Image();
-  // smoke.src = "images/smoke.gif";
-  // ctx2.drawImage(smoke, 0, 100);
-
 }
 
 function handleInit(number) {
-  console.log("made it to handleInit()")
   playerNumber = number;
   console.log("*****playerNumber: " + playerNumber)
-  // document.getElementById("numPlayersDisplay").innerHTML = playerNumber;
   init()
 }
 
 function handleGameState(gameState) {
-  // console.log("made it to handleGameState")
-
   if (!gameActive) {
     return;
   }
   gameState = JSON.parse(gameState);
-  // console.log('JSON parsed')
-  // handleNumPlayers(gameState.players.length)
-  // console.log('num players handled')
   requestAnimationFrame(() => paintGame(gameState));
-  // console.log('animation frame requested')
-
 }
 
 function handleGameOver(data) {
-  // console.log("made it to handleGameOver()")
   if (!gameActive) {
     console.log("game not active")
     return;
   }
   data = JSON.parse(data);
-
   gameActive = false;
 
   // game over messages
@@ -254,7 +224,6 @@ function handleGameOver(data) {
   ctx2.fillText(state.agreed_letters, CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
   ctx2.font = "80px Copperplate, Papyrus, fantasy";
 
-
 }
 
 function handleGameCode(gameCode) {
@@ -264,7 +233,6 @@ function handleGameCode(gameCode) {
 
 function handleScore(gameScore) {
   console.log("made it to handleScore()")
-  // scoreDisplay.innerText = gameScore;
   const left_layer2 = document.getElementById("left_layer2");
   const left_ctx = left_layer2.getContext("2d");
   left_ctx.clearRect(0, 0, 100, 554);
