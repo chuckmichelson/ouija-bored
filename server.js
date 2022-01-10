@@ -31,15 +31,15 @@
 
 
 // ***** ALTERNATIVE CODE FOR HEROKU DEPLOY ****************
-// const express = require('express')
-// const app = express()
-// const server = require('http').Server(app)
-// const io = require('socket.io')(server)
-// const PORT = process.env.PORT || 3000;
+const express = require('express')
+const app = express()
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
+const PORT = process.env.PORT || 3000;
 
-// http.listen(PORT,function(){
-//     console.log("Listening to port " + PORT);
-// });
+http.listen(PORT,function(){
+    console.log("Listening to port " + PORT);
+});
 
 // app.use("/api", function(req, res, next){
 //    console.log("request handler");
@@ -50,11 +50,11 @@
 // *********************************************************
 
 
-var app = express(),
-    http = require('http'),
-    server = http.createServer(app),
-    io = require('socket.io').listen(server);
-var sockets = io;
+// var app = express(),
+//     http = require('http'),
+//     server = http.createServer(app),
+//     io = require('socket.io').listen(server);
+// var sockets = io;
 
 
 const { FRAME_RATE } = require('./constants');
