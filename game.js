@@ -107,7 +107,7 @@ function gameLoop(state) {
     }
     if (count >= 49 && current_letter != '_') {
       state.agreed_letters += current_letter;
-      state.letter_buffer = ' ';
+      state.letter_buffer = current_letter;
       console.log("AGREED: " + state.agreed_letters)
     }
   }
