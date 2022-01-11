@@ -28,9 +28,10 @@ console.log("********************** Inside server.js")
 
 // ***** LITERALLY THE ONLY CODE IN THE SNAKES EXAMPLE *****
 const io = require('socket.io')();
-io.listen(process.env.PORT || 3000);
+// io.listen(process.env.PORT || 3000);
 // *********************************************************
 
+console.log("********************** Hopefully listening by now")
 
 // ***** ALTERNATIVE CODE FOR HEROKU DEPLOY ****************
 // const express = require('express')
@@ -204,4 +205,4 @@ function emitScore(room, score) {
 }
 
 
-// io.listen(process.env.PORT || 3000);
+io.listen(process.env.PORT || 3000);
