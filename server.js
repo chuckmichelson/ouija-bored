@@ -1,6 +1,6 @@
 
 // ***** CODE THAT WORKS FOR LOCALHOST *********************
-Load HTTP module
+// Load HTTP module
 const http = require("http");
 const hostname = '127.0.0.1';
 const PORT = 3000;
