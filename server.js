@@ -1,3 +1,4 @@
+console.log("********************** Inside server.js")
 
 // ***** CODE THAT WORKS FOR LOCALHOST *********************
 // Load HTTP module
@@ -23,7 +24,6 @@
 // });
 // *********************************************************
 
-console.log("********************** Inside server.js")
 
 
 // ***** LITERALLY THE ONLY CODE IN THE SNAKES EXAMPLE *****
