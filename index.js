@@ -146,7 +146,7 @@ function paintGame(state) {
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
   left_ctx.fillStyle = "whitesmoke";
   left_ctx.textAlign = "center";
-  numSpirits = state[0].numSpirits;
+  numSpirits = state.numSpirits;
   console.log("numSpirits: "  + numSpirits)
   console.log("state.numSpirits: "  + state.numSpirits)
   console.log("state.numSpirits[0]: "  + state.numSpirits[0])
