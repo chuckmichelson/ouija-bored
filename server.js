@@ -128,7 +128,7 @@ io.on('connection', client => {
 
     client.join(roomName);
     addPlayer(state);
-    state.numSpirits += String(numClients + 1);
+    state.numSpirits += String(numClients);
     console.log("state.numSpirits: "  + state.numSpirits)
     client.number = numClients + 1;
     client.emit('init', numClients + 1);
