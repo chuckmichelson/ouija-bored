@@ -165,7 +165,7 @@ function paintGame(state) {
   const right_layer2 = document.getElementById("right_layer2");
   const right_ctx = right_layer2.getContext("2d");
   right_ctx.clearRect(0, 0, 100, 554);
-  right_ctx.font = "60px Copperplate, Papyrus, fantasy";
+  right_ctx.font = "90px Copperplate, Papyrus, fantasy";
   streak = calculateLetterStreak(state);
   alpha = streak / state.letter_buffer.length;
   right_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
@@ -175,8 +175,17 @@ function paintGame(state) {
   if (current_letter == '_' || current_letter == undefined) {
     current_letter = ' ';
   }
-  right_ctx.fillText(current_letter, 50, 80);
-  right_ctx.font = "18px Copperplate, Papyrus, fantasy";
+  display_string = current_letter;
+  if (current_letter == '+') {
+    display_string = '+'
+    // right_ctx.font = "48px Copperplate, Papyrus, fantasy";
+  }
+  if (current_letter == '-') {
+    display_string = '-'
+    // right_ctx.font = "48px Copperplate, Papyrus, fantasy";
+  }
+  right_ctx.fillText(display_string, 60, 80);
+
 
   // display agreed letters
   // const layer_agreed = document.getElementById("layer_agreed");
