@@ -165,7 +165,7 @@ function paintGame(state) {
   const right_layer2 = document.getElementById("right_layer2");
   const right_ctx = right_layer2.getContext("2d");
   right_ctx.clearRect(0, 0, 100, 554);
-  right_ctx.font = "90px Copperplate, Papyrus, fantasy";
+  right_ctx.font = "120px Copperplate, Papyrus, fantasy";
   streak = calculateLetterStreak(state);
   alpha = streak / state.letter_buffer.length;
   right_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
