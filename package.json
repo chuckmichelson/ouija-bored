@@ -13,9 +13,16 @@
   "scripts": {
     "start": "node server.js"
   },
-  "repository": "https://github.com/chuckmichelson/ouija-bored",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuckmichelson/ouija-bored.git"
+  },
   "author": "chuckmichelson",
   "license": "ISC",
-  "homepage": "",
-  "keywords": []
+  "homepage": "https://github.com/chuckmichelson/ouija-bored#readme",
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/chuckmichelson/ouija-bored/issues"
+  },
+  "devDependencies": {}
 }
