@@ -25,7 +25,7 @@ function initGame() {
 
 function createGameState() {
   return {
-    numSpirits: Array(1).fill(0),
+    numSpirits: [0],
     x: Array(100).fill(0),
     y: Array(100).fill(0),
     planchette: {
