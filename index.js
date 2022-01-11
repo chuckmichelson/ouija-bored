@@ -144,10 +144,8 @@ function paintGame(state) {
   const left_layer2 = document.getElementById("left_layer2");
   const left_ctx = left_layer2.getContext("2d");
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
-  left_ctx.fillStyle = "whitesmoke";
   left_ctx.textAlign = "center";
   numSpirits = state.numSpirits[state.numSpirits.length - 1];
-  console.log("state.numSpirits: "  + state.numSpirits)
   left_ctx.fillText(numSpirits, 50, 80);
   left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
   left_ctx.font = "18px Copperplate, Papyrus, fantasy";
