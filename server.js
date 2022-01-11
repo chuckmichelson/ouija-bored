@@ -129,7 +129,7 @@ io.on('connection', client => {
     client.join(roomName);
     addPlayer(state);
     client.number = numClients + 1;
-    client.emit('init', client.number);
+    client.emit('init', numClients + 1);
 
     startGameInterval(roomName);
   }
