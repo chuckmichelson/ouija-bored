@@ -117,8 +117,8 @@ function gameLoop(state) {
       return true;
   }
   // reset all player velocities to 0 so the user must hold down the arrow keys
-  state.x = Array(5).fill(0);
-  state.y = Array(5).fill(0);
+  // state.x = Array(5).fill(0);
+  // state.y = Array(5).fill(0);
 
   // return with no exit code
   return false;
