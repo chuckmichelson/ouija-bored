@@ -61,20 +61,11 @@ function collapseSmoke() {
   x.style.display = "none";
 }
 
-// document.getElementById("numPlayersDisplay").innerHTML = 5 + 6;
-// joinGameBtn.addEventListener('click', newGame);
-
-// smokeBtn.addEventListener('click', makeSmoke);
-
-
-
-
 
 function setImageVisible(id, visible) {
     var img = document.getElementById(id);
     img.style.visibility = (visible ? 'visible' : 'hidden');
 }
-
 
 
 function makeSmoke() {
@@ -155,7 +146,7 @@ function paintGame(state) {
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
   left_ctx.fillStyle = "whitesmoke";
   left_ctx.textAlign = "center";
-  numSpirits = state.numSpirits;
+  numSpirits = state[0].numSpirits;
   console.log("numSpirits: "  + numSpirits)
   console.log("state.numSpirits: "  + state.numSpirits)
   console.log("state.numSpirits[0]: "  + state.numSpirits[0])
