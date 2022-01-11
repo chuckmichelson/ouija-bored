@@ -44,12 +44,12 @@ console.log("********************** Hopefully listening by now")
 //     console.log("Listening to port " + PORT);
 // });
 
-app.use("/api", function(req, res, next){
-   console.log("request handler");
-    res.end("hello");
-    console.log(res);
-    next();
-});
+// app.use("/api", function(req, res, next){
+//    console.log("request handler");
+//     res.end("hello");
+//     console.log(res);
+//     next();
+// });
 // *********************************************************
 
 
