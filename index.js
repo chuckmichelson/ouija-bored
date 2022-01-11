@@ -184,6 +184,7 @@ function paintGame(state) {
     display_string = '-'
     // right_ctx.font = "48px Copperplate, Papyrus, fantasy";
   }
+  right_ctx.font = "120px Copperplate, Papyrus, fantasy";
   right_ctx.fillText(display_string, 60, 80);
 
 
