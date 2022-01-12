@@ -247,7 +247,6 @@ function handleScore(gameScore) {
   const left_ctx = left_layer2.getContext("2d");
   left_ctx.clearRect(0, 0, 100, 554);
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
-  left_ctx.fillStyle = "white";
   left_ctx.textAlign = "center";
   left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
   left_ctx.fillText(gameScore, 50, 80);
