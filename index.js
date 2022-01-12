@@ -240,9 +240,9 @@ function handleGameCode(gameCode) {
   //gameCodeDisplay.innerText = gameCode;
 }
 
-function handleScore(gameScore) {
-  gameScore = JSON.parse(gameScore);
-  console.log("*****handleScore(): gameScore: " + gameScore)
+function handleScore(score) {
+  score = JSON.parse(score);
+  console.log("*****handleScore(): score: " + score)
   // const left_layer2 = document.getElementById("left_layer2");
   // const left_ctx = left_layer2.getContext("2d");
   // left_ctx.clearRect(0, 0, 100, 554);
