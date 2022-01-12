@@ -241,7 +241,7 @@ function handleGameCode(gameCode) {
 }
 
 function handleScore(gameScore) {
-  // console.log("made it to handleScore()")
+  console.log("*****handleScore(): gameScore: " + gameScore)
   // const left_layer2 = document.getElementById("left_layer2");
   // const left_ctx = left_layer2.getContext("2d");
   // left_ctx.clearRect(0, 0, 100, 554);

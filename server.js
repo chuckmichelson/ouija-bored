@@ -117,7 +117,6 @@ io.on('connection', client => {
     emitScore(room, numClients);
 
     if (numClients === 0) {
-      //client.emit('unknownCode');
       handleNewGame()
       return;
     }
