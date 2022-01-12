@@ -141,13 +141,13 @@ function paintGame(state) {
   ctx2.drawImage(planchette, state.planchette.pos.x - PLANCHETTE_WIDTH/2, state.planchette.pos.y - PLANCHETTE_HEIGHT/2);
 
   // display score (spirits present)
-  // const left_layer2 = document.getElementById("left_layer2");
-  // const left_ctx = left_layer2.getContext("2d");
-  // left_ctx.font = "60px Copperplate, Papyrus, fantasy";
-  // left_ctx.textAlign = "center";
-  // numSpirits = state.numSpirits[state.numSpirits.length - 1];
-  // if (numSpirits == undefined) {
-  //   numSpirits = '1';
+  const left_layer2 = document.getElementById("left_layer2");
+  const left_ctx = left_layer2.getContext("2d");
+  left_ctx.font = "60px Copperplate, Papyrus, fantasy";
+  left_ctx.textAlign = "center";
+  numSpirits = state.numSpirits[state.numSpirits.length - 1];
+  if (numSpirits == undefined) {
+    numSpirits = '1';
   }
   left_ctx.fillText(numSpirits, 50, 80);
   left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
@@ -243,16 +243,17 @@ function handleGameCode(gameCode) {
 function handleScore(gameScore) {
   gameScore = JSON.parse(gameScore);
   console.log("*****handleScore(): gameScore: " + gameScore)
-  const left_layer2 = document.getElementById("left_layer2");
-  const left_ctx = left_layer2.getContext("2d");
-  left_ctx.clearRect(0, 0, 100, 554);
-  left_ctx.font = "60px Copperplate, Papyrus, fantasy";
-  left_ctx.textAlign = "center";
-  left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
-  left_ctx.fillText(gameScore, 50, 80);
-  left_ctx.font = "18px Copperplate, Papyrus, fantasy";
-  left_ctx.fillText("Spirits", 50, 110);
-  left_ctx.fillText("Present", 50, 130);
+  // const left_layer2 = document.getElementById("left_layer2");
+  // const left_ctx = left_layer2.getContext("2d");
+  // left_ctx.clearRect(0, 0, 100, 554);
+  // left_ctx.font = "60px Copperplate, Papyrus, fantasy";
+  // left_ctx.fillStyle = "white";
+  // left_ctx.textAlign = "center";
+  // left_ctx.fillText(gameScore, 50, 80);
+  // left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
+  // left_ctx.font = "18px Copperplate, Papyrus, fantasy";
+  // left_ctx.fillText("Spirits", 50, 110);
+  // left_ctx.fillText("Present", 50, 130);
 
 }
 
