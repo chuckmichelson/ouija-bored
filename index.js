@@ -138,7 +138,7 @@ function paintGame(state) {
   const left_ctx = left_layer2.getContext("2d");
   left_ctx.font = "60px Copperplate, Papyrus, fantasy";
   left_ctx.textAlign = "center";
-  numSpirits = state.planchette.pos.x;
+  numSpirits = state.numSpirits;
   if (numSpirits == undefined) {
     numSpirits = '1';
   }
