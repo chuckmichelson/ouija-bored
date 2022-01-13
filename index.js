@@ -181,7 +181,7 @@ function paintGame(state) {
   right_ctx.fillText(display_string, 60, 80);
 
 
-  display agreed letters
+  // display agreed letters
   const layer_agreed = document.getElementById("layer_agreed");
   const agreed_ctx = layer_agreed.getContext("2d");
   agreed_ctx.fillStyle = 'black';
