@@ -142,11 +142,10 @@ function paintGame(state) {
   if (numSpirits == undefined) {
     numSpirits = '1';
   }
-  left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
   left_ctx.fillText(numSpirits, 50, 80);
+  left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
   left_ctx.font = "18px Copperplate, Papyrus, fantasy";
   left_ctx.fillText("Spirits", 50, 110);
-  right_ctx.textAlign = "center";
   left_ctx.fillText("Present", 50, 130);
 
   // display current letter
