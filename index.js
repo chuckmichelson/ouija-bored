@@ -146,6 +146,7 @@ function paintGame(state) {
   left_ctx.fillText(numSpirits, 50, 80);
   left_ctx.font = "18px Copperplate, Papyrus, fantasy";
   left_ctx.fillText("Spirits", 50, 110);
+  right_ctx.textAlign = "center";
   left_ctx.fillText("Present", 50, 130);
 
   // display current letter
