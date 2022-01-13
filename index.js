@@ -146,13 +146,12 @@ function paintGame(state) {
   }
   left_ctx.fillText(numSpirits, 50, 80);
   left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
-  left_ctx.font = "49px Copperplate, Papyrus, fantasy";
+  left_ctx.font = "48px Copperplate, Papyrus, fantasy";
+  display_text = "Spirits"
   if numSpirits == 1 {
-    left_ctx.fillText("Spirit", 50, 110);
+    display_text = "Spirit"
   }
-  else {
-    left_ctx.fillText("Spirits", 50, 110);
-  }
+  left_ctx.fillText(display_text, 50, 110);
   left_ctx.fillText("Present", 50, 130);
 
   // display current letter
