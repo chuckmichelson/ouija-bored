@@ -148,7 +148,7 @@ function paintGame(state) {
   left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
   left_ctx.font = "48px Copperplate, Papyrus, fantasy";
   display_text = "Spirits"
-  if numSpirits == 1 {
+  if (numSpirits == 1) {
     display_text = "Spirit"
   }
   left_ctx.fillText(display_text, 50, 110);
