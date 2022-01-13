@@ -137,7 +137,7 @@ function paintGame(state) {
   const left_layer2 = document.getElementById("left_layer2");
   const left_ctx = left_layer2.getContext("2d");
   left_ctx.clearRect(0, 0, 100, 554);
-  left_ctx.font = "60px Copperplate, Papyrus, fantasy";
+  left_ctx.font = "120px Copperplate, Papyrus, fantasy";
   left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
   left_ctx.textAlign = "center";
   numSpirits = state.numSpirits;
@@ -146,8 +146,13 @@ function paintGame(state) {
   }
   left_ctx.fillText(numSpirits, 50, 80);
   left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
-  left_ctx.font = "18px Copperplate, Papyrus, fantasy";
-  left_ctx.fillText("Spirits", 50, 110);
+  left_ctx.font = "49px Copperplate, Papyrus, fantasy";
+  if numSpirits == 1 {
+    left_ctx.fillText("Spirit", 50, 110);
+  }
+  else {
+    left_ctx.fillText("Spirits", 50, 110);
+  }
   left_ctx.fillText("Present", 50, 130);
 
   // display current letter
