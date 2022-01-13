@@ -151,8 +151,8 @@ function paintGame(state) {
   if (numSpirits == 1) {
     display_text = "Spirit"
   }
-  left_ctx.fillText(display_text, 50, 120);
-  left_ctx.fillText("Present", 50, 150);
+  left_ctx.fillText(display_text, 50, 110);
+  left_ctx.fillText("Present", 50, 135);
 
   // display current letter
   const right_layer2 = document.getElementById("right_layer2");
