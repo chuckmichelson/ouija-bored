@@ -42,6 +42,7 @@ function createGameState() {
 
 function addPlayer(state) {
   state.numSpirits += 1;
+  console.log(state.numSpirits)
 }
 
 function gameLoop(state) {
