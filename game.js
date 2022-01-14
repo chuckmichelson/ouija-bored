@@ -99,6 +99,9 @@ function gameLoop(state) {
   current_letter = ouijaGetLetter(state);
   // state.letter_buffer += current_letter;
 
+  if (current_letter == '') {
+    const start = Date.now();
+  }
   if (current_letter != previous_letter) {
     const start = Date.now();
   }
