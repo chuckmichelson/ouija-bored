@@ -188,7 +188,7 @@ function paintGame(state) {
   agreed_ctx.fillStyle = 'black';
   agreed_ctx.clearRect(0, 0, 838, 48);
   agreed_ctx.font = "48px Copperplate, Papyrus, fantasy";
-  agreed_ctx.fillStyle = 'rgba(255, 255, 255, .7)';
+  agreed_ctx.fillStyle = 'rgba(255, 255, 255, .5)';
   agreed_ctx.textAlign = "center";
   agreed_ctx.fillText(state.agreed_letters, 419, 40);
 }
