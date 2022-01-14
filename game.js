@@ -20,6 +20,7 @@ function initGame() {
   console.log("made it to initGame()")
   state = createGameState();
   state = ouijaGoToLetter(state, '5');
+  start = 0;
   return state;
 }
 
