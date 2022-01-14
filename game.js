@@ -100,7 +100,7 @@ function gameLoop(state) {
   // state.letter_buffer += current_letter;
 
   // run timer to determine agreed letter
-  if (state.current_letter == '') {
+  if (state.current_letter == '_') {
     var start = Date.now();
     console.log("first")
   }
