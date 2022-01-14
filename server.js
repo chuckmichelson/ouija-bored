@@ -122,7 +122,6 @@ io.on('connection', client => {
     clientRooms[client.id] = roomName;
 
     console.log("roomName: " + roomName)
-    console.log("clientRooms.length: " + clientRooms.length)
 
     client.join(roomName);
     addPlayer(state);
@@ -179,7 +178,7 @@ function startGameInterval(roomName) {
       emitGameState(roomName, state[roomName])
     } else {
       emitGameOver(roomName, winner);
-      state[roomName] = null;
+      // state[roomName] = null;
       clearInterval(intervalId);
     }
   }, 1000 / FRAME_RATE);
