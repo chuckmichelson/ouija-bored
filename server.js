@@ -122,6 +122,7 @@ io.on('connection', client => {
     clientRooms[client.id] = roomName;
 
     console.log("roomName: " + roomName)
+    console.log("clientRooms.length: " + clientRooms.length)
 
     client.join(roomName);
     addPlayer(state);
