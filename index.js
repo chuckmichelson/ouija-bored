@@ -191,7 +191,6 @@ function paintGame(state) {
   agreed_ctx.fillStyle = 'rgba(255, 255, 255, .7)';
   agreed_ctx.textAlign = "center";
   agreed_ctx.fillText(state.agreed_letters, 419, 40);
-
 }
 
 function handleInit(number) {
