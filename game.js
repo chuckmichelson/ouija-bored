@@ -19,7 +19,7 @@ module.exports = {
 function initGame() {
   console.log("made it to initGame()")
   state = createGameState();
-  state[roomName].current_game_active = true;
+  state.current_game_active = true;
   // state = ouijaGoToLetter(state, '5');
   start = 0;
   return state;
