@@ -101,11 +101,11 @@ function gameLoop(state) {
 
   // run timer to determine agreed letter
   if (current_letter == '') {
-    const start = Date.now();
+    var start = Date.now();
     console.log("first")
   }
   if (current_letter != previous_letter) {
-    const start = Date.now();
+    var start = Date.now();
     console.log("second")
   }
   if (Date.now() - start > 3000 && current_letter != '_') {
