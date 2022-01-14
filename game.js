@@ -94,7 +94,6 @@ function gameLoop(state) {
     state.planchette.pos.y = CANVAS_HEIGHT - PLANCHETTE_WIDTH / 2;
   }
 
-
   // read letter
   state.previous_letter = state.current_letter;
   state.current_letter = ouijaGetLetter(state);
@@ -102,11 +101,11 @@ function gameLoop(state) {
 
   // run timer to determine agreed letter
   if (state.current_letter == '_') {
-    var start = Date.now();
+    start = Date.now();
     console.log("first")
   }
   if (state.current_letter != state.previous_letter) {
-    var start = Date.now();
+    start = Date.now();
     console.log("second")
   }
   if (Date.now() - start > 3000 && state.current_letter != '_') {
