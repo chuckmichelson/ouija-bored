@@ -114,7 +114,7 @@ io.on('connection', client => {
     }
     // emitScore(room, numClients);
 
-    if (numClients === 0 || state === undefined) {
+    if (numClients === 0 || state[roomName] === undefined) {
       handleNewGame()
       return;
     }
