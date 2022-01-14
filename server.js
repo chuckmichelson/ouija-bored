@@ -108,13 +108,11 @@ io.on('connection', client => {
     if (room) {
       allUsers = room.sockets;
     }
-
     let numClients = 0;
     if (allUsers) {
       numClients = Object.keys(allUsers).length;
     }
-    console.log("*****allUsers: numClients: " + numClients)
-    emitScore(room, numClients);
+    // emitScore(room, numClients);
 
     if (numClients === 0) {
       handleNewGame()
