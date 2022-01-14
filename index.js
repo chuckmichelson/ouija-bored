@@ -219,10 +219,10 @@ function handleGameOver(data) {
   gameActive = false;
 
   // dim the ouija board
-  const layer3 = document.getElementById('layer3');
-  const ctx3 = layer3.getContext('2d');
-  ctx3.fillStyle = 'rgba(0, 0, 0, .3)';
-  ctx3.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  const layer2 = document.getElementById('layer2');
+  const ctx2 = layer2.getContext('2d');
+  ctx2.fillStyle = 'rgba(0, 0, 0, .3)';
+  ctx2.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // game over messages
   const layer4 = document.getElementById('layer4');
