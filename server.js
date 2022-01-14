@@ -174,6 +174,17 @@ function startGameInterval(roomName) {
   const intervalId = setInterval(() => {
     const winner = gameLoop(state[roomName]);
 
+    // get number of spirits
+    let allUsers;
+    if (room) {
+      allUsers = room.sockets;
+    }
+    let numClients = 0;
+    if (allUsers) {
+      numClients = Object.keys(allUsers).length;
+    }
+    state.numSpirits = numClients + 1;
+
     if (!winner) {
       emitGameState(roomName, state[roomName])
     } else {
