@@ -105,10 +105,12 @@ function gameLoop(state) {
   if (current_letter != previous_letter) {
     const start = Date.now();
   }
-  if (Date.now() - start > 3000 && current_letter != '_') {
-    state.agreed_letters += current_letter;
-    console.log("AGREED: " + state.agreed_letters)
-    const start = Date.now();
+  if (start != undefined) {
+    if (Date.now() - start > 3000 && current_letter != '_') {
+      state.agreed_letters += current_letter;
+      console.log("AGREED: " + state.agreed_letters)
+      const start = Date.now();
+    }
   }
 
   // if the last 30 frames of the letter buffer are the same, then that's an agreed letter
