@@ -226,8 +226,8 @@ function handleGameOver(data) {
   // dim the ouija board
   const layer1 = document.getElementById('layer1');
   const ctx1 = layer1.getContext('2d');
-  ctx1.fillStyle = 'rgba(0, 0, 0, .9)';
-  ctx1.style.opacity = "0.5";
+  ctx1.fillStyle = 'rgba(0, 0, 0, .5)';
+  // ctx1.style.opacity = "0.5";
   ctx1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // game over messages
