@@ -171,14 +171,17 @@ function paintGame(state) {
   }
   display_string = current_letter;
   if (current_letter == '+') {
-    display_string = '+'
-    // right_ctx.font = "48px Copperplate, Papyrus, fantasy";
+    right_ctx.font = "48px Copperplate, Papyrus, fantasy";
+    display_string = 'Yes'
   }
   if (current_letter == '-') {
-    display_string = '-'
-    // right_ctx.font = "48px Copperplate, Papyrus, fantasy";
+    right_ctx.font = "48px Copperplate, Papyrus, fantasy";
+    display_string = 'No'
   }
-  right_ctx.font = "120px Copperplate, Papyrus, fantasy";
+  if (current_letter == '.') {
+    right_ctx.font = "48px Copperplate, Papyrus, fantasy";
+    display_string = 'Bye'
+  }  right_ctx.font = "120px Copperplate, Papyrus, fantasy";
   right_ctx.fillText(display_string, 60, 80);
 
 
