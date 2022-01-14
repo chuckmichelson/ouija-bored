@@ -112,7 +112,7 @@ function init() {
 
   document.addEventListener('keydown', keyDown);
   // console.log("added keydown event listener")
-  // gameActive = true;
+  gameActive = true;
 
 }
 
