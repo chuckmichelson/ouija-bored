@@ -32,7 +32,7 @@ function createGameState() {
     planchette: {
       pos: {
         x: 300,
-        y: 200,
+        y: 250,
       }
     },
     previous_letter: '_',
