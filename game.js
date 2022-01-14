@@ -35,7 +35,7 @@ function createGameState() {
       }
     },
     previous_letter: '_',
-    current_letter: '',
+    current_letter: '_',
     // letter_buffer: '',
     agreed_letters: '',
   };
@@ -95,6 +95,7 @@ function gameLoop(state) {
 
 
   // read letters
+  previous_letter = state.current_letter;
   current_letter = ouijaGetLetter(state);
   // state.letter_buffer += current_letter;
 
