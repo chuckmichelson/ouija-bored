@@ -118,10 +118,7 @@ function init() {
 
 function keyDown(e) {
   // console.log("made it to keyDown()")
-  if gameActive == true {
-    socket.emit('keydown', e.keyCode);
-  }
-
+  socket.emit('keydown', e.keyCode);
   // console.log("emitted keydown code")
 }
 
