@@ -106,9 +106,6 @@ function init() {
   // planchette
   var planchette = new Image();
   planchette.src = "images/planchette.png";
-  // planchette.onload = function(){
-  //     ctx2.drawImage(planchette,CANVAS_WIDTH/2 - PLANCHETTE_WIDTH/2, CANVAS_HEIGHT/2 - PLANCHETTE_HEIGHT/2);
-  // }
 
   document.addEventListener('keydown', keyDown);
   // console.log("added keydown event listener")
@@ -118,7 +115,9 @@ function init() {
 
 function keyDown(e) {
   // console.log("made it to keyDown()")
-  socket.emit('keydown', e.keyCode);
+  if (gameActive == true) {
+    socket.emit('keydown', e.keyCode);
+  }
   // console.log("emitted keydown code")
 }
 
