@@ -34,8 +34,8 @@ function createGameState() {
         y: 300,
       }
     },
-    previous_letter: '_',
-    current_letter: '_',
+    previous_letter: '',
+    current_letter: '',
     // letter_buffer: '',
     agreed_letters: '',
   };
