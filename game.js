@@ -34,8 +34,8 @@ function createGameState() {
         y: 300,
       }
     },
-    previous_letter: '/',
-    current_letter: '/',
+    previous_letter: '',
+    current_letter: '',
     // letter_buffer: '',
     agreed_letters: '',
   };
@@ -94,23 +94,24 @@ function gameLoop(state) {
   }
 
 
-  // read letters
+  // read letter
   previous_letter = state.current_letter;
   current_letter = ouijaGetLetter(state);
   // state.letter_buffer += current_letter;
 
-  if (current_letter == '/') {
+  // run timer to determine agreed letter
+  if (current_letter == '') {
     const start = Date.now();
+    console.log("first")
   }
   if (current_letter != previous_letter) {
     const start = Date.now();
+    console.log("second")
   }
-  if (start != undefined) {
-    if (Date.now() - start > 3000 && current_letter != '_') {
-      state.agreed_letters += current_letter;
-      console.log("AGREED: " + state.agreed_letters)
-      const start = Date.now();
-    }
+  if (Date.now() - start > 3000 && current_letter != '_') {
+    state.agreed_letters += current_letter;
+    console.log("AGREED: " + state.agreed_letters)
+    const start = Date.now();
   }
 
   // if the last 30 frames of the letter buffer are the same, then that's an agreed letter
