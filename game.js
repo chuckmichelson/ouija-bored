@@ -19,7 +19,7 @@ module.exports = {
 function initGame() {
   console.log("made it to initGame()")
   state = createGameState();
-  state = ouijaGoToLetter(state, '5');
+  // state = ouijaGoToLetter(state, '5');
   start = 0;
   return state;
 }
@@ -37,7 +37,6 @@ function createGameState() {
     },
     previous_letter: '_',
     current_letter: '_',
-    // letter_buffer: '',
     agreed_letters: '',
   };
 }
@@ -97,16 +96,13 @@ function gameLoop(state) {
   // read letter
   state.previous_letter = state.current_letter;
   state.current_letter = ouijaGetLetter(state);
-  // state.letter_buffer += current_letter;
 
   // run timer to determine agreed letter
   if (state.current_letter == '_') {
     start = Date.now();
-    console.log("first")
   }
   if (state.current_letter != state.previous_letter) {
     start = Date.now();
-    console.log("second")
   }
   if (Date.now() - start > 3000 && state.current_letter != '_') {
     state.agreed_letters += state.current_letter;
