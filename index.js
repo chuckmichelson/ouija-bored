@@ -181,7 +181,7 @@ function paintGame(state) {
   if (current_letter == '.') {
     right_ctx.font = "24px Copperplate, Papyrus, fantasy";
     display_string = 'Bye'
-  }  right_ctx.font = "120px Copperplate, Papyrus, fantasy";
+  }
   right_ctx.fillText(display_string, 60, 80);
 
 
