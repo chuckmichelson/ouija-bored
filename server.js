@@ -114,7 +114,7 @@ io.on('connection', client => {
     }
     // emitScore(room, numClients);
 
-    if (numClients === 0 || state[roomName] === undefined) {
+    if (numClients === 0 || state[roomName].current_game_active === false) {
       handleNewGame()
       return;
     }
@@ -179,6 +179,7 @@ function startGameInterval(roomName) {
     } else {
       emitGameOver(roomName, winner);
       // state[roomName] = null;
+      state[roomName].current_game_active = false;
       clearInterval(intervalId);
     }
   }, 1000 / FRAME_RATE);
