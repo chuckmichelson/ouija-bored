@@ -95,20 +95,20 @@ function gameLoop(state) {
 
 
   // read letter
-  previous_letter = state.current_letter;
-  current_letter = ouijaGetLetter(state);
+  state.previous_letter = state.current_letter;
+  state.current_letter = ouijaGetLetter(state);
   // state.letter_buffer += current_letter;
 
   // run timer to determine agreed letter
-  if (current_letter == '') {
+  if (state.current_letter == '') {
     var start = Date.now();
     console.log("first")
   }
-  if (current_letter != previous_letter) {
+  if (state.current_letter != state.previous_letter) {
     var start = Date.now();
     console.log("second")
   }
-  if (Date.now() - start > 3000 && current_letter != '_') {
+  if (Date.now() - start > 3000 && state.current_letter != '_') {
     state.agreed_letters += current_letter;
     console.log("AGREED: " + state.agreed_letters)
     const start = Date.now();
