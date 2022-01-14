@@ -34,8 +34,8 @@ function createGameState() {
         y: 300,
       }
     },
-    previous_letter: '_',
-    current_letter: '_',
+    previous_letter: '/',
+    current_letter: '/',
     // letter_buffer: '',
     agreed_letters: '',
   };
@@ -99,13 +99,13 @@ function gameLoop(state) {
   current_letter = ouijaGetLetter(state);
   // state.letter_buffer += current_letter;
 
-  if (current_letter == '') {
+  if (current_letter == '/') {
     const start = Date.now();
   }
   if (current_letter != previous_letter) {
     const start = Date.now();
   }
-  if (Date.now() - start > 3000) {
+  if (Date.now() - start > 3000 && current_letter != '_') {
     state.agreed_letters += current_letter;
     console.log("AGREED: " + state.agreed_letters)
     const start = Date.now();
