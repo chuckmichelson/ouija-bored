@@ -108,7 +108,7 @@ function init() {
   planchette.src = "images/planchette.png";
   // planchette.onload = function(){
   //     ctx2.drawImage(planchette,CANVAS_WIDTH/2 - PLANCHETTE_WIDTH/2, CANVAS_HEIGHT/2 - PLANCHETTE_HEIGHT/2);
-  }
+  // }
 
   document.addEventListener('keydown', keyDown);
   // console.log("added keydown event listener")
