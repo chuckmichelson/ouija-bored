@@ -214,15 +214,21 @@ function handleGameOver(data) {
     console.log("game not active")
     return;
   }
+
+  // game over screen
+  const layer2 = document.getElementById('layer2');
+  const context = layer2.getContext('2d');
+  context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
   data = JSON.parse(data);
   gameActive = false;
 
   // dim the ouija board
-  const layer2 = document.getElementById('layer2');
-  const ctx2 = layer2.getContext('2d');
-  ctx2.fillStyle = 'rgba(0, 0, 0, .9)';
-  ctx2.style.opacity = "0.9";
-  ctx2.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  const layer1 = document.getElementById('layer1');
+  const ctx1 = layer1.getContext('2d');
+  ctx1.fillStyle = 'rgba(0, 0, 0, .9)';
+  ctx1.style.opacity = "0.5";
+  ctx1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // game over messages
   const layer4 = document.getElementById('layer4');
