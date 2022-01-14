@@ -4,6 +4,7 @@ const { CANVAS_HEIGHT } = require('./constants');
 const { PLANCHETTE_WIDTH } = require('./constants');
 const { PLANCHETTE_HEIGHT } = require('./constants');
 const { MAX_PLAYERS_PER_ROOM } = require('./constants');
+const { AGREE_TIME } = require('./constants');
 
 const { makeid } = require('./utils');
 const { ouijaGoToLetter } = require('./utils');
@@ -104,7 +105,7 @@ function gameLoop(state) {
   if (state.current_letter != state.previous_letter) {
     start = Date.now();
   }
-  if (Date.now() - start > 3000 && state.current_letter != '_') {
+  if (Date.now() - start > AGREE_TIME && state.current_letter != '_') {
     state.agreed_letters += state.current_letter;
     console.log("AGREED: " + state.agreed_letters)
     start = Date.now();
