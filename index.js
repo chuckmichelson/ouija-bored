@@ -221,11 +221,6 @@ function handleGameOver(data) {
   // ctx1.fillStyle = 'rgba(0, 0, 0, .5)';
   // ctx1.drawImage(background,0,0);
 
-  // remove the board
-  const layer1 = document.getElementById('layer1');
-  const context1 = layer1.getContext('2d');
-  context1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-
   // remove the planchette
   const layer2 = document.getElementById('layer2');
   const context = layer2.getContext('2d');
