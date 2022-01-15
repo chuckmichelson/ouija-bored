@@ -226,14 +226,14 @@ function handleGameOver(data) {
   const context = layer2.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
-  // dim the ouija board
-  const layer1 = document.getElementById('layer1');
-  const ctx1 = layer1.getContext('2d');
-  ctx1.fillStyle = 'rgba(0, 0, 0, .5)';
-  var ouijaboard = new Image();
-  ouijaboard.src = "images/ouija_board.png";
-  ctx1.style.opacity = "0.5";
-  ctx1.drawImage(background,0,0);
+  // // dim the ouija board
+  // const layer1 = document.getElementById('layer1');
+  // const ctx1 = layer1.getContext('2d');
+  // ctx1.fillStyle = 'rgba(0, 0, 0, .5)';
+  // var ouijaboard = new Image();
+  // ouijaboard.src = "images/ouija_board.png";
+  // ctx1.style.opacity = "0.5";
+  // ctx1.drawImage(background,0,0);
 
   // game over messages
   const layer4 = document.getElementById('layer4');
