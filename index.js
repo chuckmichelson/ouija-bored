@@ -99,11 +99,9 @@ function init() {
 }
 
 function keyDown(e) {
-  // console.log("made it to keyDown()")
   if (gameActive == true) {
     socket.emit('keydown', e.keyCode);
   }
-  // console.log("emitted keydown code")
 }
 
 function paintGame(state) {
@@ -147,8 +145,7 @@ function paintGame(state) {
   // alpha = streak / state.letter_buffer.length;
   right_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
   right_ctx.textAlign = "center";
-  // current_letter = state.letter_buffer.substr(state.letter_buffer.length - 1);
-  // current_letter = state.letter_buffer[state.letter_buffer.length - 1]
+
   current_letter = state.current_letter;
   if (current_letter == '_' || current_letter == undefined) {
     current_letter = ' ';
