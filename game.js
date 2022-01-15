@@ -106,7 +106,7 @@ function gameLoop(state) {
   if (state.current_letter != state.previous_letter) {
     start = Date.now();
   }
-  if (Date.now() - start > 4000 && state.current_letter != '_') {
+  if (Date.now() - start > 3000 && state.current_letter != '_') {
     state.agreed_letters += state.current_letter;
     console.log("AGREED: " + state.agreed_letters)
     start = Date.now();
