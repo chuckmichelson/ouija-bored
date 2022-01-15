@@ -112,6 +112,26 @@ function gameLoop(state) {
     start = Date.now();
   }
 
+  // if the last 30 frames of the letter buffer are the same, then that's an agreed letter
+
+
+  // if (state.letter_buffer.length > 50) {
+  //   var last50 = state.letter_buffer.substr(state.letter_buffer.length - 50);
+  //   // console.log(last50)
+  //   let count = 0;
+  //   for(let i = 0; i < last50.length; i++){
+  //     if(i === last50.lastIndexOf(last50[i])){
+  //        continue;
+  //     };
+  //     count++;
+  //   }
+  //   if (count >= 49 && current_letter != '_') {
+  //     state.agreed_letters += current_letter;
+  //     state.letter_buffer = current_letter;
+  //     console.log("AGREED: " + state.agreed_letters)
+  //   }
+  // }
+
   last_agreed = state.agreed_letters.substr(state.agreed_letters.length - 1);
   if(last_agreed == '.') {
       return true;
