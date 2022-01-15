@@ -210,10 +210,10 @@ function handleGameState(gameState) {
 }
 
 function handleGameOver(data) {
-  if (!gameActive) {
-    console.log("game not active")
-    return;
-  }
+  // if (!gameActive) {
+  //   console.log("game not active")
+  //   return;
+  // }
 
   // remove the planchette
   const layer2 = document.getElementById('layer2');
