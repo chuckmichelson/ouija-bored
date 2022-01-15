@@ -30,7 +30,6 @@ server.listen(PORT, hostname, () => {
 // *********************************************************
 
 
-
 const { FRAME_RATE } = require('./constants');
 const { CANVAS_WIDTH } = require('./constants');
 const { CANVAS_HEIGHT } = require('./constants');
