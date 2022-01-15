@@ -215,20 +215,25 @@ function handleGameOver(data) {
     return;
   }
 
-  // game over screen
+  // // dim the board
+  // var background = new Image();
+  // background.src = "images/ouija_board.png";
+  // ctx1.fillStyle = 'rgba(0, 0, 0, .5)';
+  // ctx1.drawImage(background,0,0);
+
+  // remove the planchette
   const layer2 = document.getElementById('layer2');
   const context = layer2.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-
-  data = JSON.parse(data);
-  gameActive = false;
 
   // dim the ouija board
   const layer1 = document.getElementById('layer1');
   const ctx1 = layer1.getContext('2d');
   ctx1.fillStyle = 'rgba(0, 0, 0, .5)';
-  // ctx1.style.opacity = "0.5";
-  ctx1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  var ouijaboard = new Image();
+  ouijaboard.src = "images/ouija_board.png";
+  ctx1.style.opacity = "0.5";
+  ctx1.drawImage(background,0,0);
 
   // game over messages
   const layer4 = document.getElementById('layer4');
@@ -238,6 +243,9 @@ function handleGameOver(data) {
   ctx4.textAlign = "center";
   ctx4.font = "120px Copperplate, Papyrus, fantasy";
   ctx4.fillText("Good Bye", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+
+  data = JSON.parse(data);
+  gameActive = false;
 
 }
 
