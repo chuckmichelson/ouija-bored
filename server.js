@@ -30,51 +30,6 @@ server.listen(PORT, hostname, () => {
 // *********************************************************
 
 
-// ***** ALTERNATIVE CODE FOR HEROKU DEPLOY ****************
-// const express = require('express')
-// const app = express()
-// const server = require('http').Server(app)
-// const io = require('socket.io')(server)
-// const PORT = process.env.PORT || 3000;
-
-// io.listen(PORT,function(){
-//     console.log("Listening to port " + PORT);
-// });
-
-// app.use("/api", function(req, res, next){
-//    console.log("request handler");
-//     res.end("hello");
-//     console.log(res);
-//     next();
-// });
-// *********************************************************
-
-
-
-// ***** TRYING OUT CODE FOR HEROKU ************************
-// Load HTTP module
-// const http = require("http");
-// const hostname = 'https://ouija-bored.herokuapp.com';
-// const PORT = process.env.PORT || 3000;
-
-// //Create HTTP server and listen on port 3000 for requests
-// const server = http.createServer((req, res) => {
-
-//   //Set the response HTTP header with HTTP status and Content type
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Hello World\n');
-// });
-
-// const io = require('socket.io')();
-
-// //listen for request on port 3000, and as a callback function have the port listened on logged
-// io.listen(process.env.PORT || 3000);
-// server.listen(PORT, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${PORT}/`);
-// });
-// *********************************************************
-
 
 const { FRAME_RATE } = require('./constants');
 const { CANVAS_WIDTH } = require('./constants');
@@ -83,10 +38,6 @@ const { PLANCHETTE_WIDTH } = require('./constants');
 const { PLANCHETTE_HEIGHT } = require('./constants');
 const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
 const { makeid } = require('./utils');
-
-
-
-
 
 
 const state = {};
