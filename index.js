@@ -237,7 +237,7 @@ function handleGameOver(data) {
   ctx4.fillStyle = "whitesmoke";
   ctx4.textAlign = "center";
   ctx4.font = "120px Copperplate, Papyrus, fantasy";
-  ctx4.fillText("Good Bye", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+  ctx4.fillText(state.agreed_letters, CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
   data = JSON.parse(data);
   gameActive = false;
