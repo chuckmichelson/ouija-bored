@@ -215,8 +215,6 @@ function handleGameOver(data) {
     return;
   }
 
-
-
   // remove the planchette
   const layer2 = document.getElementById('layer2');
   const context = layer2.getContext('2d');
@@ -228,10 +226,9 @@ function handleGameOver(data) {
   context_1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // display a dimmed board
-  var background = new Image();
-  background.src = "images/ouija_board.png";
-  context_1.fillStyle = 'rgba(0, 0, 0, .5)';
-  context_1.drawImage(background,0,0);
+  var background1 = new Image();
+  background1.src = "images/ouija_board_dim.png";
+  context_1.drawImage(background1,0,0);
 
   // game over messages
   const layer4 = document.getElementById('layer4');
