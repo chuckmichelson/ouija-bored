@@ -226,6 +226,10 @@ function handleGameOver(data) {
   const context = layer2.getContext('2d');
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
+  const layer1 = document.getElementById('layer1');
+  const context_1 = layer1.getContext('2d');
+  context_1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
   // // dim the ouija board
   // const layer1 = document.getElementById('layer1');
   // const ctx1 = layer1.getContext('2d');
