@@ -84,21 +84,14 @@ const { PLANCHETTE_HEIGHT } = require('./constants');
 const { initGame, addPlayer, gameLoop, getUpdatedVelocity } = require('./game');
 const { makeid } = require('./utils');
 
-
-
-
-
-
 const state = {};
 const clientRooms = {};
-
 
 io.on('connection', client => {
 
   client.on('keydown', handleKeydown);
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
-
 
   function handleJoinGame(roomName) {
     console.log("made it to handleJoinGame")
