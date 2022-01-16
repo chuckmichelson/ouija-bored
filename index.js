@@ -86,9 +86,9 @@ function init() {
       ctx1.drawImage(background,0,0);
   }
 
-  // planchette
-  var planchette = new Image();
-  planchette.src = "images/planchette.png";
+  // // planchette
+  // var planchette = new Image();
+  // planchette.src = "images/planchette.png";
 
   document.addEventListener('keydown', keyDown);
   // console.log("added keydown event listener")
