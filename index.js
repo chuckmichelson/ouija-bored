@@ -205,7 +205,7 @@ function handleGameOver(data) {
   // ctx1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // display a dimmed board
-  var dim = new Image();
+  const dim = new Image();
   dim.src = "images/ouija_board_dim.png";
   ctx1.drawImage(dim,0,0);
 
