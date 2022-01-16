@@ -212,7 +212,7 @@ function handleGameOver(state) {
   ctx4.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   ctx4.fillStyle = "white";
   ctx4.textAlign = "center";
-  ctx4.font = "120px Copperplate, Papyrus, fantasy";
+  ctx4.font = "96px Copperplate, Papyrus, fantasy";
   var final_message = state.agreed_letters.substring(0, state.agreed_letters.length - 1);;
   ctx4.fillText(final_message, CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
