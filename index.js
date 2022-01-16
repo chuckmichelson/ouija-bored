@@ -181,6 +181,12 @@ function handleGameOver(state) {
 
   state = JSON.parse(state);
 
+  // clear the top of the screen
+  const layer_agreed = document.getElementById("layer_agreed");
+  const agreed_ctx = layer_agreed.getContext("2d");
+  agreed_ctx.fillStyle = 'black';
+  agreed_ctx.clearRect(0, 0, 838, 48);
+
   // remove the planchette
   const layer2 = document.getElementById('layer2');
   const ctx2 = layer2.getContext('2d');
