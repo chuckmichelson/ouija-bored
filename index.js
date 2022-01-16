@@ -179,6 +179,8 @@ function handleGameOver(state) {
   //   return;
   // }
 
+  state = JSON.parse(state);
+
   // remove the planchette
   const layer2 = document.getElementById('layer2');
   const ctx2 = layer2.getContext('2d');
