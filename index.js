@@ -86,10 +86,6 @@ function init() {
       ctx1.drawImage(background,0,0);
   }
 
-  // // planchette
-  // var planchette = new Image();
-  // planchette.src = "images/planchette.png";
-
   document.addEventListener('keydown', keyDown);
   // console.log("added keydown event listener")
   gameActive = true;
@@ -256,18 +252,4 @@ function reset() {
   gameCodeInput.value = '';
   initialScreen.style.display = "block";
   gameScreen.style.display = "none";
-}
-
-function calculateLetterStreak(state) {
-  current_letter = state.current_letter;
-  buffer = state.letter_buffer;
-  var streak = 0;
-  for (i = 0; i < buffer.length; i++) {
-    streak += 1;
-    if (current_letter != buffer[buffer.length - i - 1]) {
-      break;
-    }
-  }
-  console.log("streak: " + streak)
-  return streak;
 }
