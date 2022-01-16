@@ -1,5 +1,3 @@
-// const { GRID_SIZE } = require('./constants');
-const FRAME_RATE = 10;
 const CANVAS_WIDTH = 838;
 const CANVAS_HEIGHT = 554;
 const PLANCHETTE_WIDTH = 120;
