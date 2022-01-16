@@ -196,8 +196,8 @@ function handleGameOver(data) {
 
   // remove the planchette
   const layer2 = document.getElementById('layer2');
-  const context = layer2.getContext('2d');
-  context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  const ctx2 = layer2.getContext('2d');
+  ctx2.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // remove the ouija board
   const layer1 = document.getElementById('layer1');
