@@ -187,6 +187,10 @@ function handleGameOver(state) {
   agreed_ctx.fillStyle = 'black';
   agreed_ctx.clearRect(0, 0, 838, 48);
 
+  const right_layer2 = document.getElementById("right_layer2");
+  const right_ctx2 = right_layer2.getContext("2d");
+  right_ctx2.clearRect(0, 0, 100, 554);
+
   // remove the planchette
   const layer2 = document.getElementById('layer2');
   const ctx2 = layer2.getContext('2d');
