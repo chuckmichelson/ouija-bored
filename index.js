@@ -114,24 +114,24 @@ function paintGame(state) {
 
   // display score (spirits present)
   const left_layer2 = document.getElementById("left_layer2");
-  const left_ctx = left_layer2.getContext("2d");
-  left_ctx.clearRect(0, 0, 100, 554);
-  left_ctx.font = "120px Copperplate, Papyrus, fantasy";
-  left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
-  left_ctx.textAlign = "center";
+  const left_ctx2 = left_layer2.getContext("2d");
+  left_ctx2.clearRect(0, 0, 100, 554);
+  left_ctx2.font = "120px Copperplate, Papyrus, fantasy";
+  left_ctx2.fillStyle = 'rgba(255, 255, 255, .3)';
+  left_ctx2.textAlign = "center";
   numSpirits = state.numSpirits;
   if (numSpirits == undefined) {
     numSpirits = '1';
   }
-  left_ctx.fillText(numSpirits, 50, 80);
-  left_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
-  left_ctx.font = "24px Copperplate, Papyrus, fantasy";
+  left_ctx2.fillText(numSpirits, 50, 80);
+  left_ctx2.fillStyle = 'rgba(255, 255, 255, .3)';
+  left_ctx2.font = "24px Copperplate, Papyrus, fantasy";
   display_text = "Spirits"
   if (numSpirits == 1) {
     display_text = "Spirit"
   }
-  left_ctx.fillText(display_text, 50, 110);
-  left_ctx.fillText("Present", 50, 135);
+  left_ctx2.fillText(display_text, 50, 110);
+  left_ctx2.fillText("Present", 50, 135);
 
   // display current letter
   const right_layer2 = document.getElementById("right_layer2");
