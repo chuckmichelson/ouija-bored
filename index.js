@@ -202,14 +202,12 @@ function handleGameOver(data) {
   // remove the ouija board
   const layer1 = document.getElementById('layer1');
   const ctx1 = layer1.getContext('2d');
-  ctx1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  // ctx1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // display a dimmed board
-  const layer3 = document.getElementById('layer3');
-  const ctx3 = layer3.getContext('2d');
   var dim = new Image();
   dim.src = "images/ouija_board_dim.png";
-  ctx3.drawImage(dim,0,0);
+  ctx1.drawImage(dim,0,0);
 
   // // game over messages
   // const layer4 = document.getElementById('layer4');
