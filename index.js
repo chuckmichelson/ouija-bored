@@ -202,7 +202,7 @@ function handleGameOver(data) {
   // remove the ouija board
   const layer1 = document.getElementById('layer1');
   const ctx1 = layer1.getContext('2d');
-  // ctx1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  ctx1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // display a dimmed board
   const dim = new Image();
