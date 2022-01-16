@@ -201,6 +201,7 @@ function handleGameOver(data) {
   ctx4.fillStyle = "white";
   ctx4.textAlign = "center";
   ctx4.font = "120px Copperplate, Papyrus, fantasy";
+  console.log(state.agreed_letters)
   ctx4.fillText("Good Bye", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
   data = JSON.parse(data);
