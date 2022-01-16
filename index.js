@@ -25,10 +25,7 @@ console.log("sockets on")
 // const smokeBtn = document.getElementById('smokeBtn');
 // const scoreDisplay = document.getElementById('scoreDisplay');
 
-// makeSmoke()
 document.body.style.backgroundColor = "black";
-// playGif("images/smoke.gif")
-// makeSmoke()
 setTimeout(() => { collapseSmoke(); joinGame();}, 2000);
 
 
@@ -44,14 +41,14 @@ function setImageVisible(id, visible) {
 }
 
 
-function makeSmoke() {
-  const layer1 = document.getElementById('layer1');
-  const ctx_smoke = layer1.getContext('2d');
-  // ctx_smoke.clearRect(0, 0, 554, 554);
-  var smoke = new Image();
-  smoke.src = "images/smoke.gif";
-  ctx_smoke.drawImage(smoke,0, 0);
-}
+// function makeSmoke() {
+//   const layer1 = document.getElementById('layer1');
+//   const ctx_smoke = layer1.getContext('2d');
+//   // ctx_smoke.clearRect(0, 0, 554, 554);
+//   var smoke = new Image();
+//   smoke.src = "images/smoke.gif";
+//   ctx_smoke.drawImage(smoke,0, 0);
+// }
 
 function newGame() {
   console.log("made it to NewGame")
