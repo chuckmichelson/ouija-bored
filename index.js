@@ -173,7 +173,7 @@ function handleGameState(gameState) {
   requestAnimationFrame(() => paintGame(gameState));
 }
 
-function handleGameOver(data) {
+function handleGameOver(state) {
   // if (!gameActive) {
   //   console.log("game not active")
   //   return;
