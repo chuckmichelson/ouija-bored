@@ -127,7 +127,7 @@ function startGameInterval(roomName) {
     if (!winner) {
       emitGameState(roomName, state[roomName])
     } else {
-      emitGameOver(roomName, winner);
+      emitGameOver(roomName, state[roomName]);
       // state[roomName] = null;
       state[roomName].current_game_active = false;
       clearInterval(intervalId);
