@@ -205,9 +205,11 @@ function handleGameOver(data) {
   ctx1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // display a dimmed board
-  var background1 = new Image();
-  background1.src = "images/ouija_board_dim.png";
-  ctx2.drawImage(background1,0,0);
+  const layer3 = document.getElementById('layer3');
+  const ctx3 = layer3.getContext('2d');
+  var dim = new Image();
+  dim.src = "images/ouija_board_dim.png";
+  ctx3.drawImage(dim,0,0);
 
   // // game over messages
   // const layer4 = document.getElementById('layer4');
