@@ -190,7 +190,7 @@ function handleGameOver(data) {
   ctx1.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   // display a dimmed board
-  var background = new Image();
+  // var background = new Image();
   background.src = "images/ouija_board_dim.png";
   ctx1.drawImage(background,0,0);
 
