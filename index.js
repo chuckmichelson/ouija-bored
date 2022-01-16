@@ -4,8 +4,8 @@ const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 
 // ***** CHANGE THIS TO RUN ON HEROKU
-const socket = io('http://localhost:3000');
-// const socket = io('https://ouija-bored.herokuapp.com/');
+// const socket = io('http://localhost:3000');
+const socket = io('https://ouija-bored.herokuapp.com/');
 
 socket.on('init', handleInit);
 socket.on('gameState', handleGameState);
