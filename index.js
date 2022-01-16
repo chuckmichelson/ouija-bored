@@ -203,8 +203,8 @@ function handleGameOver(state) {
   ctx4.fillStyle = "white";
   ctx4.textAlign = "center";
   ctx4.font = "120px Copperplate, Papyrus, fantasy";
-  console.log(state.agreed_letters)
-  ctx4.fillText(state.agreed_letters, CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+  var final_message = state.agreed_letters.substring(0, state.agreed_letters.length - 1);;
+  ctx4.fillText(final_message, CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
   // data = JSON.parse(data);
   gameActive = false;
