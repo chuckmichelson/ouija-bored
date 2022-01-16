@@ -209,14 +209,14 @@ function handleGameOver(data) {
   background1.src = "images/ouija_board_dim.png";
   ctx1.drawImage(background1,0,0);
 
-  // game over messages
-  const layer4 = document.getElementById('layer4');
-  const ctx4 = layer4.getContext('2d');
-  // ctx4.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  ctx4.fillStyle = "white";
-  ctx4.textAlign = "center";
-  ctx4.font = "120px Copperplate, Papyrus, fantasy";
-  ctx4.fillText(state.agreed_letters, CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+  // // game over messages
+  // const layer4 = document.getElementById('layer4');
+  // const ctx4 = layer4.getContext('2d');
+  // // ctx4.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  // ctx4.fillStyle = "white";
+  // ctx4.textAlign = "center";
+  // ctx4.font = "120px Copperplate, Papyrus, fantasy";
+  // ctx4.fillText(state.agreed_letters, CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
   data = JSON.parse(data);
   gameActive = false;
