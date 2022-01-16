@@ -4,6 +4,7 @@ const CANVAS_HEIGHT = 554;
 const PLANCHETTE_WIDTH = 120;
 const PLANCHETTE_HEIGHT = 120;
 const MAX_PLAYERS_PER_ROOM = 100;
+const AGREE_DURATION = 3000;
 
 const OUIJA_CODES = {
     0 : {letter : '+', x : 204, y : 87 }, // i.e., YES
@@ -56,4 +57,5 @@ module.exports = {
   PLANCHETTE_HEIGHT,
   MAX_PLAYERS_PER_ROOM,
   OUIJA_CODES,
+  AGREE_DURATION,
 }
