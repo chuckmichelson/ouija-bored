@@ -135,13 +135,13 @@ function paintGame(state) {
 
   // display current letter
   const right_layer2 = document.getElementById("right_layer2");
-  const right_ctx = right_layer2.getContext("2d");
-  right_ctx.clearRect(0, 0, 100, 554);
-  right_ctx.font = "120px Copperplate, Papyrus, fantasy";
+  const right_ctx2 = right_layer2.getContext("2d");
+  right_ctx2.clearRect(0, 0, 100, 554);
+  right_ctx2.font = "120px Copperplate, Papyrus, fantasy";
   // streak = calculateLetterStreak(state);
   // alpha = streak / state.letter_buffer.length;
-  right_ctx.fillStyle = 'rgba(255, 255, 255, .3)';
-  right_ctx.textAlign = "center";
+  right_ctx2.fillStyle = 'rgba(255, 255, 255, .3)';
+  right_ctx2.textAlign = "center";
 
   current_letter = state.current_letter;
   if (current_letter == '_' || current_letter == undefined) {
@@ -149,18 +149,18 @@ function paintGame(state) {
   }
   display_string = current_letter;
   if (current_letter == '+') {
-    right_ctx.font = "48px Copperplate, Papyrus, fantasy";
+    right_ctx2.font = "48px Copperplate, Papyrus, fantasy";
     display_string = 'Yes'
   }
   if (current_letter == '-') {
-    right_ctx.font = "48px Copperplate, Papyrus, fantasy";
+    right_ctx2.font = "48px Copperplate, Papyrus, fantasy";
     display_string = 'No'
   }
   if (current_letter == '.') {
-    right_ctx.font = "48px Copperplate, Papyrus, fantasy";
+    right_ctx2.font = "48px Copperplate, Papyrus, fantasy";
     display_string = 'Bye'
   }
-  right_ctx.fillText(display_string, 60, 80);
+  right_ctx2.fillText(display_string, 60, 80);
 
 
   // display agreed letters
