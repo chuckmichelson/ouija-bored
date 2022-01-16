@@ -41,15 +41,6 @@ function setImageVisible(id, visible) {
 }
 
 
-// function makeSmoke() {
-//   const layer1 = document.getElementById('layer1');
-//   const ctx_smoke = layer1.getContext('2d');
-//   // ctx_smoke.clearRect(0, 0, 554, 554);
-//   var smoke = new Image();
-//   smoke.src = "images/smoke.gif";
-//   ctx_smoke.drawImage(smoke,0, 0);
-// }
-
 function newGame() {
   console.log("made it to NewGame")
   socket.emit('newGame');
@@ -60,11 +51,12 @@ function joinGame() {
   socket.emit('joinGame', 'AAAAA');
 }
 
+
 let playerNumber = 1;
 let gameActive = false;
 
+
 function init() {
-  // console.log("made it to init")
 
   const layer1 = document.getElementById('layer1');
   const ctx1 = layer1.getContext('2d');
