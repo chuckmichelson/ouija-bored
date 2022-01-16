@@ -141,10 +141,10 @@ function emitGameState(room, gameState) {
     .emit('gameState', JSON.stringify(gameState));
 }
 
-function emitGameOver(room, state) {
+function emitGameOver(room, gameState) {
   // Send this event to everyone in the room.
   io.sockets.in(room)
-    .emit('gameOver', JSON.stringify({ state }));
+    .emit('gameOver', JSON.stringify(gameState));
 }
 
 function emitScore(room, score) {
