@@ -204,7 +204,7 @@ function handleGameOver(state) {
   console.log(state.agreed_letters)
   ctx4.fillText("Good Bye", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 
-  data = JSON.parse(data);
+  // data = JSON.parse(data);
   gameActive = false;
 
 }
